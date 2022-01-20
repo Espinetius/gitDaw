@@ -1,4 +1,4 @@
-public class tester {
+public class Tester {
     public static void main(String[] Args){
         Asignatura asi1 = new Asignatura(1);
         Asignatura asi2 = new Asignatura(2);
