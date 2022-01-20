@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class POO {
-    public static Ejemplovaca damevaca(){
+    public static Ejemplovaca dameVaca(){
         Scanner lector = new Scanner(System.in);
         System.out.println("Introduce nombre, color, edad, peso, si da leche o no, y la calidad");
         String nombre = lector.nextLine();
