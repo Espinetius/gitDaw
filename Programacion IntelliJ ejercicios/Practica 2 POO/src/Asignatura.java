@@ -3,6 +3,7 @@ public class Asignatura {
     private double calificacion;
     public Asignatura(int ide) {
         identificador=ide;
+        calificacion=0;
     }
     //-----------getter y setters----------
     public int getIdentificador() {return identificador;}
