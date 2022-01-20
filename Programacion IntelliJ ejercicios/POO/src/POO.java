@@ -1,8 +1,7 @@
-import java.util.Objects;
 import java.util.Scanner;
 
 public class POO {
-    public static ejemplovaca damevaca(){
+    public static Ejemplovaca damevaca(){
         Scanner lector = new Scanner(System.in);
         System.out.println("Introduce nombre, color, edad, peso, si da leche o no, y la calidad");
         String nombre = lector.nextLine();
@@ -12,10 +11,10 @@ public class POO {
         boolean lechera = lector.nextBoolean();
         lector.nextLine();
         String calidad = lector.nextLine();
-        ejemplovaca nuevavaca = new ejemplovaca(nombre, color, edad, peso, lechera, calidad);
+        Ejemplovaca nuevavaca = new Ejemplovaca(nombre, color, edad, peso, lechera, calidad);
         return nuevavaca;
     }
-    public static ejemploToro dameToro(){
+    public static EjemploToro dameToro(){
         Scanner lector = new Scanner(System.in);
         System.out.println("Introduce nombre, color, edad, peso, si es toreable y su brabura");
         String nombre = lector.nextLine();
@@ -25,10 +24,10 @@ public class POO {
         boolean toreable = lector.nextBoolean();
         lector.nextLine();
         String brabura = lector.nextLine();
-        ejemploToro nuevoToro = new ejemploToro(nombre, color, edad, peso, toreable, brabura);
+        EjemploToro nuevoToro = new EjemploToro(nombre, color, edad, peso, toreable, brabura);
         return nuevoToro;
     }
-    public static ejemplocerdo damecerdo() {
+    public static Ejemplocerdo damecerdo() {
         Scanner lector = new Scanner(System.in);
         System.out.println("Introduce nombre, color, edad, peso, si esta sano y su raza");
         String nombre = lector.nextLine();
@@ -38,7 +37,7 @@ public class POO {
         boolean sano = lector.nextBoolean();
         lector.nextLine();
         String raza = lector.nextLine();
-        ejemplocerdo nuevoCerdo = new ejemplocerdo(nombre, color, edad, peso, sano, raza);
+        Ejemplocerdo nuevoCerdo = new Ejemplocerdo(nombre, color, edad, peso, sano, raza);
         return nuevoCerdo;
     }
     public static void  main(String[] args) {
@@ -49,15 +48,15 @@ public class POO {
             String opcion = lector.nextLine();
             switch (opcion) {
                 case "vaca":
-                    ejemplovaca nuevavaca = damevaca();
+                    Ejemplovaca nuevavaca = damevaca();
                     System.out.println(nuevavaca.vacadefinida());
                     break;
                 case "toro":
-                    ejemploToro nuevoToro = dameToro();
+                    EjemploToro nuevoToro = dameToro();
                     System.out.println(nuevoToro.torodefinido());
                     break;
                 case "cerdo":
-                    ejemplocerdo nuevoCerdo = damecerdo();
+                    Ejemplocerdo nuevoCerdo = damecerdo();
                     System.out.println(nuevoCerdo.cerdodefinido());
                     break;
                 default:

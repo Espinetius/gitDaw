@@ -1,14 +1,14 @@
-public class ejemplovaca extends animal {
+public class Ejemplovaca extends Animal {
     private boolean lechera;
     private String calidad; //baja,media,alta
     //----------------------------CONSTRUCTORES----------------------
 
-    public ejemplovaca () {
+    public Ejemplovaca() {
         super();
         lechera = false;
         calidad = "baja";
     }
-    public ejemplovaca (String nombre, String color, int nacimiento, float peso, boolean lechera, String quality) {
+    public Ejemplovaca(String nombre, String color, int nacimiento, float peso, boolean lechera, String quality) {
         super(nombre, color, nacimiento, peso);
         this.lechera = lechera;
         calidad = quality;

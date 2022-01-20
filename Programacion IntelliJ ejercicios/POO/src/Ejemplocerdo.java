@@ -1,16 +1,16 @@
-public class ejemplocerdo extends animal {
+public class Ejemplocerdo extends Animal {
     private boolean sano;
     private String raza;
 
     //----------------------------CONSTRUCTORES----------------------
 
-    public ejemplocerdo () {
+    public Ejemplocerdo() {
         super();
         sano = false;
         raza = "programador";
 
     }
-    public ejemplocerdo (String nombre, String color, int nacimiento, float peso, boolean sano, String raza) {
+    public Ejemplocerdo(String nombre, String color, int nacimiento, float peso, boolean sano, String raza) {
         super(nombre,color,nacimiento,peso);
         this.sano = sano;
         this.raza = raza;

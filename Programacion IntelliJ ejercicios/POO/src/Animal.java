@@ -1,16 +1,16 @@
-public class animal {
+public class Animal {
     public static final String granja = "1ª Daw";
     protected String nombre;
     protected String color;
     protected int nacimiento;
     protected float peso;
-    public animal () {
+    public Animal() {
         nombre = "Seleccione nombre";
         color = "Seleccione color";
         nacimiento = 0;
         peso = 0;
     }
-    public animal (String nombre, String color, int nacimiento, float peso) {
+    public Animal(String nombre, String color, int nacimiento, float peso) {
         this.nombre = nombre;
         this.color = color;
         this.nacimiento = nacimiento;
