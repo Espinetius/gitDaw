@@ -3,7 +3,6 @@ public class CuentaCorriente {
     private String cuenta_corriente;
     private double saldo;
 
-    public CuentaCorriente() {}
     public CuentaCorriente(Titular titular, String cuenta_corriente, double saldo) {
         this.titular=titular;
         this.cuenta_corriente=cuenta_corriente;

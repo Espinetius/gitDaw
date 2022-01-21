@@ -4,12 +4,10 @@ public class EjemploToro extends Animal {
     //----------------------------CONSTRUCTORES----------------------
 
     public EjemploToro() {
-        super();
-        toreable = false;
-        brabura = "baja";
+        this("toro"+numanimales, "color", 1, 1, true, false, "baja");
     }
-    public EjemploToro(String nombre, String color, int edad, float peso, boolean toreable, String brabura) {
-        super(nombre, color, edad, peso);
+    public EjemploToro(String nombre, String color, int edad, float peso,boolean sano, boolean toreable, String brabura) {
+        super(nombre, color, edad, peso, sano);
         this.toreable = toreable;
         this.brabura = brabura;
     }
@@ -17,11 +15,6 @@ public class EjemploToro extends Animal {
      //override sale cuando el metodo se reformule y no se use el del padre, en este caso la clase objeto
     public String torodefinido() {
         return "ejemploToro{" +
-                "granja=" + granja + '\'' +
-                ", nombre='" + nombre + '\'' +
-                ", color='" + color + '\'' +
-                ", edad=" + nacimiento +
-                ", peso=" + peso +
                 ", toreable=" + toreable +
                 ", brabura='" + brabura + '\'' +
                 '}';
