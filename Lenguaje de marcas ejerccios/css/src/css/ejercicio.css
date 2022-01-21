@@ -1,0 +1,48 @@
+* {
+    margin-left: 25px;
+}
+
+p {
+    font-family: Arial;
+    font-size: 20px;
+}
+
+.sub {
+    text-decoration: underline;
+}
+
+.mayus {
+    text-transform: uppercase;
+}
+
+.pequeño {
+    font-size: 15px;
+}
+
+.cursiva {
+    font-style: italic;
+}
+
+.amarillo {
+    color: yellow;
+}
+
+.rojo {
+    color: red;
+}
+
+.gris {
+    color: grey;
+}
+
+.azul {
+    color: blue;
+}
+
+.verde {
+    color: green;
+}
+
+.marron {
+    color: brown;
+}
