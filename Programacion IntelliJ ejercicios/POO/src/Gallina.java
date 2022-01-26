@@ -28,9 +28,9 @@ public class Gallina extends  Animal {
         }
     }
 
-    public String gallinadefinida() {
-        return super.toString() + "{" +
-                "raza=" + raza +
+    public String toString() {
+        return super.toString() +
+                ", raza=" + raza +
                 "ponedora=" + ponedora +
                 "da carne=" + produccioncarne +
                 '}';

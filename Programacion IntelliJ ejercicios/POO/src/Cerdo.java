@@ -18,9 +18,9 @@ public class Cerdo extends Animal {
     //--------------------setter(cambiar valores de los atributos)------------------
     public void setRaza(String raza) {this.raza=raza;}
     //--------------------------metodos
-    public String cerdodefinido() {
-        return super.toString()+"{"+
-                "raza=" +
+    public String toString() {
+        return super.toString()+
+                ", raza=" +
                 '}';
     }
 }

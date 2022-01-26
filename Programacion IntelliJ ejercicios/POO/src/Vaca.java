@@ -4,12 +4,12 @@ public class Vaca extends Animal {
     //----------------------------CONSTRUCTORES----------------------
 
     public Vaca() {
-        this("vaca"+numanimales,"color",1,1,true,false,"baja");
+        this("vaca"+numanimales,"color",1,1,true,false);
     }
-    public Vaca(String nombre, String color, int nacimiento, float peso, boolean sano, boolean lechera, String quality) {
+    public Vaca(String nombre, String color, int nacimiento, float peso, boolean sano, boolean lechera) {
         super(nombre, color, nacimiento, peso, sano);
         this.lechera = lechera;
-        calidad = quality;
+
     }
     private String toStringLechera() {
         String cadena;
@@ -23,7 +23,7 @@ public class Vaca extends Animal {
      //override sale cuando el metodo se reformule y no se use el del padre, en este caso la clase objeto
 
     public String toString() {
-        return this.getClass().getSimpleName()+"{" +
+        return super.toString()+
                 ", lechera=" + toStringLechera() +
                 ", calidad='" + calidad + '\'' +
                 '}';

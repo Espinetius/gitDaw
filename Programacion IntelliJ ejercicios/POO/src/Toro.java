@@ -13,8 +13,8 @@ public class Toro extends Animal {
     }
 
      //override sale cuando el metodo se reformule y no se use el del padre, en este caso la clase objeto
-    public String torodefinido() {
-        return "ejemploToro{" +
+    public String toString() {
+        return super.toString()+
                 ", toreable=" + toreable +
                 ", brabura='" + brabura + '\'' +
                 '}';

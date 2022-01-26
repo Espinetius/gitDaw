@@ -31,8 +31,7 @@ public class Animal {
                 ", nacimiento=" + nacimiento +
                 ", peso=" + peso +
                 ", sano=" + sano +
-                ", idanimal=" + idanimal +
-                '}';
+                ", idanimal=" + idanimal;
     }
 
     public String getNombre() {

@@ -45,9 +45,9 @@ public class Pato extends Animal{
             this.genero = false;
         }
     }
-    public String patodefinido() {
-        return super.toString()+"{"+
-                "calidad="+calidad+
+    public String toString() {
+        return super.toString()+
+                ", calidad="+calidad+
                 "genero="+genero+
                 '}';
     }

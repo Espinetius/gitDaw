@@ -18,8 +18,8 @@ public class Conejo extends  Animal{
     public void setEstado(boolean estado){this.estado = estado;}
     //metodos sobreescritura
 
-    public String conejodefinido(){
-        return  super.toString()+"{"+
+    public String toString(){
+        return  super.toString()+
                 ", raza="+ raza +
                 ", estado="+ estado +
                 '}';
