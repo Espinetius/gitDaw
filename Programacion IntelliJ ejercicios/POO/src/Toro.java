@@ -1,12 +1,12 @@
-public class EjemploToro extends Animal {
+public class Toro extends Animal {
     private boolean toreable;
     private String brabura; //baja,media,alta
     //----------------------------CONSTRUCTORES----------------------
 
-    public EjemploToro() {
+    public Toro() {
         this("toro"+numanimales, "color", 1, 1, true, false, "baja");
     }
-    public EjemploToro(String nombre, String color, int edad, float peso,boolean sano, boolean toreable, String brabura) {
+    public Toro(String nombre, String color, int edad, float peso, boolean sano, boolean toreable, String brabura) {
         super(nombre, color, edad, peso, sano);
         this.toreable = toreable;
         this.brabura = brabura;

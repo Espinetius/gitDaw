@@ -7,11 +7,11 @@ public class Animal {
     protected static int numanimales;
     private int idanimal;
     public Animal() {
+        //this.("sin nombre"+numanimales, "sin color", 0, 0, true);
         nombre="sin nombre";
         color="sin color";
         numanimales++;
         idanimal=numanimales;
-        //this.("sin nombre"+numanimales, "sin color", 0, 0, true);
     }
     public Animal(String nombre, String color, int nacimiento, float peso, boolean sano) {
         this.nombre = nombre;
@@ -25,7 +25,7 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal"+numanimales+"{" +
+        return this.getClass().getSimpleName()+numanimales+"{" +
                 "nombre='" + nombre + '\'' +
                 ", color='" + color + '\'' +
                 ", nacimiento=" + nacimiento +
@@ -72,4 +72,5 @@ public class Animal {
     public void setSano(boolean sano) {this.sano=sano;}
 
     public boolean getSano() { return sano;}
+
 }

@@ -1,21 +1,30 @@
-public class Ejemplovaca extends Animal {
+public class Vaca extends Animal {
     private boolean lechera;
     private String calidad; //baja,media,alta
     //----------------------------CONSTRUCTORES----------------------
 
-    public Ejemplovaca() {
+    public Vaca() {
         this("vaca"+numanimales,"color",1,1,true,false,"baja");
     }
-    public Ejemplovaca(String nombre, String color, int nacimiento, float peso,boolean sano, boolean lechera, String quality) {
+    public Vaca(String nombre, String color, int nacimiento, float peso, boolean sano, boolean lechera, String quality) {
         super(nombre, color, nacimiento, peso, sano);
         this.lechera = lechera;
         calidad = quality;
     }
-
+    private String toStringLechera() {
+        String cadena;
+        if (lechera==true) {
+            cadena="si";
+        } else {
+            cadena = "no";
+        }
+        return cadena;
+    }
      //override sale cuando el metodo se reformule y no se use el del padre, en este caso la clase objeto
-    public String vacadefinida() {
-        return "ejemplovaca{" +
-                ", lechera=" + lechera +
+
+    public String toString() {
+        return this.getClass().getSimpleName()+"{" +
+                ", lechera=" + toStringLechera() +
                 ", calidad='" + calidad + '\'' +
                 '}';
     }
