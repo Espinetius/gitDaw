@@ -4,7 +4,7 @@ public class Vaca extends Animal {
     //----------------------------CONSTRUCTORES----------------------
 
     public Vaca() {
-        this("vaca"+numanimales,"color",1,1,true,false);
+        this("vaca","color",1,1,true,false);
     }
     public Vaca(String nombre, String color, int nacimiento, float peso, boolean sano, boolean lechera) {
         super(nombre, color, nacimiento, peso, sano);
@@ -13,7 +13,7 @@ public class Vaca extends Animal {
     }
     private String toStringLechera() {
         String cadena;
-        if (lechera==true) {
+        if (lechera) {
             cadena="si";
         } else {
             cadena = "no";

@@ -4,7 +4,7 @@ public class Toro extends Animal {
     //----------------------------CONSTRUCTORES----------------------
 
     public Toro() {
-        this("toro"+numanimales, "color", 1, 1, true, false, "baja");
+        this("toro", "color", 1, 1, true, false, "baja");
     }
     public Toro(String nombre, String color, int edad, float peso, boolean sano, boolean toreable, String brabura) {
         super(nombre, color, edad, peso, sano);

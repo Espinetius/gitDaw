@@ -6,7 +6,7 @@ public class Cerdo extends Animal {
         /*super("cerdo","blanco",8,4);
         sano = false;
         raza = "programador";*/
-        this("cerdo"+numanimales,"blanco",8,4,false,"desconocida");
+        this("cerdo","blanco",8,4,false,"desconocida");
     }
     public Cerdo(String nombre, String color, int nacimiento, float peso, boolean sano, String raza) {
         super(nombre,color,nacimiento,peso,sano);
