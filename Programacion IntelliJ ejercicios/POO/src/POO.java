@@ -1,6 +1,6 @@
 public class POO {
     public static void  main(String[] args) {
-
-        System.out.println(EntradaDatos.animales());
+        Animal animal=EntradaDatos.animales(EntradaDatos.seleccionanimal());
+        System.out.println(animal);
         }
 }

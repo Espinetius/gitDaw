@@ -2,7 +2,6 @@ public class Toro extends Animal {
     private boolean toreable;
     private String brabura; //baja,media,alta
     //----------------------------CONSTRUCTORES----------------------
-
     public Toro() {
         this("toro", "color", 1, 1, true, false, "baja");
     }
