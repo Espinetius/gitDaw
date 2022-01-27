@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class EntradaDatos {
 
-        public static int seleccionanimal() {
+        protected static int seleccionanimal() {
             Scanner lector = new Scanner(System.in);
             int opcion;
             System.out.println("Bienvenido a la granja " + Granja.granja +
