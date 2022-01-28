@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
-public class ControlEntrada extends  EntradaDatos{
-    public int numopcion() {
-        Scanner lector = new Scanner(System.in);
-        int numopcion = EntradaDatos.seleccionanimal();
-        while (EntradaDatos.seleccionanimal() > 1 && EntradaDatos.seleccionanimal() < 6){
-            System.out.println("Seleccione una opcion entre 1 y 6");
-            numopcion = lector.nextInt();
+public class ControlEntrada {
+    public static boolean controlSelecAnimal(int opcion) {
+        boolean control = false;
+        if (opcion>1 && opcion<7) {
+            control=true;
         }
-        return numopcion;
+        return control;
     }
+    // hay que hacer un control para cada tipo de variable NO DE CADA CLASE
+
 }

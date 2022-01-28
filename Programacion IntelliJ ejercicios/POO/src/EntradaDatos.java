@@ -12,8 +12,13 @@ public class EntradaDatos {
                     "\n3.Cerdo" +
                     "\n4.Gallina" +
                     "\n5.Conejo" +
-                    "\n6.Pato");
+                    "\n6.Pato" +
+                    "\n7.Oveja");
             opcion = lector.nextInt();
+            while (!ControlEntrada.controlSelecAnimal(opcion)) {
+                System.out.println("Introduzca un valor entre 1 y 7");
+                opcion = lector.nextInt();
+            }
             return opcion;
         }
         public static Animal animales(int opcion) {
@@ -43,6 +48,10 @@ public class EntradaDatos {
                 case 6:
                     System.out.println("Ha seleccionado pato.\nIntroduzca nombre, color, edad, peso, si esta sana su calidad y su genero");
                     animaldatos = new Pato(lector.nextLine(), lector.nextLine(), lector.nextInt(), lector.nextFloat(), lector.nextBoolean(),lector.nextLine(), lector.nextBoolean());
+                    break;
+                case 7:
+                    System.out.println("Ha seleccionado oveja.\nIntroduzca nombre, color, edad, peso, si esta sana, si da lana, si da queso y su localidad");
+                    animaldatos = new Oveja(lector.nextLine(), lector.nextLine(), lector.nextInt(), lector.nextFloat(), lector.nextBoolean(), lector.nextBoolean(), lector.nextBoolean(), lector.nextLine());
                     break;
                 default:
                     System.out.println("No ha seleccionado ningun animal");
