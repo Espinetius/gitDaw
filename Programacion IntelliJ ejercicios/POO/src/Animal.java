@@ -21,7 +21,7 @@ public class Animal {
 
     @Override
     public String toString() {
-        return this.getClass().getSimpleName()+Granja.numanimales+"{" +
+        return this.getClass().getSimpleName()+"{" +
                 "nombre='" + nombre + '\'' +
                 ", color='" + color + '\'' +
                 ", nacimiento=" + nacimiento +

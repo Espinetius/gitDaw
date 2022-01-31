@@ -1,6 +1,9 @@
 public class POO {
     public static void  main(String[] args) {
-        Animal animal=EntradaDatos.animales(EntradaDatos.seleccionanimal());
-        System.out.println(animal);
+
+        Granja daw = new Granja();
+        EntradaDatos.menuPrincipal(daw);
+        //switch menú ppal;
+        //asdf.altaAnimal(EntradaDatos.animales(EntradaDatos.seleccionanimal()));
         }
 }
