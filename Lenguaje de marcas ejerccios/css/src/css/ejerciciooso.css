@@ -1,0 +1,33 @@
+.menudesplegable a {
+    display: block;
+    padding: 10px 10px;
+    width: 160px;
+    background-color: lightgray;
+    text-indent: 15px;
+    font-size: 0.8em;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.menudesplegable a:hover {
+    background-color: red;
+}
+
+.textoconimagen {
+    background-color: lightskyblue;
+    width: 75%;
+    text-align: justify;
+    padding: 10px;
+    border: 1px solid red;
+    padding: 10px 10px 15px 10px;
+}
+
+.textoconimagen img {
+    margin: 10px;
+    width: 200px;
+    float: right;
+    border: 1px solid red;
+}
+
+img:hover {
+    width: 80%;
+}

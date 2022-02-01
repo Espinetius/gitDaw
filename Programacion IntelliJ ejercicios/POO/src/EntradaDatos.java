@@ -1,12 +1,50 @@
+import java.sql.Array;
 import java.util.Scanner;
 
 public class EntradaDatos {
+        protected static void menuPrincipal(Granja granja){
+            Scanner lector = new Scanner(System.in);
+            String respuesta="si";
+            int opcionmenu;
+            System.out.println("Bienvenido a la granja " +Granja.granja+".");
+            do {
+                System.out.println("\nSeleccione la opcion que desea realizar:" +
+                        "\n1.Introducir animal." +
+                        "\n2.Eliminar animal." +
+                        "\n3.Ver lista de animales." +
+                        "\n4.Salir del programa.");
+                opcionmenu = lector.nextInt();
+                switch (opcionmenu) {
+                    case 1:
+                        if (granja.hayHueco())
+                            granja.altaAnimal(animales(seleccionanimal()));
+                        else
+                            System.out.println("No hay hueco");
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+
+                        break;
+                    case 4:
+                        System.out.println("Muchas gracias por usar el programa");
+                        respuesta="no";
+                        break;
+                }
+                if (opcionmenu!=4) {
+                    lector.nextLine();
+                    System.out.println("Desea introducir otro animal?");
+                    respuesta = lector.nextLine();
+                }
+                } while (ControlEntrada.nextanimal(respuesta)&&opcionmenu==4);
+            System.out.println("cerrando ...");
+
+        }
 
         protected static int seleccionanimal() {
             Scanner lector = new Scanner(System.in);
             int opcion;
-            System.out.println("Bienvenido a la granja " + Granja.granja +
-                    "\nSeleccione un animal del menu para introducirlo:" +
+            System.out.println("Seleccione un animal del menu para introducirlo:" +
                     "\n1.Vaca" +
                     "\n2.Toro" +
                     "\n3.Cerdo" +
@@ -15,7 +53,7 @@ public class EntradaDatos {
                     "\n6.Pato" +
                     "\n7.Oveja");
             opcion = lector.nextInt();
-            while (!ControlEntrada.controlSelecAnimal(opcion)) {
+            while (ControlEntrada.controlSelecAnimal(opcion)) {
                 System.out.println("Introduzca un valor entre 1 y 7");
                 opcion = lector.nextInt();
             }
@@ -58,5 +96,14 @@ public class EntradaDatos {
             }
             return animaldatos;
         }
+        /*
+        public static Granja arrayanimales(){
+            Scanner lector = new Scanner(System.in);
+            System.out.println("Cuantos animales va a tener su granja?");
+            int totalanimales = lector.nextInt();
+            return new Granja(totalanimales);
+        }
+
+         */
 
 }
