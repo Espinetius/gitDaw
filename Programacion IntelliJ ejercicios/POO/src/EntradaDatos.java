@@ -1,18 +1,32 @@
 import java.sql.Array;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class EntradaDatos {
         protected static void menuPrincipal(Granja granja){
+            boolean salida=false;
             Scanner lector = new Scanner(System.in);
             String respuesta="si";
             int opcionmenu;
+            int numanimales;
+            int contadorAnimales=0;
+            int contadorEspacios=0;
             System.out.println("Bienvenido a la granja " +Granja.granja+".");
+            /*
+            System.out.println("Introduzca el numero de animales totales que tendra su granja:");
+            numanimales= lector.nextInt();
+            Granja daw = new Granja(numanimales);
+             */
             do {
                 System.out.println("\nSeleccione la opcion que desea realizar:" +
                         "\n1.Introducir animal." +
-                        "\n2.Eliminar animal." +
-                        "\n3.Ver lista de animales." +
-                        "\n4.Salir del programa.");
+                        "\n2.Eliminar animal. " +
+                        "\n3.Lista de animales." +
+                        "\n4.Listar animales que cumplan dos requisitos indicados por el usuario" +
+                        "\n5.Listar solo los animales del tipo indicado por el usuario." +
+                        "\n6.Modificar algún atributo general de un animal identificado por nombre" +
+                        "\n8.Modificar un atributo específico de algún animal" +
+                        "\n9.Salir del programa.");
                 opcionmenu = lector.nextInt();
                 switch (opcionmenu) {
                     case 1:
@@ -22,21 +36,75 @@ public class EntradaDatos {
                             System.out.println("No hay hueco");
                         break;
                     case 2:
+                        int numanimal;
+                        System.out.println("A continuacion se le dara la lista de animales para que escoja al que quiere dar de baja.");
+                        for (int i = 0; i < Granja.animales.length; i++) {
+                            if (Granja.animales[i]!=null) {
+                                System.out.println(Granja.animales[i]);
+                                contadorAnimales++;
+                            } else {
+                                contadorEspacios++;
+                            }
+                        }
+                        if(contadorEspacios!=0) {
+                            System.out.println("Tienes " + contadorAnimales + " animales y " + contadorEspacios + " espacios aun para mas animales");
+                        } else {
+                            System.out.println("La granja esta llena");
+                        }
+                        System.out.println("Que numero de animal quieres dar de baja?");
+                        numanimal=lector.nextInt()-1;
+                        granja.bajaAnimal(numanimal);
                         break;
                     case 3:
-
+                        System.out.println("A continuacion se muestra la lista de los animales que tiene:");
+                        for (int i = 0; i < Granja.animales.length; i++) {
+                            if (Granja.animales[i] != null) {
+                                System.out.println(Granja.animales[i]);
+                            }
+                        }
                         break;
                     case 4:
+                        System.out.println("Indique dos identificativos para la busqueda de los animales.");
+                        String iden1=lector.nextLine();
+                        String iden2=lector.nextLine();
+                        System.out.println("A continuacion se muestra la lista de los animales que tiene:");
+                        for (int i = 0; i < Granja.animales.length; i++) {
+                            if (Granja.animales[i] != null) {
+                                System.out.println(Granja.animales[i]);
+                            }
+                        }
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        break;
+                    case 7:
+                        break;
+                    case 8:
+                        break;
+                    case 9:
                         System.out.println("Muchas gracias por usar el programa");
                         respuesta="no";
+                        salida = true;
                         break;
                 }
-                if (opcionmenu!=4) {
+                /*if (opcionmenu!=4) {
                     lector.nextLine();
                     System.out.println("Desea introducir otro animal?");
                     respuesta = lector.nextLine();
+                    ControlEntrada.nextanimal(respuesta);
                 }
-                } while (ControlEntrada.nextanimal(respuesta)&&opcionmenu==4);
+                 */
+
+                if (opcionmenu!=9) {
+                    lector.nextLine();
+                    System.out.println("Desea introducir otro animal?");
+                    respuesta = lector.nextLine();
+                    if (respuesta.equals("no")) {
+                        salida=true;
+                    }
+                }
+                } while (salida == false && opcionmenu!=9);
             System.out.println("cerrando ...");
 
         }

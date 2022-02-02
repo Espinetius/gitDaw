@@ -19,6 +19,7 @@ public class Animal {
         this.sano=sano;
     }
 
+
     @Override
     public String toString() {
         return this.getClass().getSimpleName()+"{" +

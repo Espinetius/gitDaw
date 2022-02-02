@@ -1,13 +1,17 @@
+import java.util.Arrays;
+
 public class Granja {
     public static final String granja = "1ª Daw";
-    protected Animal animales[];
+    protected static Animal[] animales;
+
 
     public Granja() {
-        animales = new Animal[100];
-        for (int i = 0; i < animales.length/4; i++) {
-            animales[i] = new Vaca();
+        animales = new Animal[10];
+        for (int i = 0; i < animales.length/5; i++) {
+            animales[i] = new Animal();
         }
     }
+
     public Granja(int total) {
         animales = new Animal[total];
         for (int i = 0; i < total; i++) {
@@ -26,6 +30,12 @@ public class Granja {
             }
         }
     }
+    public void bajaAnimal(int numanimal) {
+            if (animales[numanimal]!=null) {
+                animales[numanimal] = null;
+            }
+
+    }
     public boolean hayHueco() {
         boolean hayHueco=false;
         for (int i = 0; i < animales.length && !hayHueco; i++) {
@@ -35,6 +45,14 @@ public class Granja {
         }
         return hayHueco;
     }
+
+    public String listaAnimales() {
+        return "Granja{" +
+                "\nAnimales:" +
+                "\n" + Arrays.toString(getAnimales()) +
+                '}';
+    }
+
     public Animal[] getAnimales() {
         return animales;
     }

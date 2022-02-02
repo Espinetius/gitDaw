@@ -3,7 +3,6 @@ public class POO {
 
         Granja daw = new Granja();
         EntradaDatos.menuPrincipal(daw);
-        //switch menú ppal;
-        //asdf.altaAnimal(EntradaDatos.animales(EntradaDatos.seleccionanimal()));
+
         }
 }
