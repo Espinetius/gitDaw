@@ -4,10 +4,10 @@ public class Pato extends Animal{
     private boolean genero;
     //Constructores
     public Pato(){
-        this("sin nombre", "sin color", 0, 0, true, "alta",true);
+        this("sin nombre", "sin color", 0, 0, "alta",true);
     }
-    public Pato(String nombre, String color, int nacimiento, float peso, boolean sano, String calidad, boolean genero) {
-        super(nombre, color, nacimiento, peso, sano);
+    public Pato(String nombre, String color, int nacimiento, float peso, String calidad, boolean genero) {
+        super(nombre, color, nacimiento, peso);
         this.calidad=calidad;
         this.genero=genero;
     }

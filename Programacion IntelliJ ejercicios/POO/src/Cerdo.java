@@ -6,10 +6,10 @@ public class Cerdo extends Animal {
         /*super("cerdo","blanco",8,4);
         sano = false;
         raza = "programador";*/
-        this("cerdo","blanco",8,4,false,"desconocida");
+        this("cerdo","blanco",8,4,"desconocida");
     }
-    public Cerdo(String nombre, String color, int nacimiento, float peso, boolean sano, String raza) {
-        super(nombre,color,nacimiento,peso,sano);
+    public Cerdo(String nombre, String color, int nacimiento, float peso, String raza) {
+        super(nombre,color,nacimiento,peso);
         this.raza = raza;
     }
     //--------------------getter(obtener los valores de los atributos)----------------------

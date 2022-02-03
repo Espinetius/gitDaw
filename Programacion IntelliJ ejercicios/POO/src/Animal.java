@@ -3,7 +3,6 @@ public class Animal {
     protected String color;
     protected int nacimiento;
     protected float peso;
-    protected boolean sano;
 
     public Animal() {
         //this.("sin nombre"+numanimales, "sin color", 0, 0, true);
@@ -11,12 +10,11 @@ public class Animal {
         color="sin color";
 
     }
-    public Animal(String nombre, String color, int nacimiento, float peso, boolean sano) {
+    public Animal(String nombre, String color, int nacimiento, float peso) {
         this.nombre = nombre;
         this.color = color;
         this.nacimiento = nacimiento;
         this.peso = peso;
-        this.sano=sano;
     }
 
 
@@ -26,8 +24,7 @@ public class Animal {
                 "nombre='" + nombre + '\'' +
                 ", color='" + color + '\'' +
                 ", nacimiento=" + nacimiento +
-                ", peso=" + peso +
-                ", sano=" + sano;
+                ", peso=" + peso;
     }
 
     public String getNombre() {
@@ -55,8 +52,5 @@ public class Animal {
         this.peso=peso;
     }
 
-    public void setSano(boolean sano) {this.sano=sano;}
-
-    public boolean getSano() { return sano;}
 
 }

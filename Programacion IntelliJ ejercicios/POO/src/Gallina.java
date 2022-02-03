@@ -6,15 +6,15 @@ public class Gallina extends  Animal {
 
     public Gallina() {
         //this("sin nombre", "sin color", 0, 0, true, true, true);
-        super("sin nombre", "sin color", 0, 0, true);
+        super("sin nombre", "sin color", 0, 0);
         raza = "ligera";
         ponedora = true;
 
     }
 
     //------------------- constructor con entrada de datos por teclado
-    public Gallina(String nombre, String color, int edad, float peso, boolean sano, String raza) {
-        super(nombre, color, edad, peso, sano);
+    public Gallina(String nombre, String color, int edad, float peso, String raza) {
+        super(nombre, color, edad, peso);
         this.raza = raza;
         if (raza.equalsIgnoreCase("ligera")) {
             ponedora = true;

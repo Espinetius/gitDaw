@@ -3,10 +3,10 @@ public class Conejo extends  Animal{
     private boolean estado; //domestico o no domestico
     //constructores
      public Conejo(){
-         this("nombre", "color", 0, 0, true, "raza", true);
+         this("nombre", "color", 0, 0, "raza", true);
     }
-    public Conejo(String nombre, String color,int nacimiento, float peso, boolean sano, String raza, boolean estado) {
-        super(nombre,color,nacimiento,peso,sano);
+    public Conejo(String nombre, String color,int nacimiento, float peso, String raza, boolean estado) {
+        super(nombre,color,nacimiento,peso);
         this.raza = raza;
         this.estado = estado;
     }

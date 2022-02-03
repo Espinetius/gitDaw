@@ -6,11 +6,11 @@ public class Oveja extends Animal {
     
     //---------------constructores
     public Oveja(){
-        this("oveja", "color", 0, 0,true,true,true,"localidad");
+        this("oveja", "color", 0, 0,true,true,"localidad");
 
     }
-    public Oveja (String nombre, String color, int edad, float peso, boolean sano, boolean lana, boolean queso, String localidad){
-        super(nombre,color, edad, peso, sano);
+    public Oveja (String nombre, String color, int edad, float peso, boolean lana, boolean queso, String localidad){
+        super(nombre,color, edad, peso);
         this.lana=lana;
         this.queso=queso;
         this.localidad=localidad;

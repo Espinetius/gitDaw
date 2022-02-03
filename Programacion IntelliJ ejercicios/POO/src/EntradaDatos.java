@@ -3,20 +3,21 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class EntradaDatos {
+    protected  static  int numeanimales() {
+        Scanner lector = new Scanner(System.in);
+        int numanimales;
+        System.out.println("Bienvenido a la granja " +Granja.granja+".");
+        System.out.println("Introduzca el numero de animales totales que tendra su granja:");
+        numanimales= lector.nextInt();
+        return numanimales;
+    }
         protected static void menuPrincipal(Granja granja){
             boolean salida=false;
             Scanner lector = new Scanner(System.in);
             String respuesta="si";
             int opcionmenu;
-            int numanimales;
             int contadorAnimales=0;
             int contadorEspacios=0;
-            System.out.println("Bienvenido a la granja " +Granja.granja+".");
-            /*
-            System.out.println("Introduzca el numero de animales totales que tendra su granja:");
-            numanimales= lector.nextInt();
-            Granja daw = new Granja(numanimales);
-             */
             do {
                 System.out.println("\nSeleccione la opcion que desea realizar:" +
                         "\n1.Introducir animal." +
@@ -60,14 +61,22 @@ public class EntradaDatos {
                         for (int i = 0; i < Granja.animales.length; i++) {
                             if (Granja.animales[i] != null) {
                                 System.out.println(Granja.animales[i]);
+                                contadorAnimales++;
+                            } else {
+                                contadorEspacios++;
                             }
+                        }
+                        if(contadorEspacios!=0) {
+                            System.out.println("Tienes " + contadorAnimales + " animales y " + contadorEspacios + " espacios aun para mas animales");
+                        } else {
+                            System.out.println("La granja esta llena");
                         }
                         break;
                     case 4:
                         System.out.println("Indique dos identificativos para la busqueda de los animales.");
                         String iden1=lector.nextLine();
                         String iden2=lector.nextLine();
-                        System.out.println("A continuacion se muestra la lista de los animales que tiene:");
+                        System.out.println("A continuacion se muestra la lista de los animales que tienen esos identificativos:");
                         for (int i = 0; i < Granja.animales.length; i++) {
                             if (Granja.animales[i] != null) {
                                 System.out.println(Granja.animales[i]);
@@ -95,16 +104,15 @@ public class EntradaDatos {
                     ControlEntrada.nextanimal(respuesta);
                 }
                  */
-
                 if (opcionmenu!=9) {
                     lector.nextLine();
-                    System.out.println("Desea introducir otro animal?");
+                    System.out.println("Desea continuar?");
                     respuesta = lector.nextLine();
                     if (respuesta.equals("no")) {
                         salida=true;
                     }
                 }
-                } while (salida == false && opcionmenu!=9);
+                } while (!salida);
             System.out.println("cerrando ...");
 
         }
@@ -133,31 +141,31 @@ public class EntradaDatos {
             switch (opcion) {
                 case 1:
                     System.out.println("Ha seleccionado vaca.\nIntroduzca nombre, color, edad, peso, si esta sana si produce leche o no");
-                    animaldatos = new Vaca(lector.next(), lector.next(), lector.nextInt(), lector.nextFloat(), lector.nextBoolean(), lector.nextBoolean());
+                    animaldatos = new Vaca(lector.next(), lector.next(), lector.nextInt(), lector.nextFloat(), lector.nextBoolean());
                     break;
                 case 2:
                     System.out.println("Ha seleccionado toro.\nIntroduzca nombre, color, edad, peso, si esta sana si es toreable y su nivel de brabura");
-                    animaldatos = new Toro(lector.nextLine(), lector.nextLine(), lector.nextInt(), lector.nextFloat(), lector.nextBoolean(), lector.nextBoolean(), lector.nextLine());
+                    animaldatos = new Toro(lector.nextLine(), lector.nextLine(), lector.nextInt(), lector.nextFloat(), lector.nextBoolean(), lector.nextLine());
                     break;
                 case 3:
                     System.out.println("Ha seleccionado cerdo.\nIntroduzca nombre, color, edad, peso, si esta sana su raza");
-                    animaldatos = new Cerdo(lector.nextLine(), lector.nextLine(), lector.nextInt(), lector.nextFloat(), lector.nextBoolean(), lector.nextLine());
+                    animaldatos = new Cerdo(lector.nextLine(), lector.nextLine(), lector.nextInt(), lector.nextFloat(), lector.nextLine());
                     break;
                 case 4:
                     System.out.println("Ha seleccionado gallina.\nIntroduzca nombre, color, edad, peso, si esta sana y su raza");
-                    animaldatos = new Gallina(lector.nextLine(), lector.nextLine(), lector.nextInt(), lector.nextFloat(), lector.nextBoolean(), lector.nextLine());
+                    animaldatos = new Gallina(lector.nextLine(), lector.nextLine(), lector.nextInt(), lector.nextFloat(), lector.nextLine());
                     break;
                 case 5:
                     System.out.println("Ha seleccionado conejo.\nIntroduzca nombre, color, edad, peso, si esta sana su raza y su estado si es domestico o no");
-                    animaldatos = new Conejo(lector.nextLine(), lector.nextLine(), lector.nextInt(), lector.nextFloat(), lector.nextBoolean(),lector.nextLine(), lector.nextBoolean());
+                    animaldatos = new Conejo(lector.nextLine(), lector.nextLine(), lector.nextInt(), lector.nextFloat(),lector.nextLine(), lector.nextBoolean());
                     break;
                 case 6:
                     System.out.println("Ha seleccionado pato.\nIntroduzca nombre, color, edad, peso, si esta sana su calidad y su genero");
-                    animaldatos = new Pato(lector.nextLine(), lector.nextLine(), lector.nextInt(), lector.nextFloat(), lector.nextBoolean(),lector.nextLine(), lector.nextBoolean());
+                    animaldatos = new Pato(lector.nextLine(), lector.nextLine(), lector.nextInt(), lector.nextFloat(),lector.nextLine(), lector.nextBoolean());
                     break;
                 case 7:
                     System.out.println("Ha seleccionado oveja.\nIntroduzca nombre, color, edad, peso, si esta sana, si da lana, si da queso y su localidad");
-                    animaldatos = new Oveja(lector.nextLine(), lector.nextLine(), lector.nextInt(), lector.nextFloat(), lector.nextBoolean(), lector.nextBoolean(), lector.nextBoolean(), lector.nextLine());
+                    animaldatos = new Oveja(lector.nextLine(), lector.nextLine(), lector.nextInt(), lector.nextFloat(), lector.nextBoolean(), lector.nextBoolean(), lector.nextLine());
                     break;
                 default:
                     System.out.println("No ha seleccionado ningun animal");

@@ -4,10 +4,10 @@ public class Vaca extends Animal {
     //----------------------------CONSTRUCTORES----------------------
 
     public Vaca() {
-        this("vaca","color",1,1,true,false);
+        this("vaca","color",1,1,false);
     }
-    public Vaca(String nombre, String color, int nacimiento, float peso, boolean sano, boolean lechera) {
-        super(nombre, color, nacimiento, peso, sano);
+    public Vaca(String nombre, String color, int nacimiento, float peso, boolean lechera) {
+        super(nombre, color, nacimiento, peso);
         this.lechera = lechera;
 
     }

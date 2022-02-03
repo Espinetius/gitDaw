@@ -3,10 +3,10 @@ public class Toro extends Animal {
     private String brabura; //baja,media,alta
     //----------------------------CONSTRUCTORES----------------------
     public Toro() {
-        this("toro", "color", 1, 1, true, false, "baja");
+        this("toro", "color", 1, 1, false, "baja");
     }
-    public Toro(String nombre, String color, int edad, float peso, boolean sano, boolean toreable, String brabura) {
-        super(nombre, color, edad, peso, sano);
+    public Toro(String nombre, String color, int edad, float peso, boolean toreable, String brabura) {
+        super(nombre, color, edad, peso);
         this.toreable = toreable;
         this.brabura = brabura;
     }

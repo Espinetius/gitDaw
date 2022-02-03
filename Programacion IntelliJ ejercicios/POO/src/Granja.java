@@ -15,7 +15,8 @@ public class Granja {
     public Granja(int total) {
         animales = new Animal[total];
         for (int i = 0; i < total; i++) {
-            animales[i] = EntradaDatos.animales((int)(Math.random()*7+1));
+            animales[i] = null;
+                    //EntradaDatos.animales((int)(Math.random()*7+1));
         }
     }
     public Granja(Animal[] animales) {
