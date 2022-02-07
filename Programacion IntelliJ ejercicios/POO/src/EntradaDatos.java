@@ -29,6 +29,7 @@ public class EntradaDatos {
                         "\n8.Modificar un atributo específico de algún animal" +
                         "\n9.Salir del programa.");
                 opcionmenu = lector.nextInt();
+                lector.nextLine();
                 switch (opcionmenu) {
                     case 1:
                         if (granja.hayHueco())
@@ -79,8 +80,13 @@ public class EntradaDatos {
                         System.out.println("A continuacion se muestra la lista de los animales que tienen esos identificativos:");
                         for (int i = 0; i < Granja.animales.length; i++) {
                             if (Granja.animales[i] != null) {
-                                System.out.println(Granja.animales[i]);
+                            switch (iden1) {
+                                case 
+                                        Granja.animales[i].getClass().getName().equalsIgnoreCase(iden1):
+                                    System.out.println(Granja.animales[i]);
+                                }
                             }
+                        }
                         }
                         break;
                     case 5:

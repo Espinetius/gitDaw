@@ -8,7 +8,7 @@ public class Granja {
     public Granja() {
         animales = new Animal[10];
         for (int i = 0; i < animales.length/5; i++) {
-            animales[i] = new Animal();
+            animales[i] = new Vaca();
         }
     }
 
