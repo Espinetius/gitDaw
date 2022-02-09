@@ -1,4 +1,4 @@
-public class Locales extends Llamadas{
+public class Local extends Llamada {
     /**
      * el precio esta definido en el ejercicio
      */
@@ -7,7 +7,12 @@ public class Locales extends Llamadas{
     /**
      * el precio es de 15 centimos/sec
      */
-    public Locales(){
+    public Local() {
+        super();
+        precio=15;
+    }
+    public Local(int tiempo){
+        super(tiempo);
         precio=15;
     }
 
@@ -23,7 +28,7 @@ public class Locales extends Llamadas{
     @Override
     public String toString() {
         return super.toString() +
-                "precio=" + 15 +
+                ", precio=" + 15 +
                 '}';
     }
 }

@@ -1,14 +1,15 @@
-public class Provinciales extends Llamadas{
+public class Provincial extends Llamada {
     protected int franja;
-    public Provinciales() {
+    public Provincial() {
+        super();
         franja= (int) (Math.random()*3);
     }
-    public Provinciales(int franja) {
+    public Provincial(int franja) {
         this.franja=franja;
     }
 
-    public Provinciales(int numEntr, int numDest, double tiempo, int franja) {
-        super(numEntr, numDest, tiempo);
+    public Provincial(double tiempo, int franja) {
+        super(tiempo);
         this.franja=franja;
     }
 
@@ -27,8 +28,8 @@ public class Provinciales extends Llamadas{
     @Override
     public String toString() {
         return super.toString() +
-                "franja=" + franja +
-                "precio=" + precio()/tiempo +
+                ", franja=" + franja +
+                ", precio=" + precio()/tiempo +
                 '}';
     }
 }

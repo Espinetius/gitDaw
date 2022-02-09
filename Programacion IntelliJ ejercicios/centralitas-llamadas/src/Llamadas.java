@@ -1,46 +1,35 @@
-public abstract class Llamadas {
-    /**
-     * atributos de la clase llamadas.
-     * el precio sera en centimos
-     * el tiempo es opr segundos.
-     */
-    protected int numEntr;
-    protected int numDest;
-    protected double tiempo;
+import java.util.Arrays;
 
-
-    /**
-     * constructor base para llamadas
-     */
+public class Llamadas {
+    protected Llamada[] arrayllamadas;
+    public Llamadas(Llamada[] arrayllamadas) {
+        this.arrayllamadas=arrayllamadas;
+    }
     public Llamadas() {
-        this(50);
-
+        arrayllamadas= new Llamada[5];
+        for (int i = 0; i< arrayllamadas.length; i++) {
+            if (i%2==0) {
+                arrayllamadas[i]= new Local();
+            } else {
+                arrayllamadas[i]= new Provincial();
+            }
+        }
     }
-
-    /**
-     * constructor especifico de llamdas segun el tiempo
-     */
-    public Llamadas(double tiempo) {
-        numEntr=(int)(Math.random()*100000000);
-        numDest=(int)(Math.random()*100000000);
-        this.tiempo = tiempo;
-
+    public void infollamadas() {
+        for (int i = 0; i < arrayllamadas.length; i++) {
+            System.out.println(arrayllamadas[i]);
+        }
     }
+    public void preciollamadas() {
+        for (int i = 0; i < arrayllamadas.length; i++) {
+            System.out.println(arrayllamadas[i].precio());
+        }
 
-    public Llamadas(int numEntr, int numDest, double tiempo) {
-        this.numEntr = numEntr;
-        this.numDest = numDest;
-        this.tiempo = tiempo;
     }
 
     @Override
     public String toString() {
-        return getClass().getSimpleName() +
-                "numEntr=" + numEntr +
-                ", numDest=" + numDest +
-                ", tiempo=" + tiempo;
+        return "Llamadas:" +
+                "\narrayllamadas=" + Arrays.toString(arrayllamadas);
     }
-
-    public abstract double precio();
-
 }

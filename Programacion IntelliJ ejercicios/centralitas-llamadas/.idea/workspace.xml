@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d886d3d-01d5-451e-9e70-46e8ab31b50e" name="Changes" comment="7/02/2022&#10;herencia y polimorfismo&#10;el ultimo ej es el de la centralita">
-      <change beforePath="$PROJECT_DIR$/../../BDD SQL base de datos/VENDEDORES.SQL" beforeDir="false" afterPath="$PROJECT_DIR$/../../BDD SQL base de datos/VENDEDORES.SQL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Llamada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Centralita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Centralita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Llamadas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Llamadas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Locales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Local.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Provinciales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Provincial.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +49,24 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../herenciafiguras" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Centralita" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Centralita" />
+      <module name="centralitas-llamadas" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Centralita" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
