@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d886d3d-01d5-451e-9e70-46e8ab31b50e" name="Changes" comment="7/02/2022&#10;herencia y polimorfismo&#10;el ultimo ej es el de la centralita" />
+    <list default="true" id="4d886d3d-01d5-451e-9e70-46e8ab31b50e" name="Changes" comment="7/02/2022&#10;herencia y polimorfismo&#10;el ultimo ej es el de la centralita">
+      <change beforePath="$PROJECT_DIR$/../../BDD SQL base de datos/VENDEDORES.SQL" beforeDir="false" afterPath="$PROJECT_DIR$/../../BDD SQL base de datos/VENDEDORES.SQL" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
