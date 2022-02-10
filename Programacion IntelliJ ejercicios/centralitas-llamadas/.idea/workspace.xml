@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d886d3d-01d5-451e-9e70-46e8ab31b50e" name="Changes" comment="7/02/2022&#10;herencia y polimorfismo&#10;el ultimo ej es el de la centralita">
-      <change afterPath="$PROJECT_DIR$/src/Llamada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Centralita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Centralita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Llamadas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Llamadas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Locales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Local.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Provinciales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Provincial.java" afterDir="false" />
-    </list>
+    <list default="true" id="4d886d3d-01d5-451e-9e70-46e8ab31b50e" name="Changes" comment="9/02/2022&#10;herencia y polimorfismo&#10;centralita" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +39,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -84,7 +78,21 @@
       <option name="project" value="LOCAL" />
       <updated>1644234671036</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="9/02/2022&#10;herencia y polimorfismo&#10;centralita">
+      <created>1644406449667</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1644406449667</updated>
+    </task>
+    <task id="LOCAL-00003" summary="9/02/2022&#10;herencia y polimorfismo&#10;centralita">
+      <created>1644406479018</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1644406479018</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,6 +109,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="7/02/2022&#10;herencia y polimorfismo&#10;el ultimo ej es el de la centralita" />
-    <option name="LAST_COMMIT_MESSAGE" value="7/02/2022&#10;herencia y polimorfismo&#10;el ultimo ej es el de la centralita" />
+    <MESSAGE value="9/02/2022&#10;herencia y polimorfismo&#10;centralita" />
+    <option name="LAST_COMMIT_MESSAGE" value="9/02/2022&#10;herencia y polimorfismo&#10;centralita" />
   </component>
 </project>
