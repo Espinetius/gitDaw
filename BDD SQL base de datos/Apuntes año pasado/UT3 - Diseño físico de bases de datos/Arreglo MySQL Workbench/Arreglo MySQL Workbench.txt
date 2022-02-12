@@ -1,0 +1,8 @@
+ARREGLO DEL FALLO POR EL CUÁL MySQL Workbench no muestra el icono de llave roja (clave primaria y ajena a la vez) en sus diagramas:
+
+Copia la imagen corregida a esta carpeta:
+
+[tu carpeta de Archivos de Programa] > MySQL > MySQL Workbench > images > grt > structs
+
+Reemplazando la imagen existente, que ocupa demasiado y por eso no se muestra.
+

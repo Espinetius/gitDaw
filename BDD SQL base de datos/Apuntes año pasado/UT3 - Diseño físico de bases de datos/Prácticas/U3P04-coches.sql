@@ -1,0 +1,20 @@
+INSERT INTO COCHES.COCHES (modelo,potencia,fecha,precio,disponible,observaciones) VALUES ('afent',100,'2009-12-12',14500,true,'buena relación calidad precio');
+INSERT INTO `COCHES` (modelo,potencia,fecha,precio,disponible,observaciones) VALUES ('clio',70,'2009-12-12',6500,true,'airbag lateral');
+INSERT INTO `COCHES` (modelo,potencia,fecha,precio,disponible,observaciones) VALUES ('fiat brava',90,'2009-12-12',0.0,false,'fuera de existencias');
+INSERT INTO `COCHES` (modelo,potencia,fecha,precio,disponible,observaciones) VALUES ('fiat punto',70,'2005-09-09',5500,true,'coche urbano');
+INSERT INTO `COCHES` (modelo,potencia,fecha,precio,disponible,observaciones) VALUES ('ford focus',89,'2010-01-01',12800,true,'altas prestacones');
+INSERT INTO `COCHES` (modelo,potencia,fecha,precio,disponible,observaciones) VALUES ('kia rio',90,'2010-03-01',9000,true,'buena relación calidad precio');
+INSERT INTO `COCHES` (modelo,potencia,fecha,precio,disponible,observaciones) VALUES ('laguna',200,'2007-03-05',12500,false,'mucho espacio');
+INSERT INTO `COCHES` (modelo,potencia,fecha,precio,disponible,observaciones) VALUES ('marbella',65,'2003-01-02',4000,1,'el mas económico');
+INSERT INTO `COCHES` (modelo,potencia,fecha,precio,disponible,observaciones) VALUES ('megane',100,'2008-10-13',12000,1,'confort');
+INSERT INTO `COCHES` (modelo,potencia,fecha,precio,disponible,observaciones) VALUES ('mercedes 300',150,'2001-10-15',25000,1,'coche de alto standing');
+INSERT INTO `COCHES` (modelo,potencia,fecha,precio,disponible,observaciones) VALUES ('mercedes 500',200,'2003-08-16',40000,1,'buenísimo');
+INSERT INTO `COCHES` (modelo,potencia,fecha,precio,disponible,observaciones) VALUES ('opel kadet',89,'1999-12-12',6000,1,'buen precio');
+INSERT INTO `COCHES` (modelo,potencia,fecha,precio,disponible,observaciones) VALUES ('r-18',80,'1995-11-12',6000,1,'buen coche');
+INSERT INTO `COCHES` (modelo,potencia,fecha,precio,disponible,observaciones) VALUES ('santa fe',150,'1999-12-12',18500,1,'altas prestaciones');
+INSERT INTO `COCHES` (modelo,potencia,fecha,precio,disponible,observaciones) VALUES ('santia',200,'2006-12-12',12000,1,'economico');
+INSERT INTO `COCHES` (modelo,potencia,fecha,precio,disponible,observaciones) VALUES ('smart',60,'2008-03-04',9000,0,'no requiere carnet');
+INSERT INTO `COCHES` (modelo,potencia,fecha,precio,disponible,observaciones) VALUES ('space',200,'2010-04-05',18000,1,'gran tamaño');
+INSERT INTO `COCHES` (modelo,potencia,fecha,precio,disponible,observaciones) VALUES ('toledo',150,'2009-03-05',17500,1,'metalizado');
+INSERT INTO `COCHES` (modelo,potencia,fecha,precio,disponible) VALUES ('toyota corola',100,'2010-01-01',18000,1);
+
