@@ -5,8 +5,8 @@ public class Movimiento {
 		this(new Posicion(), new Posicion());
 	}
 	public Movimiento(Posicion posInicial, Posicion posFinal) {
-				this.posInicial = posInicial;
-				this.posFinal = posFinal;
+		this.posInicial = posInicial;
+		this.posFinal = posFinal;
 	}
 	public boolean esVertical() {
 		boolean vertical=false;
@@ -46,6 +46,11 @@ public class Movimiento {
 		return saltoVertical;
 	}
 
-
-
+	@Override
+	public String toString() {
+		return "Movimiento{" +
+				"posInicial=" + posInicial +
+				", posFinal=" + posFinal +
+				'}';
+	}
 }
