@@ -17,7 +17,5 @@ public abstract class Pieza {
 	public abstract String pintarPieza();
 
 	@Override
-	public String toString() {
-		return "Pieza -> " +color;
-	}
+	public abstract String toString();
 }
