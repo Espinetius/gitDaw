@@ -7,10 +7,10 @@ public class Torre extends Pieza{
     @Override
     public boolean validoMovimiento(Movimiento mov) {
        boolean respuesta=false;
-       if (mov.esVertical()||mov.esVertical()) {
+       if (mov.esVertical()||mov.esHorizontal()) {
            respuesta=true;
        }
-       return true;
+       return respuesta;
     }
     public String pintarPieza() {
         return nombre="Torre";
@@ -18,6 +18,12 @@ public class Torre extends Pieza{
 
     @Override
     public String toString() {
-        return super.toString() + " " + pintarPieza();
+        String pieza;
+        if (color.equalsIgnoreCase("blanco")){
+            pieza="\u2656 ";
+        } else {
+            pieza="\u265C ";
+        }
+        return pieza;
     }
 }

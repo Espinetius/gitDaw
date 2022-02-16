@@ -24,7 +24,7 @@ public class Movimiento {
 	}
 	public boolean esDiagonal() {
 		boolean diagonal = false;
-		if (saltoHorizontal()==saltoVertical()) {
+		if (Math.abs(saltoHorizontal())==Math.abs(saltoVertical())) {
 			diagonal=true;
 		}
 		return diagonal;
@@ -32,19 +32,14 @@ public class Movimiento {
 	public int saltoHorizontal() {
 		int saltoHorizontal;
 		saltoHorizontal= posFinal.columna - posInicial.columna;
-		if (saltoHorizontal<0) {
-			saltoHorizontal = posInicial.columna - posFinal.columna;
-		}
 		return  saltoHorizontal;
 	}
 	public int saltoVertical() {
 		int saltoVertical;
 		saltoVertical= posFinal.fila - posInicial.fila;
-		if (saltoVertical<0) {
-			saltoVertical = posInicial.fila - posFinal.fila;
-		}
 		return saltoVertical;
 	}
+
 
 	@Override
 	public String toString() {
