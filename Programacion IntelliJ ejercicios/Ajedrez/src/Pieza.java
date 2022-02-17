@@ -8,9 +8,9 @@ public abstract class Pieza {
 
 	public Pieza(String color) {
 		if (color.equalsIgnoreCase("blanco")) {
-			color = "blanco";
+			this.color = "blanco";
 		} else if (color.equalsIgnoreCase("negro")) {
-			color= "negro";
+			this.color= "negro";
 		}
 	}
 	public abstract boolean validoMovimiento(Movimiento mov);

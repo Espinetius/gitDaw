@@ -25,7 +25,7 @@ public class Tablero {
 				if (tablero[i][j]!=null) {
 					System.out.print(tablero[i][j].toString());
 				} else {
-					System.out.println(" ");
+					System.out.print(" ");
 				}
 			}
 			System.out.println();
@@ -33,12 +33,10 @@ public class Tablero {
 	}
 	public boolean hayPieza(int fila, int columna) {
 		boolean respuesta = false;
-		boolean salida = false;
-		for (int i = 0; i < 8 && !salida; i++) {
-			for (int j = 0; j < 8 && !salida; j++) {
+		for (int i = 0; i < 8 && !respuesta; i++) {
+			for (int j = 0; j < 8 && !respuesta; j++) {
 				if (tablero[fila][columna]!=null) {
 					respuesta = true;
-					salida = true;
 				}
 			}
 		}
@@ -46,16 +44,42 @@ public class Tablero {
 	}
 	public boolean hayPieza(Posicion pos) {
 		boolean respuesta =false;
-		boolean salida = false;
-		for (int i = 0; i < 8 && !salida; i++) {
-			for (int j = 0; j < 8 && !salida; j++) {
+		for (int i = 0; i < 8 && !respuesta; i++) {
+			for (int j = 0; j < 8 && !respuesta; j++) {
 				if (tablero[pos.getFila()][pos.getColumna()]!=null) {
 					respuesta=true;
-					salida=true;
 				}
 			}
 		}
 		return respuesta;
 	}
-
+	public boolean hayPiezasEntre(Movimiento mov) {
+		boolean respuesta = false;
+		for (int i = mov.posInicial.fila; i <= mov.posFinal.fila && !respuesta; i++) {
+			for (int j = mov.posInicial.columna; j <= mov.posFinal.columna && !respuesta; j++) {
+				if (tablero[i][j]!=null) {
+					respuesta=true;
+				}
+			}
+		}
+		return respuesta;
+	}
+	public void ponPieza(Pieza figura, int fila, int columna) {
+		tablero[fila][columna]=figura;
+	}
+	public void ponPieza(Pieza figura, Posicion pos) {
+		tablero[pos.getFila()][pos.getColumna()]=figura;
+	}
+	public void quitarPieza(int fila, int columna) {
+		tablero[fila][columna]=null;
+	}
+	public void quitarPieza(Posicion pos) {
+		tablero[pos.getFila()][pos.getColumna()]=null;
+	}
+	public Pieza devuelvePieza(int fila, int columna) {
+		return tablero[fila][columna];
+	}
+	public Pieza devuelvePieza(Posicion pos) {
+		return tablero[pos.getFila()][pos.getColumna()];
+	}
 }
