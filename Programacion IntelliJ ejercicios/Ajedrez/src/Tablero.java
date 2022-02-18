@@ -1,23 +1,29 @@
 public class Tablero {
 	Pieza tablero[][]=new Pieza[8][8];
 	public Tablero() {
-		tablero[0][0] = new Torre("negro");
-		tablero[0][1] = new Caballo("negro");
-		tablero[0][2] = new Alfil("negro");
-		tablero[0][3] = new Reina("negro");
-		tablero[0][4] = new Rey("negro");
-		tablero[0][5] = new Alfil("negro");
-		tablero[0][6] = new Caballo("negro");
-		tablero[0][7] = new Torre("negro");
+		tablero[0][0] = new Torre("blanco");
+		tablero[0][1] = new Caballo("blanco");
+		tablero[0][2] = new Alfil("blanco");
+		tablero[0][3] = new Reina("blanco");
+		tablero[0][4] = new Rey("blanco");
+		tablero[0][5] = new Alfil("blanco");
+		tablero[0][6] = new Caballo("blanco");
+		tablero[0][7] = new Torre("blanco");
+		for (int i = 0; i < 8; i++) {
+			tablero[1][i] = new Peon ("blanco");
+		}
 
-		tablero[7][0] = new Torre("blanco");
-		tablero[7][1] = new Caballo("blanco");
-		tablero[7][2] = new Alfil("blanco");
-		tablero[7][3] = new Reina("blanco");
-		tablero[7][4] = new Rey("blanco");
-		tablero[7][5] = new Alfil("blanco");
-		tablero[7][6] = new Caballo("blanco");
-		tablero[7][7] = new Torre("blanco");
+		tablero[7][0] = new Torre("negro");
+		tablero[7][1] = new Caballo("negro");
+		tablero[7][2] = new Alfil("negro");
+		tablero[7][3] = new Reina("negro");
+		tablero[7][4] = new Rey("negro");
+		tablero[7][5] = new Alfil("negro");
+		tablero[7][6] = new Caballo("negro");
+		tablero[7][7] = new Torre("negro");
+		for (int i = 0; i < 8; i++) {
+			tablero[6][i] = new Peon ("negro");
+		}
 	}
 	public void pintartablero() {
 		for (int i = 0; i < 8; i++) {
@@ -25,7 +31,7 @@ public class Tablero {
 				if (tablero[i][j]!=null) {
 					System.out.print(tablero[i][j].toString());
 				} else {
-					System.out.print(" ");
+					System.out.print("   ");
 				}
 			}
 			System.out.println();

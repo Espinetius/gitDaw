@@ -10,16 +10,17 @@ public class Juego {
         this.turno = turno;
     }*/
     public Movimiento jugada(String jugadaString, Tablero tablero) {
-        Scanner lector = new Scanner(System.in);
-        jugadaString = lector.nextLine();
+        Movimiento mov= null;
         int[] jugadaArray =new int[jugadaString.length()];
-        for (int i = 0; i < jugadaString.length(); i++) {
-            jugadaArray[i]=jugadaString.indexOf(i);
-        }
+        jugadaArray[0] = jugadaString.charAt(1)-49;//fila inicial
+        jugadaArray[1] = jugadaString.charAt(0)-65;//col inicial
+        jugadaArray[2] = jugadaString.charAt(3)-49;//fila final
+        jugadaArray[3] = jugadaString.charAt(2)-65; //col final
+        //Hasta que no esté todo ok no creo mov
         Posicion ini = new Posicion(jugadaArray[0],jugadaArray[1]);
         Posicion fin = new Posicion(jugadaArray[2],jugadaArray[3]);
-        Movimiento jugada = new Movimiento(ini, fin);
+        mov = new Movimiento(ini, fin);
         turno++;
-        return jugada;
+        return mov;
     }
 }
