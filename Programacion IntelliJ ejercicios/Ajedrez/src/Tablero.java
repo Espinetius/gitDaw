@@ -31,7 +31,8 @@ public class Tablero {
 				if (tablero[i][j]!=null) {
 					System.out.print(tablero[i][j].toString());
 				} else {
-					System.out.print("   ");
+					tablero[i][j]= '\u25a0';
+					System.out.print(tablero[i][j]);
 				}
 			}
 			System.out.println();
