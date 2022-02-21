@@ -31,7 +31,7 @@ public class Tablero {
 				if (tablero[i][j]!=null) {
 					System.out.print(tablero[i][j].toString());
 				} else {
-					System.out.print("   ");
+					System.out.print("  ");
 				}
 			}
 			System.out.println();
