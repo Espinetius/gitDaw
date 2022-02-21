@@ -31,12 +31,9 @@ public class Tablero {
 				if (tablero[i][j]!=null) {
 					System.out.print(tablero[i][j].toString());
 				} else {
-<<<<<<< HEAD
 					System.out.print("  ");
-=======
-					tablero[i][j]= '\u25a0';
-					System.out.print(tablero[i][j]);
->>>>>>> a1f393b45e7fb95d1da6636d97eeb424fa6e924d
+					//tablero[i][j]= '\u25a0 ';
+					//System.out.print(tablero[i][j]);
 				}
 			}
 			System.out.println();
