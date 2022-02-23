@@ -26,18 +26,21 @@ public class Tablero {
 		}
 	}
 	public void pintartablero() {
+		System.out.println(" |\tA\tB\tC\tD\tE\tF\tG\tH\t|");
+		System.out.println("-| -- -- -- -- -- -- -- -- -- -- -- |");
 		for (int i = 0; i < 8; i++) {
+			System.out.print(i+1+"|\t");
 			for (int j = 0; j < 8; j++) {
 				if (tablero[i][j]!=null) {
-					System.out.print(tablero[i][j].toString());
+					System.out.print(tablero[i][j].toString()+"\t");
 				} else {
-					System.out.print("  ");
-					//tablero[i][j]= '\u25a0 ';
-					//System.out.print(tablero[i][j]);
+					System.out.print("\t");
+
 				}
 			}
-			System.out.println();
+			System.out.println("|");
 		}
+		System.out.println("-| -- -- -- -- -- -- -- -- -- -- -- |");
 	}
 	public boolean hayPieza(int fila, int columna) {
 		boolean respuesta = false;
@@ -63,13 +66,36 @@ public class Tablero {
 	}
 	public boolean hayPiezasEntre(Movimiento mov) {
 		boolean respuesta = false;
-		for (int i = mov.posInicial.fila; i <= mov.posFinal.fila && !respuesta; i++) {
-			for (int j = mov.posInicial.columna; j <= mov.posFinal.columna && !respuesta; j++) {
-				if (tablero[i][j]!=null) {
+		int aux;
+		int filamenor = mov.posInicial.fila;
+		int filamayor = mov.posFinal.fila;
+		int colmenor = mov.posInicial.columna;
+		int colmayor = mov. posFinal.columna;
+		if (mov.esVertical()) {
+			if (filamenor > filamayor) {
+				aux = filamenor;
+				filamenor = filamayor;
+				filamayor = aux;
+			}
+			for (int i = filamenor +1 ; i < filamayor && !respuesta; i++) {
+				if (tablero!=null) {
+					respuesta = true;
+				}
+			}
+		} else if (mov.esHorizontal()) {
+			if (colmenor>colmayor) {
+				aux = colmenor;
+				colmenor=colmayor;
+				aux= colmayor;
+			}
+			for (int i = colmenor + 1; i < colmayor; i++) {
+				if (tablero!=null) {
 					respuesta=true;
 				}
 			}
 		}
+
+
 		return respuesta;
 	}
 	public void ponPieza(Pieza figura, int fila, int columna) {
