@@ -12,7 +12,6 @@ public class Tablero {
 		for (int i = 0; i < 8; i++) {
 			tablero[1][i] = new Peon ("blanco");
 		}
-
 		tablero[7][0] = new Torre("negro");
 		tablero[7][1] = new Caballo("negro");
 		tablero[7][2] = new Alfil("negro");
@@ -35,7 +34,6 @@ public class Tablero {
 					System.out.print(tablero[i][j].toString()+"\t");
 				} else {
 					System.out.print("\t");
-
 				}
 			}
 			System.out.println("|");

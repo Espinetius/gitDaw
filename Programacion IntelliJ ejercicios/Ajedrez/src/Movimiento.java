@@ -39,8 +39,6 @@ public class Movimiento {
 		saltoVertical= posFinal.fila - posInicial.fila;
 		return saltoVertical;
 	}
-
-
 	@Override
 	public String toString() {
 		return "Movimiento{" +
