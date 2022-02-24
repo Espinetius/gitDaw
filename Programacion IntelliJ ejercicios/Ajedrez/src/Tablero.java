@@ -86,7 +86,7 @@ public class Tablero {
 			if (colmenor>colmayor) {
 				aux = colmenor;
 				colmenor=colmayor;
-				aux= colmayor;
+				colmayor = aux;
 			}
 			for (int i = colmenor + 1; i < colmayor; i++) {
 				if (tablero!=null) {
