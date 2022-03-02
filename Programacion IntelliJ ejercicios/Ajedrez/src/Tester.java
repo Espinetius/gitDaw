@@ -8,7 +8,7 @@ public class Tester {
         Juego jugadaTurno = new Juego();
         do {
             tablero.pintartablero();
-            System.out.println(jugadaTurno.turnoColor());
+            System.out.println(jugadaTurno.newTurno());
             System.out.println("Introduce Jugada");
             Movimiento mov = jugadaTurno.jugada(lector.nextLine(), tablero);
             if (tablero.devuelvePieza(mov.posInicial).validoMovimiento(mov) && !tablero.hayPiezasEntre(mov)) {
