@@ -4,6 +4,7 @@ public abstract class Pieza {
 
 	public String getColor() {
 		return color;
+
 	}
 
 	public Pieza(String color) {

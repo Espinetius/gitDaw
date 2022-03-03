@@ -91,11 +91,53 @@ public class Tablero {
 					respuesta=true;
 				}
 			}
+		} else if (mov.esDiagonal()) {
+			if (mov.posInicial.fila < mov.posFinal.fila) {
+				if (mov.posInicial.columna < mov.posFinal.columna) {
+					for (int i = mov.posInicial.fila, j = mov.posInicial.columna; i < mov.posFinal.fila &&  j < mov.posFinal.columna; i++, j++) {
+						if (tablero != null) {
+							respuesta = true;
+							break;
+						}
+					}
+				} else if (mov.posInicial.columna > mov.posFinal.columna) {
+					for (int i =mov.posInicial.fila, j=mov.posInicial.columna; i<mov.posFinal.fila && j>mov.posFinal.columna; i++, j--) {
+						if (tablero!=null) {
+							respuesta=true;
+							break;
+						}
+					}
+				}
+			} else if(mov.posInicial.fila>mov.posFinal.fila) {
+				if (mov.posInicial.columna < mov.posFinal.columna) {
+					for (int i = mov.posInicial.fila, j = mov.posInicial.columna; i > mov.posFinal.fila && j < mov.posFinal.columna; i--, j++) {
+						if (tablero != null) {
+							respuesta = true;
+							break;
+						}
+					}
+				} else if (mov.posInicial.columna > mov.posFinal.columna) {
+					for (int i = mov.posInicial.fila, j = mov.posInicial.columna; i > mov.posFinal.fila && j > mov.posFinal.columna; i--, j--) {
+						if (tablero != null) {
+							respuesta = true;
+							break;
+						}
+					}
+
+				}
+			}
+
 		}
-
-
 		return respuesta;
 	}
+	/*
+	public boolean movValido(int fila, int columna, boolean turno) {
+		if (turno && tablero[fila][columna].getColor().equalsIgnoreCase("blanco") || !turno && tablero[fila][columna].getColor().equalsIgnoreCase("negro")) {
+			return true;
+		}
+		return false;
+	}
+	 */
 	public void ponPieza(Pieza figura, int fila, int columna) {
 		tablero[fila][columna]=figura;
 	}

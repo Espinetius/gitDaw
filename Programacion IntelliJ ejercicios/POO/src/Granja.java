@@ -9,8 +9,14 @@ public class Granja {
         animales = new Animal[10];
         for (int i = 0; i < animales.length/5; i++) {
             animales[i] = new Vaca();
+            if (i%2==0) {
+                animales[i] = new Gallina();
+            } else {
+                animales[i] = new Vaca();
+            }
         }
     }
+
 
     public Granja(int total) {
         animales = new Animal[total];
