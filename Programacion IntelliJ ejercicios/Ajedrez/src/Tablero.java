@@ -130,14 +130,12 @@ public class Tablero {
 		}
 		return respuesta;
 	}
-	/*
-	public boolean movValido(int fila, int columna, boolean turno) {
-		if (turno && tablero[fila][columna].getColor().equalsIgnoreCase("blanco") || !turno && tablero[fila][columna].getColor().equalsIgnoreCase("negro")) {
+	public boolean movValido(int fila, int columna, int turno) {
+		if (turno%2==0 && tablero[fila][columna].getColor().equalsIgnoreCase("blanco") || turno%2!=0 && tablero[fila][columna].getColor().equalsIgnoreCase("negro")) {
 			return true;
 		}
 		return false;
 	}
-	 */
 	public void ponPieza(Pieza figura, int fila, int columna) {
 		tablero[fila][columna]=figura;
 	}
