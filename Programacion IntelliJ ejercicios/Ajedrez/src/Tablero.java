@@ -131,10 +131,11 @@ public class Tablero {
 		return respuesta;
 	}
 	public boolean movValido(int fila, int columna, int turno) {
+		boolean respuesta = false;
 		if (turno%2==0 && tablero[fila][columna].getColor().equalsIgnoreCase("blanco") || turno%2!=0 && tablero[fila][columna].getColor().equalsIgnoreCase("negro")) {
-			return true;
+			respuesta = true;
 		}
-		return false;
+		return respuesta;
 	}
 	public void ponPieza(Pieza figura, int fila, int columna) {
 		tablero[fila][columna]=figura;
