@@ -14,10 +14,6 @@ public class Tester {
             System.out.println(jugadaTurno.newTurno());
             System.out.println("Introduce Jugada");
             Movimiento mov = jugadaTurno.jugada(lector.nextLine(), tablero);
-            while (tablero.movValido(mov.posInicial.fila, mov.posInicial.columna,jugadaTurno.turno)) {
-                System.out.println("Introduzca un movimiento valido");
-                mov = jugadaTurno.jugada(lector.nextLine(), tablero);
-            }
             if (tablero.devuelvePieza(mov.posInicial).validoMovimiento(mov) && !tablero.hayPiezasEntre(mov)) {
                 tablero.ponPieza(tablero.devuelvePieza(mov.posInicial), mov.posFinal);
                 tablero.quitarPieza(mov.posInicial);
