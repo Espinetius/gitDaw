@@ -1,8 +1,17 @@
 public class Caballo extends Pieza{
+	/**
+	 * te devuelve el color del padre
+	 * @param color
+	 */
 	public Caballo(String color) {
 		super(color);
 	}
 
+	/**
+	 * te valida el movimiento en forma de L del caballo en todas las direcciones.
+	 * @param mov
+	 * @return
+	 */
 	@Override
 	public boolean validoMovimiento(Movimiento mov) {
 		boolean respuesta = false;
@@ -12,11 +21,19 @@ public class Caballo extends Pieza{
 		return respuesta;
 	}
 
+	/**
+	 * te devuelve el nombre de la pieza
+	 * @return
+	 */
 	@Override
 	public String pintarPieza() {
 		return nombre="Caballo";
 	}
 
+	/**
+	 * te pinta la pieza dependiendo del color del padre, si es blanco o negro
+	 * @return
+	 */
 	@Override
 	public String toString() {
 		String pieza;

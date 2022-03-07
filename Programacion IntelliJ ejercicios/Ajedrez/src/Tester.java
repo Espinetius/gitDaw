@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+/**
+ * tester de la aplicacion. Aqui se llamaran las clases y metodos del programa
+ */
 public class Tester {
     public static void main(String args[]) {
         Scanner lector = new Scanner(System.in);

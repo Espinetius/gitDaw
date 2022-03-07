@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-image: url(/Horario.jpg);
+                background-size: cover;
+            }
+            #contenedor {
+                margin: auto;
+                width: 1000px;
+                height: 500px;
+                background-color: lightgray;
+                border: 2px solid black;
+            }
+            header, nav {
+                width: 100%;
+                height: 15%;
+                background-color: goldenrod;
+                color: black;
+                font-size: 1.7em;
+                display: flex;
+                justify-content: center;
+                align-items: center;   
+            }
+            #navegacion {
+                justify-content: space-around;
+                background-color: black;
+            }
+
+            nav a {
+                text-decoration: none;
+                color: white;
+            }
+
+            nav a:hover{
+                color: red;
+            }
+
+            #contenido {
+                height: 55%;
+                width: 100%;
+            }
+
+            aside {
+                height: 100%;
+                width: 30%;
+                background-color: limegreen;
+                float: left;
+            } 
+            section {
+                height: 100%;
+                width: 70%;
+                background-color:aquamarine;
+                float: left;
+                display: flex; 
+                flex-direction: column;
+            }
+            section #enlaces {
+                display: flex;
+                justify-content: space-around;
+            }
+            
+            footer {
+                height: 15%;
+                width: 100%;
+                background-color: red;
+            }
+
+            section a {
+                margin-top: 20px;
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #uno {
+                background-color:#ec731e;
+            }
+            #dos {
+                background-color: green;
+            }
+            #tres {
+                background-color:red;
+            }
+            
+            #lorem {
+                width: 80%;
+                margin: auto;
+                font-size: 1.2em;
+                overflow-y: auto; /* Si el texto es más grande que la caja 
+                                   genera un scroll vertical */
+            }
+            #lorem p:first-letter {
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            
+            #lorem p img {
+                margin-top: 5px;
+                margin-right: 5px;
+                float: left;
+            }
+            
+            aside p {
+                background-color: goldenrod;
+                color: black;
+                text-align: center;
+            }
+            
+            aside form {
+                width: 100%;
+                height: 35%;
+                background-color:antiquewhite;
+            }
+            
+            label {
+                font-weight: bold;
+                color: blue;
+            }
+            #boton {
+                margin-top: 20px;
+                width: 100%;
+                height: 25%;
+                background-color: blue;
+                color: white;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="contenedor">
+            <header>
+                Cabecera
+            </header>
+            <nav id="navegacion">
+                <a href="#">Nosotros</a>
+                <a href="#">Contacto</a>
+                <a href="#">Síguenos</a>
+                <a href="#">Usuario</a>
+            </nav>
+             <div id="contenido">
+                <aside>
+                    <p>Introduzca los datos</p>
+                    <form action="#" method="get">
+                        <br/>
+                        <label>Usuario</label>: <input type="text" /><br/><br/>
+                        <label>Contraseña</label>: <input type="password" /><br/>
+                        <input id="boton" type="submit" value="Entrar" />
+                    </form> 
+                </aside>
+                <section>
+                    <div id="enlaces">
+                        <a id="uno" href="ejercicio.html">Enlace 1</a>
+                        <a id="dos" href="#">Enlace 2</a>
+                        <a id="tres" href="#">Enlace 3</a>
+                    </div>
+                    <div id="lorem">
+                        <p>
+                            At vero eos et accusamus et iusto odio dignissimos ducimus 
+                            qui blanditiis praesentium voluptatum deleniti atque corrupti
+                             <img src="/Horario.jpg" style="width:20%" />
+                            quos dolores et quas molestias excepturi sint occaecati
+                            cupiditate non provident, similique sunt in culpa qui
+                            officia deserunt mollitia animi, id est laborum et dolorum
+                            fuga. Et harum quidem rerum facilis est et expedita distinctio. 
+                            Nam libero tempore, cum soluta nobis est eligendi optio cumque
+                            nihil impedit quo minus id quod maxime placeat facere 
+                            possimus, omnis voluptas assumenda est, omnis dolor.
+                        </p>
+                    </div>
+                </section>
+            </div>
+            <footer>
+                PIE
+            </footer>
+        </div>
+    </body>
+</html>

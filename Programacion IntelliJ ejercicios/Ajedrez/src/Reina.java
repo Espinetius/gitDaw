@@ -1,6 +1,15 @@
 public class Reina extends Pieza{
+	/**
+	 * te devuelve el color del padre
+	 * @param color
+	 */
 	public Reina(String color) { super(color);}
 
+	/**
+	 * te valida el movimiento de la pieza
+	 * @param mov
+	 * @return
+	 */
 	@Override
 	public boolean validoMovimiento(Movimiento mov) {
 		boolean respuesta=false;
@@ -10,10 +19,20 @@ public class Reina extends Pieza{
 		return respuesta;
 	}
 
+	/**
+	 * te devuelve el nombre de la pieza
+	 * @return
+	 */
 	@Override
 	public String pintarPieza() {
 		return nombre="Reina";
 	}
+
+	/**
+	 * te pinta la pieza dependiendo del padre, si es blanco o negro
+	 *
+	 * @return
+	 */
 	@Override
 	public String toString() {
 		String pieza;
