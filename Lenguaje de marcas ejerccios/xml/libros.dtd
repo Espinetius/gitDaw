@@ -1,0 +1,5 @@
+<!ELEMENT libros (libro+)>
+<!ELEMENT libro (titulo,autor,precio)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
