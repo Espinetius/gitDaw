@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<institutos>
+    <ies cod="28001">
+        <nombre>Palomeras-Vallecas</nombre>
+        <ciudad>Madrid</ciudad>
+        <num_alumnos>500</num_alumnos>
+        <num_aprobados>500</num_aprobados>
+    </ies>
+    <ies cod="28002">
+        <nombre>Virgen de la Paloma</nombre>
+        <ciudad>Madrid</ciudad>
+        <num_alumnos>700</num_alumnos>
+        <num_aprobados>650</num_aprobados>
+    </ies>
+    <ies cod="28003">
+        <nombre>Santo Domingo Savio</nombre>
+        <ciudad>Madrid</ciudad>
+        <num_alumnos>15000</num_alumnos>
+        <num_aprobados>200</num_aprobados>
+    </ies>
+</institutos>

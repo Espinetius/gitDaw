@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE libros SYSTEM "libros.dtd">
+<libros>
+    <libro>
+        <titulo>AutoSket</titulo>
+        <autor>Ramón Montero</autor>
+        <precio>33</precio>
+    </libro>
+    <libro>
+        <titulo>Windows</titulo>
+        <autor>Jaime Perez</autor>
+        <precio>50</precio>
+    </libro>
+    <libro>
+        <titulo>Web Grapics</titulo>
+        <autor>Ron Wodaski</autor>
+        <precio>48</precio>
+    </libro>
+</libros>
