@@ -86,7 +86,7 @@ public class Tablero {
 				colmenor=colmayor;
 				colmayor = aux;
 			}
-			for (int i = colmenor + 1; i < colmayor; i++) {
+			for (int i = colmenor + 1; i < colmayor && !respuesta; i++) {
 				if (tablero!=null) {
 					respuesta=true;
 				}
@@ -94,44 +94,39 @@ public class Tablero {
 		} else if (mov.esDiagonal()) {
 			if (mov.posInicial.fila < mov.posFinal.fila) {
 				if (mov.posInicial.columna < mov.posFinal.columna) {
-					for (int i = mov.posInicial.fila, j = mov.posInicial.columna; i < mov.posFinal.fila &&  j < mov.posFinal.columna; i++, j++) {
+					for (int i = mov.posInicial.fila, j = mov.posInicial.columna; i < mov.posFinal.fila && j < mov.posFinal.columna && !respuesta; i++, j++) {
 						if (tablero != null) {
 							respuesta = true;
-							break;
 						}
 					}
 				} else if (mov.posInicial.columna > mov.posFinal.columna) {
-					for (int i =mov.posInicial.fila, j=mov.posInicial.columna; i<mov.posFinal.fila && j>mov.posFinal.columna; i++, j--) {
-						if (tablero!=null) {
-							respuesta=true;
-							break;
+					for (int i = mov.posInicial.fila, j = mov.posInicial.columna; i < mov.posFinal.fila && j > mov.posFinal.columna && !respuesta; i++, j--) {
+						if (tablero != null) {
+							respuesta = true;
 						}
 					}
 				}
-			} else if(mov.posInicial.fila>mov.posFinal.fila) {
+			} else if (mov.posInicial.fila > mov.posFinal.fila) {
 				if (mov.posInicial.columna < mov.posFinal.columna) {
-					for (int i = mov.posInicial.fila, j = mov.posInicial.columna; i > mov.posFinal.fila && j < mov.posFinal.columna; i--, j++) {
+					for (int i = mov.posInicial.fila, j = mov.posInicial.columna; i > mov.posFinal.fila && j < mov.posFinal.columna && !respuesta; i--, j++) {
 						if (tablero != null) {
 							respuesta = true;
-							break;
 						}
 					}
 				} else if (mov.posInicial.columna > mov.posFinal.columna) {
-					for (int i = mov.posInicial.fila, j = mov.posInicial.columna; i > mov.posFinal.fila && j > mov.posFinal.columna; i--, j--) {
+					for (int i = mov.posInicial.fila, j = mov.posInicial.columna; i > mov.posFinal.fila && j > mov.posFinal.columna && !respuesta; i--, j--) {
 						if (tablero != null) {
 							respuesta = true;
-							break;
 						}
 					}
 
 				}
 			}
-
 		}
 		return respuesta;
 	}
 	public boolean movValido(int fila, int columna, int turno) {
-		if (turno%2==0 && tablero[fila][columna].getColor().equalsIgnoreCase("blanco") || turno%2!=0 && tablero[fila][columna].getColor().equalsIgnoreCase("negro")) {
+		if (turno%2==0 && !tablero[fila][columna].getColor().equalsIgnoreCase("blanco") || turno%2!=0 && !tablero[fila][columna].getColor().equalsIgnoreCase("negro")) {
 			return true;
 		}
 		return false;
