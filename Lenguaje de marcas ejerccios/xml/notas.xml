@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE SSOO SYSTEM "notas.dtd">
+<SSOO>
+    <alumno id="1">
+        <matricula>123456789</matricula>
+        <nombre>pepe</nombre>
+        <apellido>pepito</apellido>
+        <notaTeoria>10</notaTeoria>
+        <notaPractica>10</notaPractica>
+    </alumno>
+    <alumno id="2">
+        <matricula>987654321</matricula>
+        <nombre>Jose</nombre>
+        <apellido>josecito</apellido>
+        <notaTeoria>8</notaTeoria>
+        <notaPractica>6</notaPractica>
+    </alumno>
+    <alumno id="3">
+        <matricula>654987321</matricula>
+        <nombre>Maria</nombre>
+        <apellido>unchaletenelcampo</apellido>
+        <notaTeoria>9</notaTeoria>
+        <notaPractica>7</notaPractica>
+    </alumno>
+    <alumno id="4">
+        <matricula>456789123</matricula>
+        <nombre>Manuela</nombre>
+        <apellido>manolita</apellido>
+        <notaTeoria>5</notaTeoria>
+        <notaPractica>8</notaPractica>
+    </alumno>
+</SSOO>

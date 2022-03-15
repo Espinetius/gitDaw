@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE saludo SYSTEM "saludos.dtd">
+<saludo>
+    <persona id="1">
+        <alumno>David Espinosa Gonzalez</alumno>
+        <mensaje>HOLA!</mensaje>
+        <curso>1Daw</curso>
+        <dni>52890874M</dni>
+        <edad>28</edad>
+        <casado>negativo</casado>
+        <sueldo>cero patatero</sueldo>
+        <hijos>solo en sueños BB</hijos>
+    </persona>
+    <persona id="2">
+        <alumno>Sergio Espinosa Gonzalez</alumno>
+        <mensaje>CARADECOLA!</mensaje>
+        <curso>Sin cursar</curso>
+        <dni>52890873G</dni>
+        <edad>30</edad>
+        <casado>en pareja, pero no casado</casado>
+        <sueldo>1200</sueldo>
+        <hijos>solo en sueños bbsito</hijos>
+    </persona>
+</saludo>

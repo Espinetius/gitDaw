@@ -1,0 +1,10 @@
+<!ELEMENT SSOO (teoria,practica)>
+<!ELEMENT teoria (alumno+)>
+<!ELEMENT alumno (matricula,nombre,apellido,notaTeoria?,notaPractica?)>
+<!ATTLIST alumno id NMTOKEN #REQUIRED>
+<!ELEMENT matricula (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT notaTeoria (#PCDATA)>
+<!ELEMENT practica (alumno+)>
+<!ELEMENT notaPractica (#PCDATA)>
