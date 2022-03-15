@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE animal SYSTEM "tiendaAnimales.dtd">
+<animal>
+    <perro id="1">
+        <nombre>lua</nombre>
+        <raza>Alaska</raza>
+        <fechNac fech="12/06/2022">12/06/2022</fechNac>
+        <sexo sex="?">hembra</sexo>
+        <codperro>1234</codperro>
+        <madPerro>tina</madPerro>
+        <padPerro>toby</padPerro>
+        <veterinario>Antonio Garcia Paredes</veterinario>
+    </perro>
+</animal>

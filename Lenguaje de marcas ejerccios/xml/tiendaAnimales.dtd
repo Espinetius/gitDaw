@@ -1,0 +1,13 @@
+<!ELEMENT animal (perro)>
+<!ELEMENT perro (nombre,raza,fechNac,sexo,codperro,madPerro,padPerro,veterinario)>
+<!ATTLIST perro id NMTOKEN #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT raza (#PCDATA)>
+<!ELEMENT fechNac (#PCDATA)>
+<!ATTLIST fechNac fech CDATA #REQUIRED>
+<!ELEMENT sexo (#PCDATA)>
+<!ATTLIST sexo sex CDATA #REQUIRED>
+<!ELEMENT codperro (#PCDATA)>
+<!ELEMENT madPerro (#PCDATA)>
+<!ELEMENT padPerro (#PCDATA)>
+<!ELEMENT veterinario (#PCDATA)>
