@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="espgondaEXAMEN2EV">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/espgondaEXAMEN2EV.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
