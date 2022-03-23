@@ -139,3 +139,22 @@ BEGIN
 END;
 EXECUTE SucesionDeNumerosHasta (&Introducedatos);
 
+CREATE OR REPLACE PROCEDURE SucesionDeNumerosImpares (B NUMBER)
+IS A NUMBER:=1;
+BEGIN
+  WHILE A<=B LOOP
+    DBMS_OUTPUT.PUT_LINE(A);
+    A:=A+2;
+  END LOOP;
+END;
+EXECUTE SucesionDeNumerosImpares (&Introducedatos);
+
+CREATE OR REPLACE PROCEDURE SucesionDeNumerosPares (B NUMBER)
+IS A NUMBER:=0;
+BEGIN
+  WHILE A<=B LOOP
+    DBMS_OUTPUT.PUT_LINE(A);
+    A:=A+2;
+  END LOOP;
+END;
+EXECUTE SucesionDeNumerosPares (&Introducedatos);
