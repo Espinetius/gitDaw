@@ -139,22 +139,61 @@ BEGIN
 END;
 EXECUTE SucesionDeNumerosHasta (&Introducedatos);
 
-CREATE OR REPLACE PROCEDURE SucesionDeNumerosImpares (B NUMBER)
-IS A NUMBER:=1;
+create or replace 
+PROCEDURE SucesionDeNumerosPares (B NUMBER)
+IS A NUMBER:=0;
 BEGIN
   WHILE A<=B LOOP
-    DBMS_OUTPUT.PUT_LINE(A);
-    A:=A+2;
+    A:=A+1;
+    IF MOD(A,2)!=0 THEN
+      DBMS_OUTPUT.PUT_LINE('NUMERO '||A);
+    END IF;
   END LOOP;
 END;
 EXECUTE SucesionDeNumerosImpares (&Introducedatos);
 
-CREATE OR REPLACE PROCEDURE SucesionDeNumerosPares (B NUMBER)
+create or replace 
+PROCEDURE SucesionDeNumerosPares (B NUMBER)
 IS A NUMBER:=0;
 BEGIN
   WHILE A<=B LOOP
-    DBMS_OUTPUT.PUT_LINE(A);
-    A:=A+2;
+    A:=A+1;
+    IF MOD(A,2)=0 THEN
+      DBMS_OUTPUT.PUT_LINE('NUMERO '||A);
+    END IF;
   END LOOP;
 END;
 EXECUTE SucesionDeNumerosPares (&Introducedatos);
+
+CREATE OR REPLACE PROCEDURE Multiplos (B NUMBER)
+IS A NUMBER:=0;
+BEGIN
+  DBMS_OUTPUT.PUT_LINE('LOS MULTIPLOS DE '||B||' son:');
+  WHILE A<B LOOP
+    A:=A+1;
+    IF MOD(B,A)=0 THEN
+      DBMS_OUTPUT.PUT_LINE(A);
+    END IF;
+  END LOOP;
+END;
+EXECUTE Multiplos(10);
+EXECUTE Multiplos(20);
+
+create or replace 
+PROCEDURE NumMayor (A NUMBER, B NUMBER, C NUMBER)
+IS MAYOR NUMBER;
+BEGIN
+  IF A>B THEN
+    IF A>C THEN
+      MAYOR:=A;
+    ELSE
+      MAYOR:=C;
+    END IF;
+  ELSE IF B>C THEN
+    MAYOR:=B;
+   END IF;
+  END IF;
+  DBMS_OUTPUT.PUT_LINE('El mayor es '||MAYOR);
+END;
+EXECUTE NumMayor(&IntroduceA, &IntroduceB, &IntroduceC);
+EXECUTE NumMayor(5,7,6);
