@@ -37,10 +37,12 @@ public class Torre extends Pieza{
     @Override
     public String toString() {
         String pieza;
-        if (color.equalsIgnoreCase("blanco")){
-            pieza="\u2656 ";
+        if (color.equalsIgnoreCase("negro")){
+            //pieza="\u2656 ";
+            pieza="Tb";
         } else {
-            pieza="\u265C ";
+            //pieza="\u265C ";
+            pieza="Tn";
         }
         return pieza;
     }

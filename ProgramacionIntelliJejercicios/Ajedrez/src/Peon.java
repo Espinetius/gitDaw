@@ -49,10 +49,12 @@ public class Peon extends Pieza{
 	@Override
 	public String toString() {
 		String pieza;
-		if (color.equalsIgnoreCase("blanco")){
-			pieza="\u2659 ";
+		if (color.equalsIgnoreCase("negro")){
+			//pieza="\u2659 ";
+			pieza="Pb";
 		} else {
-			pieza="\u265F ";
+			//pieza="\u265F ";
+			pieza="Pn";
 		}
 		return pieza;
 	}

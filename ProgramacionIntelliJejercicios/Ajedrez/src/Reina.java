@@ -36,10 +36,12 @@ public class Reina extends Pieza{
 	@Override
 	public String toString() {
 		String pieza;
-		if (color.equalsIgnoreCase("blanco")){
-			pieza="\u2655 ";
+		if (color.equalsIgnoreCase("negro")){
+			//pieza="\u2655 ";
+			pieza="Rb";
 		} else {
-			pieza="\u265B ";
+			//pieza="\u265B ";
+			pieza="Rn";
 		}
 		return pieza;
 	}

@@ -37,10 +37,12 @@ public class Caballo extends Pieza{
 	@Override
 	public String toString() {
 		String pieza;
-		if (color.equalsIgnoreCase("blanco")){
-			pieza="\u2658 ";
+		if (color.equalsIgnoreCase("negro")){
+			//pieza="\u2658 ";
+			pieza="Cb";
 		} else {
-			pieza="\u265E ";
+			//pieza="\u265E ";
+			pieza="Cn";
 		}
 		return pieza;
 	}

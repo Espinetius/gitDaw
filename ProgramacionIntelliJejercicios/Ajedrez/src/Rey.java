@@ -33,10 +33,12 @@ public class Rey extends Pieza{
 	 */
 	public String toString() {
 		String pieza;
-		if (color.equalsIgnoreCase("blanco")){
-			pieza="\u2654 ";
+		if (color.equalsIgnoreCase("negro")){
+			//pieza="\u2654 ";
+			pieza="RB";
 		} else {
-			pieza="\u265A ";
+			//pieza="\u265A ";
+			pieza="RN";
 		}
 		return pieza;
 	}

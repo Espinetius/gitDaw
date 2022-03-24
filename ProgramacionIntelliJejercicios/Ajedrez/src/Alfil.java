@@ -36,10 +36,12 @@ public class Alfil extends Pieza{
 	 */
 	public String toString() {
 		String pieza;
-		if (color.equalsIgnoreCase("blanco")){
-			pieza= "\u2657 ";
+		if (color.equalsIgnoreCase("negro")){
+			//pieza= "\u2657 ";
+			pieza = "Ab";
 		} else {
-			pieza="\u265D ";
+			//pieza="\u265D ";
+			pieza="An";
 		}
 		return pieza;
 	}
