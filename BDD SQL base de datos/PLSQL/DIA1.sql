@@ -197,3 +197,86 @@ BEGIN
 END;
 EXECUTE NumMayor(&IntroduceA, &IntroduceB, &IntroduceC);
 EXECUTE NumMayor(5,7,6);
+
+create or replace 
+PROCEDURE NumerosMayorMenor (A NUMBER, B NUMBER, C NUMBER)
+IS MAYOR NUMBER; MEDIANO NUMBER; MENOR NUMBER;
+BEGIN
+  DBMS_OUTPUT.PUT_LINE('A CONTINUACION SE ORDENARAN LOS NUMEROS DE MAYOR A MENOR');
+  IF A>B AND B>C THEN
+    MAYOR:=A;
+    MEDIANO:=B;
+    MENOR:=C;
+  END IF;
+  IF A>B AND C>B THEN
+    MAYOR:=A;
+    MEDIANO:=C;
+    MENOR:=B;
+  END IF;
+  IF A>B AND A<C THEN
+    MAYOR:=C;
+    MEDIANO:=A;
+    MENOR:=B;
+  END IF;
+  IF C>A AND B>C THEN
+    MAYOR:=C;
+    MEDIANO:=B;
+    MENOR:=A;
+  END IF;
+  IF B>C AND C>A THEN
+    MAYOR:=B;
+    MEDIANO:=C;
+    MENOR:=A;
+  END IF;
+  IF B>C AND A>C THEN
+    MAYOR:=B;
+    MEDIANO:=A;
+    MENOR:=C;
+  END IF;
+    DBMS_OUTPUT.PUT_LINE('LOS NUMEROS ORDENADOS SON: '||MAYOR||'-'||MEDIANO||'-'||MENOR);
+END;
+EXECUTE NumerosMayorMenor (10,8,12);
+EXECUTE NumerosMayorMenor (&IntroduceNum1, &IntroduceNum2, &IntroduceNum3);
+
+CREATE OR REPLACE PROCEDURE SumaMediaParImpar (A NUMBER)
+IS RESULTADO NUMBER:=0; I NUMBER:=0;
+BEGIN
+  DBMS_OUTPUT.PUT_LINE('Suma, media, pares, impares');
+  FOR I IN 0..A LOOP
+    RESULTADO:=RESULTADO+I;
+  END LOOP;
+  DBMS_OUTPUT.PUT_LINE('Suma: '||RESULTADO);
+  DBMS_OUTPUT.PUT_LINE('Media: '||RESULTADO/A);
+  RESULTADO:=0;
+  FOR I IN 0..A LOOP
+    IF MOD(I,2)=0 THEN
+      RESULTADO:=RESULTADO+I;
+    END IF;
+  END LOOP;
+  DBMS_OUTPUT.PUT_LINE('La suma de los pares es: '||RESULTADO);
+  RESULTADO:=0;
+  FOR I IN 0..A LOOP
+    IF MOD(I,2)!=0 THEN
+      RESULTADO:=RESULTADO+I;
+    END IF;
+  END LOOP;
+  DBMS_OUTPUT.PUT_LINE('La suma de los impares es: '||RESULTADO);
+END;
+EXECUTE SumaMediaParImpar(&IntroduceNumero);
+
+CREATE OR REPLACE PROCEDURE Potencia (A NUMBER, B NUMBER)
+IS RESULTADO NUMBER:=1; I NUMBER;
+BEGIN
+  FOR I IN 0..B-1 LOOP
+    RESULTADO:=RESULTADO*A;
+  END LOOP;
+  DBMS_OUTPUT.PUT_LINE(A||' elevado a '||B||' es '||RESULTADO);
+END;
+EXECUTE Potencia (&IntroduceBase, &IntroduceExponente);
+
+DECLARE
+BEGIN
+  NumerosMayorMenor (&IntroduceNum1, &IntroduceNum2, &IntroduceNum3);
+  SumaMediaParImpar (&IntroduceNumero);
+  Potencia (&IntroduceBase, &IntroduceExponente);
+END;
