@@ -1,6 +1,6 @@
 public class Juego {
 	protected int dificultad;
-	protected static int vidas;
+	protected int vidas;
 
 	/**
 	 * de momento el constructor del juego solo va a setear las vidas en funcion de la dificultad.
@@ -26,7 +26,7 @@ public class Juego {
 	public void setDificultad(int dificultad) {
 		this.dificultad = dificultad;
 	}
-	public static int getVidas() {
+	public int getVidas() {
 		return vidas;
 	}
 
@@ -34,12 +34,6 @@ public class Juego {
 	 * este metodo es para ocultar la palabra para el usuario.
 	 * @param palabra
 	 */
-	public void palabraJuego(Diccionario palabra) {
-		for (int i = 0; i < palabra.getPalabra().length(); i++) {
-			System.out.print(" _");
-		}
-	}
-	public boolean jugando(boolean descubierta) {
-		return descubierta;
-	}
+
+
 }
