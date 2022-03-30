@@ -6,7 +6,7 @@ public class Tester {
 		int opcion;
 		boolean salida = false;
 		MenuJuego juego = new MenuJuego();
-		do {
+
 			System.out.println("Bienvenido al juego del ahorcado. Seleccione una opcion de la lista:" +
 					"\n1. Jugar." +
 					"\n2. Gestionar diccionarios" +
@@ -25,6 +25,6 @@ public class Tester {
 				default:
 					System.out.println("No ha seleccionado una opcion valida");
 			}
-		} while(!salida);
+
 	}
 }

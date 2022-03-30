@@ -280,3 +280,46 @@ BEGIN
   SumaMediaParImpar (&IntroduceNumero);
   Potencia (&IntroduceBase, &IntroduceExponente);
 END;
+
+CREATE OR REPLACE PROCEDURE Factorial(A NUMBER)
+IS FACTORIAL NUMBER:=1; I NUMBER:=A;
+BEGIN
+  DBMS_OUTPUT.PUT('A continuacion se calculara el factorial de '||A||' -> ');
+  WHILE I>0 LOOP
+    FACTORIAL:=FACTORIAL*I;
+    I:=I-1;
+  END LOOP;
+  DBMS_OUTPUT.PUT_LINE(FACTORIAL);
+END;
+EXECUTE Factorial(&IntroduceNumero);
+
+CREATE OR REPLACE PROCEDURE TablasMultiplicar
+IS A NUMBER:=1; B NUMBER:=1; RESULTADO NUMBER;
+BEGIN
+  FOR A IN 1..9 LOOP
+    B:=1;
+    DBMS_OUTPUT.PUT_LINE('-------');
+    DBMS_OUTPUT.PUT_LINE('TABLA DEL '||A);
+    DBMS_OUTPUT.PUT_LINE('-------');
+    FOR B IN 1..10 LOOP
+      RESULTADO:=A*B;
+      DBMS_OUTPUT.PUT_LINE(A||'x'||B||'='||RESULTADO);
+    END LOOP;
+  END LOOP;
+END;
+EXECUTE TablasMultiplicar;
+    
+CREATE OR REPLACE PROCEDURE VisualizarLetras (PALABRA VARCHAR2)
+IS RESULTADO VARCHAR2(1); I NUMBER;
+BEGIN
+  FOR I IN 0..LENGTH(PALABRA) LOOP
+    RESULTADO:=SUBSTR(PALABRA,I,I+1);
+    DBMS_OUTPUT.PUT_LINE(RESULTADO);
+  END LOOP;
+END;
+
+DECLARE
+  PALABRA VARCHAR2(25);
+BEGIN
+ VisualizarLetras (&Introducepalabra);
+END;

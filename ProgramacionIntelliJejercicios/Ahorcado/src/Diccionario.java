@@ -17,7 +17,7 @@ public class Diccionario {
 	public Diccionario (int dificultad) {
 		switch (dificultad) {
 			case 1:
-				facil = new ArrayList<String>();
+				facil = new ArrayList<>();
 				facil.add("ascua");
 				facil.add("ambos");
 				facil.add("bruta");
@@ -29,7 +29,7 @@ public class Diccionario {
 				palabra = facil.get((int) (Math.random() * (facil.size())));
 				break;
 			case 2:
-				medio = new ArrayList<String>();
+				medio = new ArrayList<>();
 				medio.add("sombra");
 				medio.add("sentir");
 				medio.add("mezcla");
@@ -41,7 +41,7 @@ public class Diccionario {
 				palabra = medio.get((int) (Math.random() * (medio.size())));
 				break;
 			case 3:
-				dificil = new ArrayList<String>();
+				dificil = new ArrayList<>();
 				dificil.add("balanza");
 				dificil.add("adentro");
 				dificil.add("biombos");
@@ -52,6 +52,10 @@ public class Diccionario {
 				dificil.add("pisadas");
 				palabra = dificil.get((int) (Math.random() * (dificil.size())));
 				break;
+			case 4:
+				personalizado=new ArrayList<>();
+				palabra = personalizado.get((int)(Math.random()*(personalizado.size())));
+
 		}
 		palabraOculta=palabra.toCharArray();
 	}
@@ -59,15 +63,29 @@ public class Diccionario {
 	 * este metodo servira para listar las palabras ordenadas en grupos por dificultad   facil || medio || dificil
 	 */
 	public void listar () {
-		System.out.println("A continuacion se imprimiran las palabras en grupos de dificultad (facil | medio | dificil)");
-		for (int i=0; i< facil.size() ;i++) {
-			System.out.print(facil.get(i));
+		if (facil!=null) {
+			System.out.println("Estas son las palabras Faciles 5 letras");
+			for (int i = 0; i < facil.size(); i++) {
+				System.out.println(facil.get(i));
+			}
 		}
-		for (int i = 0; i < medio.size(); i++) {
-			System.out.println(medio.get(i));
+		if (medio!=null) {
+			System.out.println("Estas son las palabras Medias 6 letras");
+			for (int i = 0; i < medio.size(); i++) {
+				System.out.println(medio.get(i));
+			}
 		}
-		for (int i = 0; i < dificil.size(); i++) {
-			System.out.println(dificil.get(i));
+		if (dificil!=null) {
+			System.out.println("Estas son las palabras Dificiles 7 letras");
+			for (int i = 0; i < dificil.size(); i++) {
+				System.out.println(dificil.get(i));
+			}
+		}
+		if (personalizado!=null) {
+			System.out.println("Aqui se encuentra sus palabras introducidas");
+			for (int i = 0; i < personalizado.size(); i++) {
+				System.out.println(personalizado.get(i));
+			}
 		}
 	}
 	/**
@@ -101,9 +119,8 @@ public class Diccionario {
 	 * @param palabra
 	 */
 	public void addpalabras(String palabra) {
-		personalizado=new ArrayList<String>();
+		personalizado=new ArrayList<>();
 		personalizado.add(palabra);
-		this.palabra=palabra;
 	}
 	/**
 	 * metodo para cambiar una palabra del diccionario dependiendo de la dificultad y teniendo en cuenta el indice
