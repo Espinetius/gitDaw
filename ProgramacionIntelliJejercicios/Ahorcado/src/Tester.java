@@ -1,7 +1,8 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Tester {
-	public static void main (String arg[]){
+	public static void main (String arg[]) throws IOException {
 		Scanner lector = new Scanner(System.in);
 		int opcion;
 		boolean salida = false;

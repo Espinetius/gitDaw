@@ -7,55 +7,52 @@ public class Diccionario {
 	protected ArrayList<String> dificil;
 	protected ArrayList<String> personalizado;
 	protected char[] palabraOculta;
-	public Diccionario () {
-		this((int)(Math.random()*3+1));
-	}
+	public Diccionario () {this((int)(Math.random()*3+1));}
 	/**
 	 * constructor para seleccionar una palabra segun el nivel de dificultad del juego
 	 * @param dificultad
 	 */
 	public Diccionario (int dificultad) {
+		facil = new ArrayList<>();
+		facil.add("ascua");
+		facil.add("ambos");
+		facil.add("bruta");
+		facil.add("ciega");
+		facil.add("forma");
+		facil.add("dagas");
+		facil.add("locos");
+		facil.add("marca");
+		medio = new ArrayList<>();
+		medio.add("sombra");
+		medio.add("sentir");
+		medio.add("mezcla");
+		medio.add("peinar");
+		medio.add("servir");
+		medio.add("fisico");
+		medio.add("lastre");
+		medio.add("baches");
+		dificil = new ArrayList<>();
+		dificil.add("balanza");
+		dificil.add("adentro");
+		dificil.add("biombos");
+		dificil.add("central");
+		dificil.add("desfila");
+		dificil.add("parejas");
+		dificil.add("deporte");
+		dificil.add("pisadas");
+		personalizado=new ArrayList<>();
 		switch (dificultad) {
 			case 1:
-				facil = new ArrayList<>();
-				facil.add("ascua");
-				facil.add("ambos");
-				facil.add("bruta");
-				facil.add("ciega");
-				facil.add("forma");
-				facil.add("dagas");
-				facil.add("locos");
-				facil.add("marca");
 				palabra = facil.get((int) (Math.random() * (facil.size())));
 				break;
 			case 2:
-				medio = new ArrayList<>();
-				medio.add("sombra");
-				medio.add("sentir");
-				medio.add("mezcla");
-				medio.add("peinar");
-				medio.add("servir");
-				medio.add("fisico");
-				medio.add("lastre");
-				medio.add("baches");
 				palabra = medio.get((int) (Math.random() * (medio.size())));
 				break;
 			case 3:
-				dificil = new ArrayList<>();
-				dificil.add("balanza");
-				dificil.add("adentro");
-				dificil.add("biombos");
-				dificil.add("central");
-				dificil.add("desfila");
-				dificil.add("parejas");
-				dificil.add("deporte");
-				dificil.add("pisadas");
 				palabra = dificil.get((int) (Math.random() * (dificil.size())));
 				break;
-			case 4:
-				personalizado=new ArrayList<>();
-				palabra = personalizado.get((int)(Math.random()*(personalizado.size())));
-
+			default:
+				palabra = personalizado.get((int) (Math.random() * (personalizado.size())));
 		}
 		palabraOculta=palabra.toCharArray();
 	}
@@ -91,14 +88,14 @@ public class Diccionario {
 	/**
 	 * este medoto servira para modificar el diccionario añadir y modificar
 	 * @param palabra
-	 * @param dificultad
 	 */
-	public void actualizarPalabras(String palabra, int dificultad) {
+	public void actualizarPalabras(String palabra) {
 		Scanner lector = new Scanner(System.in);
 		int opcion;
 		System.out.println("Seleccione una de las dos opciones:" +
 				"\n1. Añadir palabra nueva" +
-				"\n2. Cambiar una palabra exisistente");
+				"\n2. Cambiar una palabra exisistente" +
+				"\n3. Eliminar una palabra de la dificultad personalizada");
 		opcion=lector.nextInt();
 		switch (opcion) {
 			case 1:
@@ -107,20 +104,27 @@ public class Diccionario {
 			case 2:
 				System.out.println("A continuacion se listaran las palabras para que seleccione la que quiere modificar");
 				listar();
+				System.out.println("Seleccione la dificultad de la palabra a modificar");
+				int dificultad=lector.nextInt();
 				int indice=lector.nextInt();
 				cambiarPalabras(palabra, dificultad,indice);
 				break;
+			case 3:
+				System.out.println("A continuacion se pedira la palabra que se quiera eliminar");
+
 			default:
 				System.out.println("No ha seleccionado una opcion valida");
 		}
 	}
 	/**
-	 * metodo para añadir palabras nuevas al diccionario dependiendo la dificultad
+	 * metodo para añadir palabras nuevas al diccionario de personalizado
 	 * @param palabra
 	 */
 	public void addpalabras(String palabra) {
-		personalizado=new ArrayList<>();
 		personalizado.add(palabra);
+	}
+	public void deletepalabra (String palabra) {
+		personalizado.remove(palabra);
 	}
 	/**
 	 * metodo para cambiar una palabra del diccionario dependiendo de la dificultad y teniendo en cuenta el indice
@@ -131,13 +135,13 @@ public class Diccionario {
 	public void cambiarPalabras(String palabra, int dificultad, int indice) {
 		switch (dificultad) {
 			case 1:
-				facil.add(indice ,palabra);
+				facil.set(indice ,palabra);
 				break;
 			case 2:
-				medio.add(indice, palabra);
+				medio.set(indice, palabra);
 				break;
 			case 3:
-				dificil.add(indice, palabra);
+				dificil.set(indice, palabra);
 				break;
 		}
 	}

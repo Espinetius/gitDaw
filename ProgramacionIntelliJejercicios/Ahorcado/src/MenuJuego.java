@@ -45,13 +45,11 @@ public class MenuJuego {
             }
         } while (!again);
     }
-    public void gestion() {
+    public void gestion() throws IOException {
         Scanner lector = new Scanner(System.in);
         String palabra;
         int dificultad, opcion;
-        Diccionario dicfacil = new Diccionario(1);
-        Diccionario dicmedio = new Diccionario(2);
-        Diccionario dicdificil = new Diccionario(3);
+        Diccionario dic = new Diccionario();
         boolean salida = false;
         do {
             System.out.println("Seleccione que desea hacer:" +
@@ -59,29 +57,17 @@ public class MenuJuego {
                     "\n2.- Actualizar diccionario" +
                     "\n3.- Menu anterior");
             opcion = lector.nextInt();
+            System.in.read();
             switch (opcion) {
                 case 1:
                     System.out.println("Ha seleccionado listar el diccionario.");
-                    dicfacil.listar();
-                    dicmedio.listar();
-                    dicdificil.listar();
+                    dic.listar();
                     break;
                 case 2:
                     System.out.println("Ha seleccionado modificar el diccionario." +
-                            "\nPrimero introduce la palabra que desea introducir y la dificultad");
-                    palabra = lector.next();
-                    dificultad = lector.nextInt();
-                    switch (dificultad) {
-                        case 1:
-                            dicfacil.actualizarPalabras(palabra, dificultad);
-                            break;
-                        case 2:
-                            dicmedio.actualizarPalabras(palabra, dificultad);
-                            break;
-                        case 3:
-                            dicdificil.actualizarPalabras(palabra, dificultad);
-                            break;
-                    }
+                            "\nPrimero introduce la palabra que desea introducir");
+                    palabra = lector.nextLine();
+                    dic.actualizarPalabras(palabra);
                     break;
                 case 3:
                     System.out.println("Volviendo al menu anterior");
