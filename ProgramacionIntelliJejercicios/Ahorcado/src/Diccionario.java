@@ -60,61 +60,69 @@ public class Diccionario {
 	 * este metodo servira para listar las palabras ordenadas en grupos por dificultad   facil || medio || dificil
 	 */
 	public void listar () {
-		if (facil!=null) {
 			System.out.println("Estas son las palabras Faciles 5 letras");
 			for (int i = 0; i < facil.size(); i++) {
 				System.out.println(facil.get(i));
 			}
-		}
-		if (medio!=null) {
 			System.out.println("Estas son las palabras Medias 6 letras");
 			for (int i = 0; i < medio.size(); i++) {
 				System.out.println(medio.get(i));
 			}
-		}
-		if (dificil!=null) {
 			System.out.println("Estas son las palabras Dificiles 7 letras");
 			for (int i = 0; i < dificil.size(); i++) {
 				System.out.println(dificil.get(i));
 			}
-		}
-		if (personalizado!=null) {
-			System.out.println("Aqui se encuentra sus palabras introducidas");
-			for (int i = 0; i < personalizado.size(); i++) {
-				System.out.println(personalizado.get(i));
+			if (personalizado!=null) {
+				System.out.println("Aqui se encuentra sus palabras introducidas");
+				for (int i = 0; i < personalizado.size(); i++) {
+					System.out.println(personalizado.get(i));
+				}
 			}
-		}
 	}
 	/**
 	 * este medoto servira para modificar el diccionario añadir y modificar
-	 * @param palabra
 	 */
-	public void actualizarPalabras(String palabra) {
+	public void actualizarPalabras() {
 		Scanner lector = new Scanner(System.in);
 		int opcion;
-		System.out.println("Seleccione una de las dos opciones:" +
-				"\n1. Añadir palabra nueva" +
-				"\n2. Cambiar una palabra exisistente" +
-				"\n3. Eliminar una palabra de la dificultad personalizada");
-		opcion=lector.nextInt();
-		switch (opcion) {
-			case 1:
-				addpalabras(palabra);
-				break;
-			case 2:
-				System.out.println("A continuacion se listaran las palabras para que seleccione la que quiere modificar");
-				listar();
-				System.out.println("Seleccione la dificultad de la palabra a modificar");
-				int dificultad=lector.nextInt();
-				int indice=lector.nextInt();
-				cambiarPalabras(palabra, dificultad,indice);
-				break;
-			case 3:
-				System.out.println("A continuacion se pedira la palabra que se quiera eliminar");
-
-			default:
-				System.out.println("No ha seleccionado una opcion valida");
-		}
+		String palabra;
+		boolean salida = false;
+		do {
+			System.out.println("Seleccione una de las dos opciones:" +
+					"\n1. Añadir palabra nueva" +
+					"\n2. Cambiar una palabra exisistente" +
+					"\n3. Eliminar una palabra de la dificultad personalizada" +
+					"\n4. Menu anterior");
+			opcion = lector.nextInt();
+			lector.nextLine();
+			switch (opcion) {
+				case 1:
+					System.out.println("Introduce la palabra a introducir");
+					palabra = lector.nextLine();
+					addpalabras(palabra);
+					break;
+				case 2:
+					System.out.println("A continuacion se listaran las palabras para que seleccione la que quiere modificar");
+					listar();
+					System.out.println("Seleccione la dificultad de la palabra a modificar, e introduzca la palabra nueva con su indice");
+					int dificultad = lector.nextInt();
+					palabra = lector.nextLine();
+					int indice = lector.nextInt();
+					cambiarPalabras(palabra, dificultad, indice);
+					break;
+				case 3:
+					System.out.println("A continuacion se listan las palabras. Luego escriba la palabra que desea eliminar " +
+							"\n(DEBE SER UNA PALABRA DEL DICCIONARIO PERSONALIZADO)");
+					listar();
+					palabra = lector.nextLine();
+					deletepalabra(palabra);
+					break;
+				case 4:
+					System.out.println("Volviendo al menu anteior");
+					salida = true;
+					break;
+			}
+		} while (salida);
 	}
 	/**
 	 * metodo para añadir palabras nuevas al diccionario de personalizado

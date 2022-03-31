@@ -45,7 +45,7 @@ public class MenuJuego {
             }
         } while (!again);
     }
-    public void gestion() throws IOException {
+    public void gestion() {
         Scanner lector = new Scanner(System.in);
         String palabra;
         int dificultad, opcion;
@@ -57,17 +57,15 @@ public class MenuJuego {
                     "\n2.- Actualizar diccionario" +
                     "\n3.- Menu anterior");
             opcion = lector.nextInt();
-            System.in.read();
+            lector.nextLine();
             switch (opcion) {
                 case 1:
                     System.out.println("Ha seleccionado listar el diccionario.");
                     dic.listar();
                     break;
                 case 2:
-                    System.out.println("Ha seleccionado modificar el diccionario." +
-                            "\nPrimero introduce la palabra que desea introducir");
-                    palabra = lector.nextLine();
-                    dic.actualizarPalabras(palabra);
+                    System.out.println("Ha seleccionado modificar el diccionario.");
+                    dic.actualizarPalabras();
                     break;
                 case 3:
                     System.out.println("Volviendo al menu anterior");
