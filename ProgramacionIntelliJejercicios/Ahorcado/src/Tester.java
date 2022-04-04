@@ -6,8 +6,9 @@ public class Tester {
 		Scanner lector = new Scanner(System.in);
 		int opcion;
 		boolean salida = false;
+		Diccionario diccionariopalabras = new Diccionario();
+		Juego partida = new Juego();
 		MenuJuego juego = new MenuJuego();
-
 			System.out.println("Bienvenido al juego del ahorcado. Seleccione una opcion de la lista:" +
 					"\n1. Jugar." +
 					"\n2. Gestionar diccionarios" +

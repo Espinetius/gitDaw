@@ -1,7 +1,7 @@
 public class Juego {
 	protected int dificultad;
 	protected int vidas;
-
+	public Juego() {}
 	/**
 	 * de momento el constructor del juego solo va a setear las vidas en funcion de la dificultad.
 	 * @param dificultad
