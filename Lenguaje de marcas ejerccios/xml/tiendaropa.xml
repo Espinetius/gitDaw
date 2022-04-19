@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="pares.xsl"?>
+<Tiendas>
+ <tienda>
+ <Nombre>Zara</Nombre>
+ <direccion>Gran Via</direccion>
+ <precios>19</precios>
+ </tienda>
+ <tienda>
+ <Nombre>HM</Nombre>
+ <direccion>Alcala</direccion>
+ <precios>14</precios>
+ </tienda>
+ <tienda>
+<Nombre>Springfield</Nombre>
+ <direccion>Mayor</direccion>
+<precios>9</precios>
+ </tienda>
+ <tienda>
+ <Nombre>Domino</Nombre>
+ <direccion>Alcala</direccion>
+ <precios>14</precios>
+ </tienda>
+ <tienda>
+ <Nombre>Mango</Nombre>
+ <direccion>Alcala</direccion>
+ <precios>20</precios>
+ </tienda>
+</Tiendas>
