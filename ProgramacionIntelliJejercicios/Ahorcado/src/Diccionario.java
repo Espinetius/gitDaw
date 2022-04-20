@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class Diccionario {
 	protected ArrayList<Linea> dic;
+	protected File diccionario;
 	public Diccionario() {
 		dic = new ArrayList<>();
 		dic.add(new Linea("ascua",1));
@@ -31,6 +32,15 @@ public class Diccionario {
 		dic.add(new Linea("parejas",3));
 		dic.add(new Linea("deporte",3));
 		dic.add(new Linea("pisadas",3));
+		diccionario = new File("Diccionario.txt");
+		if (!diccionario.exists()) {
+			try {
+				diccionario.createNewFile();
+
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 
 	/**
@@ -51,15 +61,6 @@ public class Diccionario {
 	 * metodo para imprimir el fichero del diccionario, como esta con el printwriter se resetea cada vez que se llama
 	 */
 	public void imprimirFicheroNuevo() {
-		File diccionario = new File("Diccionario.txt");
-		if (!diccionario.exists()) {
-			try {
-				diccionario.createNewFile();
-
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
 		try {
 			PrintWriter pw = new PrintWriter(diccionario);
 			System.out.println("EL formato del diccionario es: Palabra ; dificultad");
@@ -72,15 +73,6 @@ public class Diccionario {
 		}
 	}
 	public void imprimirFichero() {
-		File diccionario = new File("Diccionario.txt");
-		if (!diccionario.exists()) {
-			try {
-				diccionario.createNewFile();
-
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
 		Scanner lector = null;
 		try {
 			lector = new Scanner(diccionario);
@@ -92,15 +84,6 @@ public class Diccionario {
 		}
 	}
 	public void añadirLineas(Linea linea) {
-		File diccionario = new File("Diccionario.txt");
-		if (!diccionario.exists()) {
-			try {
-				diccionario.createNewFile();
-
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
 		try {
 			PrintWriter pw = new PrintWriter(new FileWriter(diccionario, true));
 			pw.println(linea);

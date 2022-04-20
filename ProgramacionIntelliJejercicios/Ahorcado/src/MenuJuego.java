@@ -61,11 +61,13 @@ public class MenuJuego {
             switch (opcion) {
                 case 1:
                     System.out.println("Ha seleccionado listar el diccionario.");
-                    dic.imprimirFichero();
+
                     break;
                 case 2:
-                    System.out.println("Ha seleccionado modificar el diccionario.");
-
+                    System.out.println("Ha seleccionado modificar el diccionario." +
+                            "\n.- Introduzca una palabra" +
+                            "\n.- Introduzca la dificultad de la palabra");
+                    dic.añadirLineas(new Linea(lector.nextLine(),lector.nextInt()));
                     break;
                 case 3:
                     System.out.println("Volviendo al menu anterior");

@@ -21,3 +21,6 @@ central ; 3
 desfila ; 3
 parejas ; 3
 deporte ; 3
+capicua ; 2
+palabra ; 2
+cagoendios ; 100
