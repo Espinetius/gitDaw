@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class Diccionario {
 	protected ArrayList<Linea> dic;
-	protected File diccionario;
 	public Diccionario() {
+		comprobarFichero();
 		dic = new ArrayList<>();
 		dic.add(new Linea("ascua",1));
 		dic.add(new Linea("ambos",1));
@@ -32,21 +32,13 @@ public class Diccionario {
 		dic.add(new Linea("parejas",3));
 		dic.add(new Linea("deporte",3));
 		dic.add(new Linea("pisadas",3));
-		diccionario = new File("Diccionario.txt");
-		if (!diccionario.exists()) {
-			try {
-				diccionario.createNewFile();
-
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
+		imprimirFicheroNuevo();
 	}
 
 	/**
 	 * metodo para comprobar que el fichero existe y si no existe lo crea.
 	 */
-	public void comprobarFichero() {
+	public static void comprobarFichero() {
 		File diccionario = new File("Diccionario.txt");
 		if (!diccionario.exists()) {
 			try {
@@ -62,7 +54,8 @@ public class Diccionario {
 	 */
 	public void imprimirFicheroNuevo() {
 		try {
-			PrintWriter pw = new PrintWriter(diccionario);
+			comprobarFichero();
+			PrintWriter pw = new PrintWriter(new File("Diccionario.txt"));
 			System.out.println("EL formato del diccionario es: Palabra ; dificultad");
 			for (int i = 0; i < dic.size(); i++) {
 				pw.println(dic.get(i));
@@ -72,28 +65,35 @@ public class Diccionario {
 			e.printStackTrace();
 		}
 	}
-	public void imprimirFichero() {
+	public static void imprimirFichero() {
 		Scanner lector = null;
 		try {
-			lector = new Scanner(diccionario);
-			for (int i = 0; i < dic.size(); i++) {
-				System.out.println(dic.get(i));
+			comprobarFichero();
+			lector = new Scanner(new File("Diccionario.txt"));
+			while(lector.hasNextLine()){
+				System.out.println(lector.nextLine());
 			}
+			lector.close();
 		} catch (Exception ex) {
 			System.out.println(ex.getMessage());
 		}
+
 	}
 	public void añadirLineas(Linea linea) {
 		try {
-			PrintWriter pw = new PrintWriter(new FileWriter(diccionario, true));
+			comprobarFichero();
+			PrintWriter pw = new PrintWriter(new FileWriter("Diccionario.txt", true));
 			pw.println(linea);
 			pw.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
-	public void modificarDiccionario() {
+	/*
+	public void borrarLineas(Linea linea) {
 		comprobarFichero();
-
+		Scanner lector = new Scanner(System.in);
+		if (lector.equals(linea)) {}
 	}
+	 */
 }

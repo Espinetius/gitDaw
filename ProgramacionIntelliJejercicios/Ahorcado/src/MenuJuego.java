@@ -55,13 +55,14 @@ public class MenuJuego {
             System.out.println("Seleccione que desea hacer:" +
                     "\n1.- Listar diccionario" +
                     "\n2.- Actualizar diccionario" +
-                    "\n3.- Menu anterior");
+                    "\n3.- Borrar palabra" +
+                    "\n4.- Menu anterior");
             opcion = lector.nextInt();
             lector.nextLine();
             switch (opcion) {
                 case 1:
                     System.out.println("Ha seleccionado listar el diccionario.");
-
+                    dic.imprimirFichero();
                     break;
                 case 2:
                     System.out.println("Ha seleccionado modificar el diccionario." +
@@ -70,6 +71,12 @@ public class MenuJuego {
                     dic.añadirLineas(new Linea(lector.nextLine(),lector.nextInt()));
                     break;
                 case 3:
+                    System.out.println("Ha seleccionado borrar linea." +
+                            "\n.- Introduzca la palabra a eliminar" +
+                            "\n.- Introduzca la dificultad de la palabra");
+                    dic.borrarLineas(new Linea(lector.nextLine(), lector.nextInt()));
+                    break;
+                case 4:
                     System.out.println("Volviendo al menu anterior");
                     salida = true;
                     break;

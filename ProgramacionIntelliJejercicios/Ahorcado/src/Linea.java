@@ -1,8 +1,7 @@
 public class Linea {
 	protected String palabra;
 	protected int dificultad;
-	private int indice=1;
-	public Linea() {}
+	protected static int indice=1;
 	public Linea(String palabra, int dificultad) {
 		this.palabra=palabra;
 		this.dificultad=dificultad;
