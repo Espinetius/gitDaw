@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class Diccionario {
 	protected ArrayList<Linea> dic;
 	public Diccionario() {
-		comprobarFichero();
 		dic = new ArrayList<>();
 		dic.add(new Linea("ascua",1));
 		dic.add(new Linea("ambos",1));
@@ -32,9 +31,8 @@ public class Diccionario {
 		dic.add(new Linea("parejas",3));
 		dic.add(new Linea("deporte",3));
 		dic.add(new Linea("pisadas",3));
-		imprimirFicheroNuevo();
+		comprobarFichero();
 	}
-
 	/**
 	 * metodo para comprobar que el fichero existe y si no existe lo crea.
 	 */
@@ -43,7 +41,7 @@ public class Diccionario {
 		if (!diccionario.exists()) {
 			try {
 				diccionario.createNewFile();
-
+				imprimirFichero();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -52,7 +50,7 @@ public class Diccionario {
 	/**
 	 * metodo para imprimir el fichero del diccionario, como esta con el printwriter se resetea cada vez que se llama
 	 */
-	public void imprimirFicheroNuevo() {
+	public  void imprimirFicheroNuevo() {
 		try {
 			comprobarFichero();
 			PrintWriter pw = new PrintWriter(new File("Diccionario.txt"));
@@ -65,6 +63,9 @@ public class Diccionario {
 			e.printStackTrace();
 		}
 	}
+	/**
+	 * metodo para imprimir el fichero del diccionario
+	 */
 	public static void imprimirFichero() {
 		Scanner lector = null;
 		try {
@@ -79,6 +80,10 @@ public class Diccionario {
 		}
 
 	}
+	/**
+	 * metodo para añadir lineas en el diccionario (fichero)
+	 * @param linea
+	 */
 	public void añadirLineas(Linea linea) {
 		try {
 			comprobarFichero();
@@ -89,11 +94,44 @@ public class Diccionario {
 			e.printStackTrace();
 		}
 	}
-	/*
+
+	/**
+	 * metodo para añardir al arraylist las palabras que no estaban pero si en el fichero, y sacar una
+	 * palabra sacando una linea aleatoria primero.
+	 * @return
+	 */
+	public String damePalabraAleatoria() {
+		String palabra = null;
+		Scanner lector;
+		while (palabra==null) {
+			try {
+				comprobarFichero();
+				lector = new Scanner(new File("Diccionario.txt"));
+				while (lector.hasNextLine()) {
+					dic.add(new Linea(lector.nextLine().split(";")[0]));
+				}
+				palabra = String.valueOf(dic.get((int)(Math.random()*dic.size()))).split(";")[0];
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+		}
+		return palabra;
+	}
+	/**
+	 * Metodo para eliminar filas o lineas de palabras del arraylist.
+	 * Este metodo no utiliza el fichero del diccionario
+	 * @param linea
+	 */
 	public void borrarLineas(Linea linea) {
 		comprobarFichero();
 		Scanner lector = new Scanner(System.in);
-		if (lector.equals(linea)) {}
+		System.out.println("Introduce la palabra a eliminar");
+		linea= new Linea(lector.nextLine());
+		for (int i = 0; i < dic.size(); i++) {
+			if (dic.get(i).palabra.equalsIgnoreCase(linea.palabra)) {
+				dic.remove(i);
+			}
+		}
 	}
-	 */
+
 }

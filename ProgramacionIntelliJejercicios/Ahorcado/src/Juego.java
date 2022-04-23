@@ -1,39 +1,57 @@
 public class Juego {
-	protected int dificultad;
+	protected String palabra;
+	protected String[] palabraOculta;
+	protected boolean victoria;
 	protected int vidas;
-	public Juego() {}
-	/**
-	 * de momento el constructor del juego solo va a setear las vidas en funcion de la dificultad.
-	 * @param dificultad
-	 */
-	public Juego(int dificultad) {
-		this.dificultad=dificultad;
-		switch (dificultad) {
-			case 1:
-				vidas = 10;
-				break;
-			case 2:
-				vidas = 8;
-				break;
-			case 3:
-				vidas = 6;
-				break;
+	public Juego(Diccionario  diccionario) {
+		vidas = 10;
+		victoria = false;
+		palabra=diccionario.damePalabraAleatoria();
+		palabraOculta=new String[palabra.length()];
+		for (int i = 0; i < palabraOculta.length; i++) {
+			palabraOculta[i]="_";
 		}
 	}
-	public int getDificultad() {
-		return dificultad;
+	public void mosstrarGuiones() {
+		for (int i = 0; i < palabraOculta.length; i++) {
+			System.out.print(palabraOculta[i]+" ");
+		}
+		System.out.println(" ");
 	}
-	public void setDificultad(int dificultad) {
-		this.dificultad = dificultad;
+	public void vidasRestantes () {
+
 	}
-	public int getVidas() {
-		return vidas;
+	public boolean win() {
+		boolean result = false;
+		victoria=false;
+		int contador=0;
+		for (int i = 0; i < palabraOculta.length; i++) {
+			if (!palabraOculta[i].equals("_")){
+				contador++;
+				if (contador== palabraOculta.length) {
+					result=true;
+					victoria=true;
+				}
+			}
+		}
+		return result;
 	}
-
-	/**
-	 * este metodo es para ocultar la palabra para el usuario.
-	 * @param palabra
-	 */
-
-
+	public void comprobarResultado(String entrada) {
+		boolean salida=false;
+		if (entrada.length()==palabra.length()) {
+			if (entrada.equalsIgnoreCase(palabra)){
+				salida=true;
+				this.win();
+			}
+		} else {
+			if(entrada.length()==1) {
+				for (int i = 0; i < palabra.length(); i++) {
+					if (entrada.toCharArray()[0]==palabra.toCharArray()[i]) {
+						salida=true;
+						palabraOculta[i]=entrada;
+					}
+				}
+			}
+		}
+	}
 }

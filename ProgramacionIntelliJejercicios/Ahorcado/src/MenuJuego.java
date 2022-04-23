@@ -2,36 +2,18 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class MenuJuego {
-    public void juego() {
+    public void juego(Diccionario diccionariopalabras) {
         Scanner lector = new Scanner(System.in);
         boolean descubierta = false;
         char letra;
         boolean again = false;
         String again2;
         do {
-            System.out.println("....Que empiece el juego...." +
-                    "\nSeleccione la dificultad:" +
-                    "\n1. Palabra de 5 letras y 10 intentos" +
-                    "\n2. Palabra de 6 letras y 8 intentos" +
-                    "\n3. Palabra de 7 letras y 6 intentos" +
-                    "\n4. Palabra personalizada");
-            int opcion = lector.nextInt();
-            Juego partida = new Juego(opcion);
+            System.out.println("....Que empiece el juego....");
+            Juego partida = new Juego(diccionariopalabras);
             //System.out.println(palabra.getPalabra());
             System.out.println("Adivine la palabra: ");
-            /*do {
-                System.out.println("\nIntroduce una letra");
-                try {
-                    letra = (char) System.in.read();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                if (palabra.palabra.equalsIgnoreCase(palabra.palabraOculta.toString())) {
-                    descubierta = true;
-                }
-            } while (!descubierta && partida.vidas > 0);
 
-             */
             if (descubierta) {
                 System.out.println("Enhorabuena! Has ganado la partida. Gracias por jugar");
             }
@@ -45,18 +27,16 @@ public class MenuJuego {
             }
         } while (!again);
     }
-    public void gestion() {
+    public void gestion(Diccionario diccionariopalabras) {
         Scanner lector = new Scanner(System.in);
-        String palabra;
-        int dificultad, opcion;
-        Diccionario dic = new Diccionario();
+        int  opcion;
+        Diccionario dic = diccionariopalabras;
         boolean salida = false;
         do {
             System.out.println("Seleccione que desea hacer:" +
                     "\n1.- Listar diccionario" +
                     "\n2.- Actualizar diccionario" +
-                    "\n3.- Borrar palabra" +
-                    "\n4.- Menu anterior");
+                    "\n3.- Menu anterior");
             opcion = lector.nextInt();
             lector.nextLine();
             switch (opcion) {
@@ -71,15 +51,11 @@ public class MenuJuego {
                     dic.añadirLineas(new Linea(lector.nextLine(),lector.nextInt()));
                     break;
                 case 3:
-                    System.out.println("Ha seleccionado borrar linea." +
-                            "\n.- Introduzca la palabra a eliminar" +
-                            "\n.- Introduzca la dificultad de la palabra");
-                    dic.borrarLineas(new Linea(lector.nextLine(), lector.nextInt()));
-                    break;
-                case 4:
                     System.out.println("Volviendo al menu anterior");
                     salida = true;
                     break;
+                default:
+                    System.out.println("No ha seleccionado una opcion valida del menu.");
             }
         } while (!salida);
     }
