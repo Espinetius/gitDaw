@@ -23,3 +23,4 @@ parejas ; 3
 deporte ; 3
 pisadas ; 3
 hola ; 1
+juego ; 1
