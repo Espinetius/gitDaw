@@ -1,35 +1,45 @@
-import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Tester {
-	public static void main (String arg[]) throws IOException {
+	public static void main (String arg[]){
 		Scanner lector = new Scanner(System.in);
-		int opcion;
+		int opcion=4;
 		String pass="palomeras";
 		String contraseña=null;
 		boolean salida = false;
 		Diccionario diccionariopalabras = new Diccionario();
 		MenuJuego juego = new MenuJuego();
+		do {
 			System.out.println("Bienvenido al juego del ahorcado. Seleccione una opcion de la lista:" +
 					"\n1. Jugar." +
 					"\n2. Gestionar diccionarios" +
 					"\n3. Salir");
-			switch (opcion = lector.nextInt()) {
+			try {
+				opcion = lector.nextInt();
+			}catch (InputMismatchException ex) {
+				ex.getMessage();
+			}
+			switch (opcion) {
 				case 1:
 					juego.juego(diccionariopalabras);
 					break;
 				case 2:
 					System.out.println("Introduzca la contraseña");
-					String limpieza= lector.nextLine();
-					contraseña = lector.nextLine();
-					int i=1;
-					while (contraseña==null || !contraseña.equals(pass)) {
-						if(i>=3) {
-							System.out.println("Recuerda, la contraseña es: 'palomeras'");
+					String limpieza = lector.nextLine();
+					try {
+						contraseña = lector.nextLine();
+						int i = 1;
+						while (contraseña == null || !contraseña.equals(pass)) {
+							if (i >= 3) {
+								System.out.println("Recuerda, la contraseña es: 'palomeras'");
+							}
+							System.out.println("Introduzca la contraseña correcta");
+							contraseña = lector.nextLine();
+							i++;
 						}
-						System.out.println("Introduzca la contraseña correcta");
-						contraseña=lector.nextLine();
-						i++;
+					} catch (InputMismatchException ex) {
+						ex.getMessage();
 					}
 					juego.gestion(diccionariopalabras);
 					break;
@@ -40,6 +50,6 @@ public class Tester {
 				default:
 					System.out.println("No ha seleccionado una opcion valida");
 			}
-
+		} while(!salida);
 	}
 }

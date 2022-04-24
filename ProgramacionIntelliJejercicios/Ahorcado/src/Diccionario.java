@@ -108,9 +108,9 @@ public class Diccionario {
 				comprobarFichero();
 				lector = new Scanner(new File("Diccionario.txt"));
 				while (lector.hasNextLine()) {
-					dic.add(new Linea(lector.nextLine().split(";")[0]));
+					dic.add(new Linea(lector.nextLine().split(" ; ")[0]));
 				}
-				palabra = String.valueOf(dic.get((int)(Math.random()*dic.size()))).split(";")[0];
+				palabra = String.valueOf(dic.get((int)(Math.random()*dic.size()))).split(" ; ")[0];
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
