@@ -24,3 +24,4 @@ deporte ; 3
 pisadas ; 3
 hola ; 1
 juego ; 1
+amistad ; 3

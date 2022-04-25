@@ -1,10 +1,12 @@
 import groovy.io.GroovyPrintWriter;
 
 import java.io.*;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Diccionario {
 	protected ArrayList<Linea> dic;
+	protected static final String nombreFichero="Diccionario.txt";
 	public Diccionario() {
 		dic = new ArrayList<>();
 		dic.add(new Linea("ascua",1));
@@ -111,6 +113,37 @@ public class Diccionario {
 					dic.add(new Linea(lector.nextLine().split(" ; ")[0]));
 				}
 				palabra = String.valueOf(dic.get((int)(Math.random()*dic.size()))).split(" ; ")[0];
+				lector.close();
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+		}
+		return palabra;
+	}
+
+	/**
+	 * Metodo que te da una palabra aleatoria del fichero en funcion de la dificultad pedida.
+	 * @param dificultad
+	 * @return
+	 */
+	public String damePalabraAleatoria(int dificultad) {
+		String palabra = null;
+		Scanner lector;
+		int diff;
+		while (palabra==null) {
+			try {
+				comprobarFichero();
+				lector = new Scanner(new File("Diccionario.txt"));
+				while (lector.hasNextLine()) {
+					dic.add(new Linea(lector.nextLine().split(" ; ")[0]));
+				}
+				ArrayList<Linea> aux = new ArrayList<>();
+				for (int i = 0; i<dic.size(); i++) {
+					if (dic.get(i).dificultad == dificultad) {
+						aux.add(dic.get(i));
+					}
+				}
+				palabra=String.valueOf(aux.get((int)(Math.random()*dic.size()))).split(" ; ")[0];
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}

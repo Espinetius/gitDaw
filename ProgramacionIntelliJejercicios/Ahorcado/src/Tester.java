@@ -22,7 +22,11 @@ public class Tester {
 			}
 			switch (opcion) {
 				case 1:
-					juego.juego(diccionariopalabras);
+					try {
+						juego.juego(diccionariopalabras);
+					} catch (ExepcionPropia e) {
+						e.printStackTrace();
+					}
 					break;
 				case 2:
 					System.out.println("Introduzca la contraseña");

@@ -3,6 +3,10 @@ public class Juego {
 	protected String[] palabraOculta;
 	protected boolean end;
 	protected int vidas;
+	/**
+	 * metodo Juego sin tener en cuenta la dificultad de las palabras.
+	 * @param diccionario
+	 */
 	public Juego(Diccionario  diccionario) {
 		vidas = 7;
 		end = false;
@@ -12,7 +16,20 @@ public class Juego {
 			palabraOculta[i]="_";
 		}
 	}
-
+	/**
+	 * Metodo juego dependiendo de la dificultad
+	 * @param diccionario
+	 * @param dificultad
+	 */
+	public Juego(Diccionario  diccionario, int dificultad) {
+		vidas = 7;
+		end = false;
+		palabra=diccionario.damePalabraAleatoria(dificultad);
+		palabraOculta=new String[palabra.length()];
+		for (int i = 0; i < palabraOculta.length; i++) {
+			palabraOculta[i]="_";
+		}
+	}
 	/**
 	 * metodo para Imprimir los guiones de la palabra oculta
 	 */
