@@ -56,7 +56,11 @@ public class MenuJuego {
                 } while (!partida.end);
                 System.out.println("Quiere volver a jugar? si/no");
             } else {
-                Testing.diffNull(dificultad);
+                try {
+                    Testing.diffNull(dificultad);
+                } catch (InputMismatchException e) {
+                    Testing.diffNull(dificultad);
+                }
                 partida= new Juego(diccionariopalabras, dificultad);
                 do {
                     //System.out.println(palabra.getPalabra());

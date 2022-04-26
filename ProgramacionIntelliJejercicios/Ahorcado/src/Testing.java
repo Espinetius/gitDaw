@@ -34,4 +34,10 @@ public class Testing {
 			throw new ExepcionPropia(diff);
 		};
 	}
+	public static void diffNull(String diff) throws ExepcionPropia{
+		diffValidas();
+		if (!dificultades.contains(diff)) {
+			throw new ExepcionPropia(diff);
+		};
+	}
 }
