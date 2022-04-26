@@ -59,7 +59,6 @@ public class Juego {
 	 */
 	public boolean win() {
 		boolean result = false;
-		end=false;
 		int contador=0;
 		for (int i = 0; i < palabraOculta.length; i++) {
 			if (!palabraOculta[i].equals("_")){

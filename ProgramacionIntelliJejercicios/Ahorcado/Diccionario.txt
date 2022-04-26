@@ -25,3 +25,13 @@ pisadas ; 3
 hola ; 1
 juego ; 1
 amistad ; 3
+paloma ; 2
+telefono ; 4
+ordenador ; 5
+instituto ; 5
+aprovado ; 4
+suspenso ; 4
+programacion ; 8
+diccionario ; 7
+terminal ; 4
+entorno ; 3

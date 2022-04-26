@@ -17,8 +17,9 @@ public class Tester {
 					"\n3. Salir");
 			try {
 				opcion = lector.nextInt();
-			}catch (InputMismatchException ex) {
+			}catch (InputMismatchException | NullPointerException ex) {
 				ex.getMessage();
+				lector.nextLine();
 			}
 			switch (opcion) {
 				case 1:
@@ -30,7 +31,7 @@ public class Tester {
 					break;
 				case 2:
 					System.out.println("Introduzca la contraseña");
-					String limpieza = lector.nextLine();
+					lector.nextLine();
 					try {
 						contraseña = lector.nextLine();
 						int i = 1;

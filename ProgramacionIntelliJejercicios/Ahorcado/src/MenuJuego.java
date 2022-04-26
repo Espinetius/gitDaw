@@ -114,9 +114,8 @@ public class MenuJuego {
                         break;
                     case 2:
                         System.out.println("Ha seleccionado modificar el diccionario." +
-                                "\n.- Introduzca una palabra" +
-                                "\n.- Introduzca la dificultad de la palabra");
-                        dic.añadirLineas(new Linea(lector.nextLine(), lector.nextInt()));
+                                "\n.- Introduzca una palabra");
+                        dic.añadirLineas(new Linea(lector.nextLine()));
                         break;
                     case 3:
                         System.out.println("Volviendo al menu anterior");
