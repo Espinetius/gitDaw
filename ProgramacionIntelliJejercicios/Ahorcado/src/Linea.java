@@ -11,6 +11,22 @@ public class Linea {
 		this.palabra=palabra;
 		dificultad=palabra.length()-4;
 	}
+	public Linea(int dificultad) {
+		this.dificultad=dificultad;
+	}
+	public String getPalabra() {
+		return palabra;
+	}
+	public void setPalabra(String palabra) {
+		this.palabra = palabra;
+	}
+	public int getDificultad() {
+		return dificultad;
+	}
+	public void setDificultad(int dificultad) {
+		this.dificultad = dificultad;
+	}
+
 	@Override
 	public String toString() {
 		return palabra + " ; " + dificultad ;

@@ -14,6 +14,7 @@ public class Diccionario {
 		dic.add(new Linea("bruta",1));
 		dic.add(new Linea("ciega",1));
 		dic.add(new Linea("forma",1));
+		dic.add(new Linea("forma",1));
 		dic.add(new Linea("dagas",1));
 		dic.add(new Linea("locos",1));
 		dic.add(new Linea("marca",1));
@@ -139,7 +140,7 @@ public class Diccionario {
 				}
 				ArrayList<Linea> aux = new ArrayList<>();
 				for (int i = 0; i<dic.size(); i++) {
-					if (dic.get(i).dificultad == dificultad) {
+					if (dic.get(i).getDificultad() == dificultad) {
 						aux.add(dic.get(i));
 					}
 				}

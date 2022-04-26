@@ -1,20 +1,30 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Testing {
 	protected static ArrayList<Integer> dificultades;
 	public static ArrayList<Integer> diffValidas() {
 		Scanner lector;
+		int dificultad;
 		dificultades = new ArrayList<>();
 		try {
 			lector = new Scanner(new File(Diccionario.nombreFichero));
 			while (lector.hasNextLine()){
-				dificultades.add(lector.nextInt());
+				dificultad= Integer.parseInt(lector.nextLine().split(" ; ")[1]);
+				for (int i = 0; i < dificultades.size(); i++) {
+					if (dificultades.get(i)!=dificultad) {
+						dificultades.add(dificultad);
+					}
+				}
+				dificultades.add(dificultad);
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
+		} catch (InputMismatchException e) {
+			e.getMessage();
 		}
 		return dificultades;
 	}
