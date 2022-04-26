@@ -139,14 +139,17 @@ public class Diccionario {
 					dic.add(new Linea(lector.nextLine().split(" ; ")[0]));
 				}
 				ArrayList<Linea> aux = new ArrayList<>();
+
 				for (int i = 0; i<dic.size(); i++) {
 					if (dic.get(i).getDificultad() == dificultad) {
 						aux.add(dic.get(i));
 					}
 				}
-				palabra=String.valueOf(aux.get((int)(Math.random()*dic.size()))).split(" ; ")[0];
+				palabra=String.valueOf(aux.get((int)(Math.random()*dic.size()+1))).split(" ; ")[0];
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
+			} catch (IndexOutOfBoundsException ex) {
+				ex.getMessage();
 			}
 		}
 		return palabra;
