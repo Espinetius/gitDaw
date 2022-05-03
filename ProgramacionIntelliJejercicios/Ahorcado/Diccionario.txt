@@ -35,3 +35,5 @@ programacion ; 8
 diccionario ; 7
 terminal ; 4
 entorno ; 3
+sudadera ; 4
+raton ; 1

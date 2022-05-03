@@ -1,0 +1,47 @@
+/* Con esta hoja de estilos se consigue que una imagen plana rectangular, 
+   se convierta en un elemnto esféríco que gira sobre sí mismo
+*/   
+
+body {
+	/* Probar a cambiar el nombre del archivo jpg de la url para modificar 
+	   la imagen del fondo de pantalla de la página web */
+   background: url(universo.jpg) 0 0 repeat; height: 100%;	
+}	
+
+#globo {
+ 
+  position: absolute;
+  
+  /* Posición en la página web.  0em 0em representa la esquina superior izquierda */
+  margin: 20em 25em;
+ 
+  /* Probar a cambiar imagen de fondo del elemento (la esfera) */
+  background: url(mapamundi.jpg) 0 0 repeat;
+     
+  /* Cambiar proporcionalmente anchura y altura, junto a background-size 
+     Ejemplo: 150x para anchura y altura y 315px para el tamaño del fondo */
+  width: 300px;
+  height: 300px;
+  background-size: 630px;
+ 
+  /* Produce bordes más redondeados. Probar a cambiar el porcentaje desde 0% a 50% 
+     0% los bordes son de 90 grados. 50% los bordes están completamente redondeados */
+  border-radius: 50%;  
+ 
+  /* Cambiar la velocidad de rotación modificando los segundos. A menor valor de "s",
+     más rápida girará el globo */
+  animation: rotate 15s linear infinite;
+  
+  /* Genera un borde sombreado en la parte izquierda */
+  box-shadow: inset 20px 0 80px 6px rgba(0, 0, 0, 1);  
+}
+
+/* Probar a cambiar los porcentajes haciéndoles variar entre 0% y 100% 
+   Si cambiamos el 100% por 50% girará la mitad del tiempo en un sentido
+   y la otra mitad en el contrario */
+@keyframes rotate {
+  0% {background-position: 0 0;}
+  100% {background-position: 630px 0;}
+}
+	
+
