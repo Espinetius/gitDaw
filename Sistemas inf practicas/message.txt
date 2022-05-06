@@ -1,0 +1,32 @@
+-La red de comunicaciones más pequeña es Subred o segmento de red.
+-La dirección MAC Es la dirección física de la tarjeta de red
+-Cables UTP: Rápidos en distancias cortas. Conectores RJ-45.
+-HUB: Replica la señal a todos los ordenadores conectados a él.
+-Topología en bus: el fallo de un Terminal, la red se queda sin servicio.
+-Topología en estrella: Sólo se quedan sin red si falla el nodo principal.
+-La capa de enlace: añade a la señal las MAC del emisor y el receptor.
+-La capa de red: Elige el mejor camino para transmitir el paquete.
+-La capa de sesión: Organiza la recuperación de la comunicación si hay incidente.
+-Protocolo TCP: TCP se basa en dir.IP, siendo TCP orientado a la conexión.
+-Protocolo DHCP: asigna dir.IP de forma dinamica a los equipos conectados.
+-Protocolo FTP: transfiere ficheros basandose en el protocolo TCP.
+-El servicio DNS: Convierte direcciones IP en nombres de dominios y viceversa.
+-Los protocolos Telnet y ssh: establecen sesión del cliente en el servidor. SSH es seguro.
+COMANDOS WINDOWS
+-Para trazar dirección: TRACERT direccion.
+-Para saber la configuración del DNS primario de un equipo Windows utilizamos el comando: ipconfig /all.
+-Para saber si tengo conexion con algo: ping algo
+-La IP 127.0.0.1 es la direccion loopback.
+COMANDOS LINUX
+-En qué fichero se configura la IP en Ubuntu 16: /etc/network/interfaces.
+-Con qué comando de Ubuntu 16 se obtiene la IP del equipo: IFCONFIG.
+-El comando de Ubuntu que nos devuelve el nombre de la IP 192.168.0.22 es: nslookup 192.168.0.22.
+-El servicio ssh escucha por el puerto 22.
+-El servicio http escucha por el puerto 80.
+-El servicio https escucha por el puerto 443.
+-Para obtener la IP en Ubuntu 20 se utiliza el comando: ip addr.
+-Para obtener la puerta de enlace en Ubuntu 20 se utiliza el comando: ip route.
+-Para obtener la MAC en Ubuntu 20 se utiliza el comando: ip neighbour.
+-El directorio en el que se configura la IP en Ubuntu 20 es: /etc/netplan
+-En Ubuntu 20 para aplicar los cambios de la configuración IP escribimos el comando: netplan apply
+-En Ubuntu 16 para aplicar los cambios de la configuración IP escribimos el comando: /etc/init.d/networking restart.
