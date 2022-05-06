@@ -1,12 +1,14 @@
 public class Servicio {
 	protected String viaje;
 	protected double precio;
+	protected Fecha fecha;
 	public Servicio() {
-		this("Lista de viajes",0.00);
+		this("Lista de viajes",0.00, new Fecha());
 	}
-	public Servicio(String viaje, double precio) {
+	public Servicio(String viaje, double precio, Fecha fecha) {
 		this.viaje=viaje;
 		this.precio=precio;
+		this.fecha=fecha;
 	}
 
 	public String getViaje() {
@@ -27,6 +29,6 @@ public class Servicio {
 
 	@Override
 	public String toString() {
-		return "-" + viaje + " -- " + precio + " €";
+		return "- " + fecha+ "\"" + viaje + " -- " + precio + " €";
 	}
 }
