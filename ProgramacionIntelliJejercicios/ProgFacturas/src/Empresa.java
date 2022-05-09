@@ -1,6 +1,6 @@
 public class Empresa {
 	protected String nombreEmpresa;
-	protected String NIF;
+	protected String CIF;
 	protected int telefono;
 	protected Direccion direccion;
 
@@ -8,25 +8,25 @@ public class Empresa {
 	 * Constructor para crear linea de empresa vacia y NIF vacio.
 	 */
 	public Empresa(){
-		this("Nombre de la empresa", "NIF de la empresa", 000000000, new Direccion());
+		this("Nombre de la empresa", "CIF de la empresa", 000000000, new Direccion());
 	}
 
 	/**
 	 * Constructor para crear linea de empresa a traves de un nombre de empresa, un NIF, un telefono y una direccion
 	 * @param nombreEmpresa
-	 * @param NIF
+	 * @param CIF
 	 * @param telefono
 	 * @param direccion
 	 */
-	public Empresa(String nombreEmpresa, String NIF, int telefono, Direccion direccion) {
+	public Empresa(String nombreEmpresa, String CIF, int telefono, Direccion direccion) {
 		this.nombreEmpresa=nombreEmpresa;
-		this.NIF=NIF;
+		this.CIF=CIF;
 		this.telefono=telefono;
 		this.direccion=direccion;
 	}
-	public Empresa(String nombreEmpresa, String NIF) {
+	public Empresa(String nombreEmpresa, String CIF) {
 		this.nombreEmpresa=nombreEmpresa;
-		this.NIF=NIF;
+		this.CIF=CIF;
 	}
 
 
@@ -38,18 +38,34 @@ public class Empresa {
 		this.nombreEmpresa = nombreEmpresa;
 	}
 
-	public String getNIF() {
-		return NIF;
+	public String getCIF() {
+		return CIF;
 	}
 
-	public void setNIF(String NIF) {
-		this.NIF = NIF;
+	public void setCIF(String CIF) {
+		this.CIF = CIF;
+	}
+
+	public int getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(int telefono) {
+		this.telefono = telefono;
+	}
+
+	public Direccion getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(Direccion direccion) {
+		this.direccion = direccion;
 	}
 
 	@Override
 	public String toString() {
 		return "Empresa: " + nombreEmpresa +
-				"\nNIF: " + NIF +
+				"\nCIF: " + CIF +
 				"\nTelefono: " + telefono +
 				"\nDireccion" + direccion;
 	}

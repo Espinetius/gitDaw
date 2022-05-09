@@ -1,7 +1,4 @@
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -10,7 +7,7 @@ public class ListaEmpresas {
 	protected static final String ficheroListaEmpresas = "Listado_Empresas.txt";
 	public ListaEmpresas() {
 		empresasArraylist = new ArrayList<>();
-		empresasArraylist.add(new Empresa("...Empresa...","...NIF..."));
+		empresasArraylist.add(new Empresa("...Empresa...","...CIF..."));
 		empresasArraylist.add(new Empresa("----------------------------------------", "------------------"));
 		comprobarFichero();
 	}
@@ -23,6 +20,19 @@ public class ListaEmpresas {
 			} catch (IOException e) {
 				System.out.println(e.getMessage());
 			}
+		}
+	}
+	public  void imprimirFicheroNuevo() {
+		try {
+			comprobarFichero();
+			PrintWriter pw = new PrintWriter(new File(ficheroListaEmpresas));
+			System.out.println("Las empresas son: (nombre empresa, CIF, telefono, ciudad)");
+			for (int i = 0; i < empresasArraylist.size(); i++) {
+				pw.println(empresasArraylist.get(i));
+			}
+			pw.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
 		}
 	}
 	public static void imprimirFichero() {
@@ -44,7 +54,7 @@ public class ListaEmpresas {
 			comprobarFichero();
 			PrintWriter pw = new PrintWriter(new FileWriter(ficheroListaEmpresas, true));
 			for (int i = 0; i < empresasArraylist.size() && !salida; i++) {
-				if (!empresa.NIF.equalsIgnoreCase(empresasArraylist.get(i).NIF)||i==empresasArraylist.size()-1){
+				if (!empresa.CIF.equalsIgnoreCase(empresasArraylist.get(i).CIF)||i==empresasArraylist.size()-1){
 					salida=true;
 				}
 			}
@@ -64,7 +74,7 @@ public class ListaEmpresas {
 			comprobarFichero();
 			PrintWriter pw = new PrintWriter(new FileWriter(ficheroListaEmpresas, true));
 			for (int i = 0; i < empresasArraylist.size() && !salida; i++) {
-				if(empresa.NIF.equalsIgnoreCase(empresasArraylist.get(i).NIF)) {
+				if(empresa.CIF.equalsIgnoreCase(empresasArraylist.get(i).CIF)) {
 					empresasArraylist.add(empresa);
 					salida=true;
 				}

@@ -37,3 +37,4 @@ terminal ; 4
 entorno ; 3
 sudadera ; 4
 raton ; 1
+teclado ; 3

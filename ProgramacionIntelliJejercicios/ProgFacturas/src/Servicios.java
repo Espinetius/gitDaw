@@ -5,7 +5,7 @@ public class Servicios {
 	protected double preciototal;
 	public Servicios() {
 		servicios = new ArrayList<>();
-		servicios.add(new Servicio());
+		servicios.add(new Servicio("Introduzca el viaje aqui", 0.00, new Fecha()));
 	}
 	public void añadirServicios(Servicio servicio) {
 		servicios.add(servicio);
@@ -14,6 +14,9 @@ public class Servicios {
 		for (int i = 0; i < servicios.size(); i++) {
 			System.out.println(servicios.get(i));
 		}
+	}
+	public double getPreciototal() {
+		return preciototal;
 	}
 	public double calculoPreciototal() {
 		preciototal=0;
