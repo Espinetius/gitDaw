@@ -68,14 +68,18 @@ public class ListaEmpresas {
 			System.out.println(e.getMessage());
 		}
 	}
-	public void actualizarEmpresa(Empresa empresa) {
+	public void actualizarEmpresa(String CIF) {
 		boolean salida=false;
 		try {
 			comprobarFichero();
 			PrintWriter pw = new PrintWriter(new FileWriter(ficheroListaEmpresas, true));
 			for (int i = 0; i < empresasArraylist.size() && !salida; i++) {
-				if(empresa.CIF.equalsIgnoreCase(empresasArraylist.get(i).CIF)) {
-					empresasArraylist.add(empresa);
+				if(CIF.equalsIgnoreCase(empresasArraylist.get(i).CIF)) {
+					System.out.println("Que desea modificar de la empresa:" +
+							"\n1.- Nombre de la empresa" +
+							"\n2.- Telefono de la empresa" +
+							"\n3.- Dirección de la empresa");
+					empresasArraylist.add(new Empresa());
 					salida=true;
 				}
 			}
