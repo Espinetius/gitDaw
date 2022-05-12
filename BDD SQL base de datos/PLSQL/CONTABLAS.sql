@@ -311,6 +311,7 @@ END;
 -----------------------------------------------
 CREATE OR REPLACE PROCEDURE SUMASALARIOSMAYOR(COD_DEPT INTEGER, SUMASALARIOS INTEGER)
 IS INCREMENTO INTEGER;
+/*Pedir perdon a carlota por ser un bobo*/
 BEGIN
   IF SUMASALARIOS<1000000 THEN
     INCREMENTO:=25000;
@@ -335,3 +336,6 @@ BEGIN
   SELECT DEPT_NO FROM EMPLE GROUP BY DEPT_NO HAVING SUM(SALARIO)>=SUMA;
   SUMASALARIOSMAYOR(COD_DEPT, SUMASALARIOS);
 END;
+----------------------------------------------------
+--EJ 31
+----------------------------------------------------

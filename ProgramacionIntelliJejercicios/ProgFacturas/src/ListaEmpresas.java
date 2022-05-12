@@ -69,6 +69,7 @@ public class ListaEmpresas {
 		}
 	}
 	public void actualizarEmpresa(String CIF) {
+		Scanner lector = new Scanner(System.in);
 		boolean salida=false;
 		try {
 			comprobarFichero();
@@ -79,8 +80,36 @@ public class ListaEmpresas {
 							"\n1.- Nombre de la empresa" +
 							"\n2.- Telefono de la empresa" +
 							"\n3.- Dirección de la empresa");
-					empresasArraylist.add(new Empresa());
+					int opcion = lector.nextInt();
+					switch (opcion) {
+						case 1:
+							System.out.println("Ha seleccionado cambiar el nombre de la empresa." +
+									"\nIntroduce el nuevo nombre.");
+							String nuevonombre=lector.nextLine();
+							empresasArraylist.get(i).setNombreEmpresa(nuevonombre);
+							break;
+						case 2:
+							System.out.println("Ha seleccionado cambiar el telefono de la empresa." +
+									"\nIntroduce el nuevo numero de contacto de la empresa.");
+							int telefono = lector.nextInt();
+							empresasArraylist.get(i).setTelefono(telefono);
+							break;
+						case 3:
+							System.out.println("Ha seleccionado cambiar la direccion. Debe de introducir la nueva direccion completa." +
+									"\n Introduce calle, numero, piso y localidad.");
+							String calle=lector.nextLine();
+							int numero= lector.nextInt();
+							String piso=lector.nextLine();
+							String localidad = lector.nextLine();
+							Direccion dir = new Direccion(calle, numero, piso, localidad);
+							empresasArraylist.get(i).setDireccion(dir);
+							break;
+						default:
+							System.out.println("No ha seleccionado una opcion valida.");
+					}
 					salida=true;
+				} else {
+					System.out.println("No hay empresa con ese CIF.");
 				}
 			}
 		} catch (Exception e) {
