@@ -13,7 +13,14 @@ public class OpcionesPrograma {
 					"\nQuiere dar de alta un nuevo usuario?");
 			String respuesta = lector.nextLine();
 			if (respuesta.equalsIgnoreCase("si")) {
+				System.out.println("Introduce la contraseña de administrador: ");
+				String entrada = lector.nextLine();
+				//método en ListaUsuarios que te busque el administrador-> password, acceso
 
+				System.out.println("Introduce el nuevo usuario, y su correspondiente contraseña");
+				String newuser= lector.nextLine();
+				String newpass=lector.nextLine();
+				listausers.añadirUser(new User(newuser,newpass));
 			}
 		}
 
