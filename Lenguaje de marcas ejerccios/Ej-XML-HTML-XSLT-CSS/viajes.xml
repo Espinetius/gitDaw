@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="viajes.xsl"?>
+
+<viajes>
+    <titulo>Lenguajes de Marcas. XSLT</titulo>
+    <propietario>1º DAW. Palomeras-Vallecas 2021-2022</propietario>
+    
+    <continente nombre="África">
+        <lugar nombre="Desierto del Namib" pais="Namibia">
+            <foto ancho="80" alto="80">Desierto-de-Namib.jpg</foto>
+            <region>El Namib</region>
+            <descripcion>El desierto más viejo del mundo</descripcion>
+        </lugar>
+        <lugar nombre="Delta del Okavango" pais="Botswana">
+            <foto ancho="80" alto="80">Delta-Okavango.jpg</foto>
+            <region>Okavango</region>
+            <descripcion>Único delta que no está en el mar</descripcion>
+        </lugar>
+         <lugar nombre="Pirámides" pais="Egipto">
+            <foto ancho="80" alto="80">LasPiramides.jpg</foto>
+            <region>El Cairo</region>
+            <descripcion>Criptas reales para los faraones del 2.700 a.C.</descripcion>
+        </lugar>
+    </continente>
+    
+    <continente nombre="América">
+        <lugar nombre="Salar de Uyuni" pais="Bolivia">
+            <foto ancho="80" alto="80">Salar-de-Uyuni.jpg</foto>
+            <region>Potosí</region>
+            <descripcion>Mayor desierto de sal del mundo a 3650 msnm</descripcion>
+        </lugar>
+        <lugar nombre="Cristo Redentor" pais="Brasil">
+            <foto ancho="80" alto="80">CristoRedentor.jpg</foto>
+            <region>Río de Janeiro</region>
+            <descripcion>Tiene una altura de 30,1m</descripcion>
+        </lugar>
+        <lugar nombre="Gran Cañón" pais="Estados Unidos">
+            <foto ancho="80" alto="80">Grand-Canyon-National-Park.jpg</foto>
+            <region>Arizona</region>
+            <descripcion>Gran Cañón del Río Colorado</descripcion>
+        </lugar>
+        <lugar nombre="Chichen Itza" pais="Mexico">
+            <foto ancho="80" alto="80">ChichenItza.jpg</foto>
+            <region>Yucatán</region>
+            <descripcion></descripcion>
+        </lugar>
+        <lugar nombre="Machu Picchu" pais="Perú">
+            <foto ancho="80" alto="80">MachuPichu.jpg</foto>
+            <region>Cusco (Urubamba)</region>
+            <descripcion>Monte Viejo en Quechua. Valle Sagrado de los Incas</descripcion>
+        </lugar>
+        <lugar nombre="Torres del Paine" pais="Chile">
+            <foto ancho="80" alto="80">TorresPaine.jpg</foto>
+            <region>Última Esperanza (Patagonia)</region>
+            <descripcion>Ubicado entre la Cordillera de los Andes y la estepa Patagónica   </descripcion>
+        </lugar>
+    </continente>
+    
+    <continente nombre="Asia">
+        <lugar nombre="La Gran Muralla China" pais="China">
+            <foto ancho="80" alto="80">LaGranMuralla.jpg</foto>
+            <region>Beijin</region>
+            <descripcion>Fortificación contruida entre el siglo V a.C. y el XVI</descripcion>
+        </lugar>
+         <lugar nombre="Petra" pais="Jordania">
+            <foto ancho="80" alto="80">Petra.jpg</foto>
+            <region>Aravá</region>
+            <descripcion>Enclave arqueológico, capital del antiguo reino Nabateo</descripcion>
+        </lugar>
+        <lugar nombre="Taj Mahal" pais="India">
+            <foto ancho="80" alto="80">TajMahal.jpg</foto>
+            <region>Agra</region>
+            <descripcion>Corona de los Palacios, monumento funerario contruido entre 1631 y 1654</descripcion>
+        </lugar>
+        <lugar nombre="Volcán Bromo" pais="Indonesia">
+            <foto ancho="80" alto="80">Volcan-Bromo.jpg</foto>
+            <region>Java</region>
+            <descripcion>Volcán activo de 2.329m de altitud</descripcion>
+        </lugar>
+        <lugar nombre="Islas Kuriles" pais="Japón">
+            <foto ancho="80" alto="80">Islas-Kuriles.jpg</foto>
+            <region>Hokkaido</region>
+            <descripcion>Archipiélago de islas volcánicas en el Pacífico Norte</descripcion>
+        </lugar>
+        <lugar nombre="Capadocia" pais="Turquía">
+            <foto ancho="80" alto="80">Cappadocia.jpg</foto>
+            <region>Anatolia Central</region>
+            <descripcion>Significa Tierra de Bellos Caballos</descripcion>
+        </lugar>
+    </continente>
+    
+    <continente nombre="Europa">
+        <lugar nombre="Lagos de Plitvice" pais="Croacia">
+            <foto ancho="80" alto="80">Lagos-de-Plitvice.jpg</foto>
+            <region>Lika</region>
+            <descripcion>Parque Natural boscoso de hayas, abetos y pinos</descripcion>
+        </lugar>
+        <lugar nombre="Praga" pais="República Checa">
+            <foto ancho="80" alto="80">Praga.jpg</foto>
+            <region>Bohemia</region>
+            <descripcion>Ciudad de 1,9 millones de habitantes</descripcion>
+        </lugar>
+        <lugar nombre="Torre Eiffel" pais="Francia">
+            <foto ancho="80" alto="80">Torre-Eiffel.jpg</foto>
+            <region>París</region>
+            <descripcion>Estructura metálica de 300m construida en 1889</descripcion>
+        </lugar>
+        <lugar nombre="Acantilados de Moher" pais="Irlanda">
+            <foto ancho="80" alto="80">Acantilados-Moher.jpg</foto>
+            <region>Burren</region>
+            <descripcion>Tienen una altura entre 120 y 214 metros sobre el Oceáno Atlántico</descripcion>
+        </lugar>
+        <lugar nombre="El Coliseo" pais="Italia">
+            <foto ancho="80" alto="80">ElColiseo.jpg</foto>
+            <region>Roma</region>
+            <descripcion>Anfiteatro romano construido en el siglo I</descripcion>
+        </lugar>
+        <lugar nombre="Preikestolen (El Púlpito)" pais="Noruega">
+            <foto ancho="80" alto="80">Preikestolen.jpg</foto>
+            <region>Rogaland</region>
+            <descripcion>Formación rocosa en el sudoeste de Noruega con una caída vertical de 604m</descripcion>
+        </lugar>
+    </continente>
+    
+    <continente nombre="Oceanía">
+        <lugar nombre="Milford Sound" pais="Nueva Zelanda">
+            <foto ancho="80" alto="80">Milford-Sound-Cruise.jpg</foto>
+            <region>Queenstown</region>
+            <descripcion>Fiordo en el suroeste de la Isla Sur de Nueva Zelanda</descripcion>
+        </lugar>
+        <lugar nombre="Milford Sound" pais="Nueva Zelanda">
+            <foto ancho="80" alto="80">Milford-Sound-Cruise.jpg</foto>
+            <region>Queenstown</region>
+            <descripcion>Fiordo en el suroeste de la Isla Sur de Nueva Zelanda</descripcion>
+        </lugar>
+    </continente>
+    
+</viajes>

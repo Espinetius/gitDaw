@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="tabacos.xsl"?>
+
+<tabacos>
+    <titulo>Ejercicio Lenguaje de Marcas</titulo>
+    <propietario>David Espinosa Gonzalez. 1ºDAW Palomeras-Vallecas</propietario>
+    <marca nombre="Adalya">
+        <sabor nombre="Love 66" estilo="Virginia">
+            <foto ancho="80" alto="80">Love_66.jpg</foto>
+            <descripcion>Sabor a mezcla de frutas: Melón, Maracuyá, Menta, Sandía</descripcion>
+        </sabor>
+        <sabor nombre="Cwng Cool Wood" estilo="Virginia">
+            <foto ancho="80" alto="80">Chwg_cool_wood.jpg</foto>
+            <descripcion>Sabor a Chicle de canela</descripcion>
+        </sabor>
+        <sabor nombre="Eskimo Leon" estilo="Virginia">
+            <foto ancho="80" alto="80">Eskimo_leon.jpg</foto>
+            <descripcion>Sabor a mezcla de lima, menta y limón</descripcion>
+        </sabor>
+        <sabor nombre="Yellow Cool" estilo="Virginia">
+            <foto ancho="80" alto="80">Yellow_cool.jpg</foto>
+            <descripcion>Sabor a mezcla de melón, menta y sandia</descripcion>
+        </sabor>
+    </marca>
+    <marca nombre="Darkside">
+        <sabor nombre="Blacktorrent" estilo="Burley">
+            <foto ancho="80" alto="80">BlackTorrent.jpg</foto>
+            <descripcion>Sabor a Grosella roja</descripcion>
+        </sabor>
+        <sabor nombre="Bnpapa" estilo="Burley">
+            <foto ancho="80" alto="80">Bnpapa.jpg</foto>
+            <descripcion>Sabor a mezcla de platano y leche</descripcion>
+        </sabor>
+        <sabor nombre="Darkside Hola" estilo="Burley">
+            <foto ancho="80" alto="80">Darkside_hola.jpg</foto>
+            <descripcion>Sabor a cocacola fría</descripcion>
+        </sabor>
+        <sabor nombre="Falling Star" estilo="Burley">
+            <foto ancho="80" alto="80">Falling_star.jpg</foto>
+            <descripcion>Sabor a mezcla mango y fruta de la pasión</descripcion>
+        </sabor>
+    </marca>
+    <marca nombre="Alchemist">
+        <sabor nombre="Black Bear" estilo="Virginia">
+            <foto ancho="80" alto="80">Black_Bear.jpg</foto>
+            <descripcion>Sabor a mezcla de Acai, mandarina y naranja</descripcion>
+        </sabor>
+        <sabor nombre="Black Moon Mln" estilo="Virginia">
+            <foto ancho="80" alto="80">Black_moon_mln.jpg</foto>
+            <descripcion>Sabor a mezcla de melón y sandia</descripcion>
+        </sabor>
+        <sabor nombre="Key Lme M!nt" estilo="Virginia">
+            <foto ancho="80" alto="80">Key_lme_m!nt.jpg</foto>
+            <descripcion>Sabor a mezcla de lima, menta y limón</descripcion>
+        </sabor>
+        <sabor nombre="Mnngo" estilo="Virginia">
+            <foto ancho="80" alto="80"></foto>
+            <descripcion>Sabor a mango</descripcion>
+        </sabor>
+    </marca>
+     <marca nombre="Nameless">
+        <sabor nombre="Pablo" estilo="Virginia">
+            <foto ancho="80" alto="80">Pablo.jpg</foto>
+            <descripcion>Sabor a mezcla arandano y lima con un toque helado</descripcion>
+        </sabor>
+        <sabor nombre="Winter is coming" estilo="Virginia">
+            <foto ancho="80" alto="80">Winter_is_coming.jpg</foto>
+            <descripcion>Sabor a Fruta del dragon con un toque helado</descripcion>
+        </sabor>
+        <sabor nombre="Black Chai" estilo="Virginia">
+            <foto ancho="80" alto="80">Black_chai.jpg</foto>
+            <descripcion>Sabor a té de limón</descripcion>
+        </sabor>
+        <sabor nombre="L Oasis" estilo="Virginia">
+            <foto ancho="80" alto="80">L_Oasis.jpg</foto>
+            <descripcion>Sabor a mezcla de piña, pomelo y mango con un toque helado</descripcion>
+        </sabor>
+    </marca>
+</tabacos>

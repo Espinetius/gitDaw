@@ -9,7 +9,7 @@
                 <link rel="stylesheet" href="tabacos.css"/>
                 <title>Tabacos cachimbas</title>
             </head>
-            <body class="fondo">
+            <body>
                 <div class="contenedor centrado">
                     <header class="header">
                         <h1>Tabacos Cachimbas</h1>
