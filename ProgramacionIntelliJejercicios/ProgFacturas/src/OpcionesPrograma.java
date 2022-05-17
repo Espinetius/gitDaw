@@ -13,6 +13,7 @@ public class OpcionesPrograma {
 					"\nQuiere dar de alta un nuevo usuario?");
 			String respuesta = lector.nextLine();
 			if (respuesta.equalsIgnoreCase("si")) {
+<<<<<<< Updated upstream
 				System.out.println("Introduce la contraseña de administrador: ");
 				String entrada = lector.nextLine();
 				//método en ListaUsuarios que te busque el administrador-> password, acceso
@@ -21,6 +22,9 @@ public class OpcionesPrograma {
 				String newuser= lector.nextLine();
 				String newpass=lector.nextLine();
 				listausers.añadirUser(new User(newuser,newpass));
+=======
+    			//llevar el programa al tester a la zona de gestion de empresas y lanzar el 2
+>>>>>>> Stashed changes
 			}
 		}
 
@@ -76,6 +80,7 @@ public class OpcionesPrograma {
 
 				default:
 					System.out.println("No ha seleccionado una opcion valida");
+
 			}
 			System.out.println("Quiere seguir gestionando empresas?");
 			String respuesta=lector.nextLine();
