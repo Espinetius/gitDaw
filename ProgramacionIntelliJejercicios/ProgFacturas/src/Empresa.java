@@ -67,6 +67,7 @@ public class Empresa {
 		return "Empresa: " + nombreEmpresa +
 				"\nCIF: " + CIF +
 				"\nTelefono: " + telefono +
-				"\nDireccion" + direccion;
+				"\nDireccion: " + direccion +
+				"\n----------------------------------------------------------------------------------------------------";
 	}
 }

@@ -1,1 +1,2 @@
-El usuario Pedro tiene la contraseña burgos25
+El usuario | Pedro | tiene la contraseña | burgos25 |
+
