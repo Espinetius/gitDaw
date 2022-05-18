@@ -3,29 +3,43 @@ import java.util.Scanner;
 public class OpcionesPrograma {
 	public void logPrincipal(ListaUsuarios listausers) {
 		Scanner lector = new Scanner(System.in);
-		listausers=new ListaUsuarios();
-		System.out.println("Introduce el usuario");
-		String user = lector.nextLine();
-		if(listausers.login(user)) {
-			System.out.println("Bienvenido...");
-		} else {
-			System.out.println("El usuario indicado no existe." +
-					"\nQuiere dar de alta un nuevo usuario?");
-			String respuesta = lector.nextLine();
-			if (respuesta.equalsIgnoreCase("si")) {
-				System.out.println("Introduce la contraseña de administrador: ");
-				String entrada = lector.nextLine();
-				if (entrada.equalsIgnoreCase(User.passAdmin)) {
+		boolean salida = false;
+		do {
+			listausers = new ListaUsuarios();
+			System.out.println("Introduce el usuario");
+			String user = lector.nextLine();
+			if (listausers.login(user)) {
+				System.out.println("Bienvenido...");
+				salida=true;
+			} else {
+				System.out.println("El usuario indicado no existe." +
+						"\nQuiere dar de alta un nuevo usuario?");
+				String respuesta = lector.nextLine();
+				if (respuesta.equalsIgnoreCase("si")) {
+
+					System.out.println("Introduce la contraseña de administrador: ");
+					String entrada = lector.nextLine();
+
+					if (entrada.equalsIgnoreCase(User.passAdmin)) {
+						System.out.println("Introduce el nuevo usuario, y su correspondiente contraseña");
+						String newuser = lector.nextLine();
+						String newpass = lector.nextLine();
+						listausers.añadirUser(new User(newuser, newpass));
+					} else {
+						System.out.println("No puede dar de alta a un usuario si no eres administrador");
+					}
+
+					//método en ListaUsuarios que te busque el administrador-> password, acceso
+
 					System.out.println("Introduce el nuevo usuario, y su correspondiente contraseña");
-					String newuser= lector.nextLine();
-					String newpass=lector.nextLine();
-					listausers.añadirUser(new User(newuser,newpass));
-				} else {
-					System.out.println("No puede dar de alta a un usuario si no eres administrador");
+					String newuser = lector.nextLine();
+					String newpass = lector.nextLine();
+					listausers.añadirUser(new User(newuser, newpass));
+					//llevar el programa al tester a la zona de gestion de empresas y lanzar el 2
+
 				}
 			}
-		}
-
+		} while(!salida);
 	}
 
 	public void gestionEmpresas(ListaEmpresas empresas) {
@@ -92,6 +106,7 @@ public class OpcionesPrograma {
 					break;
 				default:
 					System.out.println("No ha seleccionado una opcion valida");
+
 			}
 		} while(!finbucle);
 	}
