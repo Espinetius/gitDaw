@@ -1,0 +1,8 @@
+Empresa: ...Empresa...
+CIF: ...CIF...
+Telefono: 0
+Direccionnull
+Empresa: ----------------------------------------
+CIF: ------------------
+Telefono: 0
+Direccionnull

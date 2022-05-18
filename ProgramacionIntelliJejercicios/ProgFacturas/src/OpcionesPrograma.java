@@ -15,12 +15,14 @@ public class OpcionesPrograma {
 			if (respuesta.equalsIgnoreCase("si")) {
 				System.out.println("Introduce la contraseña de administrador: ");
 				String entrada = lector.nextLine();
-				//método en ListaUsuarios que te busque el administrador-> password, acceso
-
-				System.out.println("Introduce el nuevo usuario, y su correspondiente contraseña");
-				String newuser= lector.nextLine();
-				String newpass=lector.nextLine();
-				listausers.añadirUser(new User(newuser,newpass));
+				if (entrada.equalsIgnoreCase(User.passAdmin)) {
+					System.out.println("Introduce el nuevo usuario, y su correspondiente contraseña");
+					String newuser= lector.nextLine();
+					String newpass=lector.nextLine();
+					listausers.añadirUser(new User(newuser,newpass));
+				} else {
+					System.out.println("No puede dar de alta a un usuario si no eres administrador");
+				}
 			}
 		}
 
@@ -29,6 +31,7 @@ public class OpcionesPrograma {
 	public void gestionEmpresas(ListaEmpresas empresas) {
 		Scanner lector = new Scanner(System.in);
 		boolean finbucle=false;
+		boolean salida=false;
 		String CIF;
 		empresas = new ListaEmpresas();
 		int opcion;
@@ -37,8 +40,10 @@ public class OpcionesPrograma {
 			System.out.println("Indica que desea hacer:" +
 					"\n1.- Listar las empresas guardadas" +
 					"\n2.- Añadir empresas nuevas" +
-					"\n3.- Actualizar datos de alguna empresa ya guardada (es necesario saber el CIF)");
+					"\n3.- Actualizar datos de alguna empresa ya guardada (es necesario saber el CIF)" +
+					"\n4.- Menu anterior.");
 			opcion = lector.nextInt();
+			lector.nextLine();
 			switch (opcion) {
 				case 1:
 					System.out.println("Has seleccionado listar empresas guardadas");
@@ -56,15 +61,19 @@ public class OpcionesPrograma {
 					CIF = lector.nextLine();
 					System.out.println("Introduce el telefono de la Empresa");
 					telefono = lector.nextInt();
+					lector.nextLine();
 					System.out.println("Introduce la calle de la Empresa");
 					String calle = lector.nextLine();
 					System.out.println("Introduce el numero de la Empresa");
 					int numero = lector.nextInt();
+					lector.nextLine();
 					System.out.println("Introduce el piso de la Empresa");
 					String piso = lector.nextLine();
 					System.out.println("Introduce la ciudad");
 					ciudad = lector.nextLine();
-					Empresa empresa = new Empresa(nombreEmpresa, CIF, telefono, new Direccion(calle, numero, piso, ciudad));
+					Direccion direccion = new Direccion(calle, numero, piso, ciudad);
+					Empresa empresa = new Empresa(nombreEmpresa, CIF, telefono, direccion);
+					empresas.añadirEmpresas(empresa);
 					System.out.println("Empresa añadida correctamente...");
 					break;
 				case 3:
@@ -73,14 +82,16 @@ public class OpcionesPrograma {
 					empresas.actualizarEmpresa(CIF);
 					System.out.println("Empresa actualizada correctamente...");
 					break;
-
+				case 4:
+					System.out.println("Quiere volver al menu anterior?");
+					String respuesta = lector.nextLine();
+					if (respuesta.equalsIgnoreCase("si")) {
+						finbucle = true;
+						System.out.println("Volviendo al menu anterior...");
+					}
+					break;
 				default:
 					System.out.println("No ha seleccionado una opcion valida");
-			}
-			System.out.println("Quiere seguir gestionando empresas?");
-			String respuesta=lector.nextLine();
-			if (respuesta.equalsIgnoreCase("no")) {
-				finbucle=true;
 			}
 		} while(!finbucle);
 	}

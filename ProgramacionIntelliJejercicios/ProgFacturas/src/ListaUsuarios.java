@@ -8,6 +8,7 @@ public class ListaUsuarios {
 	protected static final  String nombreListaUser="Lista_usuarios.txt";
 	public ListaUsuarios() {
 		usuarios= new ArrayList<>();
+		usuarios.add(new User("David", "1234"));
 		usuarios.add(new User());
 	}
 	public static void comprobarFichero() {

@@ -54,7 +54,7 @@ public class ListaEmpresas {
 			comprobarFichero();
 			PrintWriter pw = new PrintWriter(new FileWriter(ficheroListaEmpresas, true));
 			for (int i = 0; i < empresasArraylist.size() && !salida; i++) {
-				if (!empresa.CIF.equalsIgnoreCase(empresasArraylist.get(i).CIF)||i==empresasArraylist.size()-1){
+				if (!empresa.CIF.equalsIgnoreCase(empresasArraylist.get(i).CIF)){
 					salida=true;
 				}
 			}
