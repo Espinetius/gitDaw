@@ -9,7 +9,7 @@ public class OpcionesPrograma {
 			listausers = new ListaUsuarios();
 			System.out.println("Por favor, introduce el usuario: ");
 			String user = lector.nextLine();
-			lector.nextLine();
+			//lector.nextLine();
 			if (listausers.login(user)) {
 				System.out.println("Bienvenido "+user+".");
 				salida=true;
@@ -44,7 +44,9 @@ public class OpcionesPrograma {
 						String newpass = lector.nextLine();
 						listausers.añadirUser(new User(newuser, newpass));
 					}
-                }
+                } else if (respuesta.equalsIgnoreCase("no")) {
+					System.out.println("Debe loguearse para poder aceder al programa.");
+				}
 			}
 		} while(!salida);
 	}

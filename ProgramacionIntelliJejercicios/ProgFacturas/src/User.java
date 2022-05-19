@@ -30,6 +30,6 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "El usuario "+ usuario+" tiene la contraseña "+ pass;
+		return "El usuario -"+ usuario+"- tiene la contraseña -"+ pass+"-";
 	}
 }

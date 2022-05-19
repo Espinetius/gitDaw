@@ -50,9 +50,16 @@ public class ListaUsuarios {
 	}
 	public void añadirUser(User user) {
 		boolean salida=false;
+		Scanner lector;
 		try {
 			comprobarFichero();
+			lector = new Scanner(new File(nombreListaUser));
 			PrintWriter pw = new PrintWriter(new FileWriter(nombreListaUser, true));
+			while (lector.hasNextLine()) {
+				String cadena= lector.nextLine();;
+				String trozos[]= cadena.split("-");
+				usuarios.add(new User(trozos[1],trozos[3]));
+			}
 			for (int i = 0; i < usuarios.size() && !salida; i++) {
 				if (!user.usuario.equalsIgnoreCase(usuarios.get(i).usuario)||i==usuarios.size()-1){
 					salida=true;
@@ -71,29 +78,39 @@ public class ListaUsuarios {
 	public boolean login(String user) {
 		boolean salida=false;
 		boolean acceso=false;
+		int i;
+		String password;
 		Scanner lector = new Scanner(System.in);
+		Scanner lectorFichero;
 		try {
 			comprobarFichero();
-			for (int i=0; lector.hasNextLine(); i++) {
-				if (user.equalsIgnoreCase(usuarios.get(i).usuario)) {
+			lectorFichero=new Scanner(new File(nombreListaUser));
+			PrintWriter pw = new PrintWriter(new FileWriter(nombreListaUser, true));
+			while (lectorFichero.hasNextLine()) {
+				String cadena = lectorFichero.nextLine();
+				String trozos[] = cadena.split("-");
+				usuarios.add(new User(trozos[1],trozos[3]));
+			}
+			for (i = 0; i < usuarios.size() && !salida; i++) {
+				if (user.equalsIgnoreCase(usuarios.get(i).getUsuario())) {
 					salida=true;
+					boolean flag=false;
+					System.out.println("Introduce la contraseña: ");
+					String pass;
+					for (int j=0; j < 3 && !flag; j++) {
+						System.out.println("Intento "+(j+1)+" de 3");
+						pass = lector.nextLine();
+						if (pass.equalsIgnoreCase(usuarios.get(i).getPass())) {
+							acceso=true;
+							flag=true;
+						}
+					}
 				}
 			}
 		} catch (NullPointerException ex) {
 			System.out.println(ex.getMessage());
-		}
-		if (salida) {
-			boolean flag=false;
-			System.out.println("Introduce la contraseña: ");
-			String pass;
-			for (int i = 0; i < 3 && !flag; i++) {
-				System.out.println("Intento "+(i+1)+" de 3");
-				pass = lector.nextLine();
-				if (pass.equalsIgnoreCase(usuarios.get(i).pass)) {
-					acceso=true;
-					flag=true;
-				}
-			}
+		} catch (IOException e) {
+			throw new RuntimeException(e);
 		}
 		return acceso;
 	}
