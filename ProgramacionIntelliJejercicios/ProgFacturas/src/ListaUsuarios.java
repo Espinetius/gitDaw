@@ -74,7 +74,7 @@ public class ListaUsuarios {
 		Scanner lector = new Scanner(System.in);
 		try {
 			comprobarFichero();
-			for (int i = 0; i < usuarios.size(); i++) {
+			for (int i=0; lector.hasNextLine(); i++) {
 				if (user.equalsIgnoreCase(usuarios.get(i).usuario)) {
 					salida=true;
 				}
@@ -84,7 +84,7 @@ public class ListaUsuarios {
 		}
 		if (salida) {
 			boolean flag=false;
-			System.out.println("Introduce la contraseña");
+			System.out.println("Introduce la contraseña: ");
 			String pass;
 			for (int i = 0; i < 3 && !flag; i++) {
 				System.out.println("Intento "+(i+1)+" de 3");

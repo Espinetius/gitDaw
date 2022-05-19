@@ -8,17 +8,23 @@ public class Tester {
 		OpcionesPrograma menu = new OpcionesPrograma();
 		ListaUsuarios lista = new ListaUsuarios();
 		ListaEmpresas listaEmpresas= new ListaEmpresas();
-		System.out.println("Bienvenido al Programa de facturacion Tresgon29." +
+		System.out.println("" +"----------------------------------------------------------------------------------------------------" +
+				"\n						Bienvenido al Programa de facturacion Tresgon29." +
+                "\n----------------------------------------------------------------------------------------------------" +
 				"\nDebe identificarse para continuar....");
 		menu.logPrincipal(lista);
 		do {
 			System.out.println("Seleccione que desea hacer:" +
+					"\n0.- Cambiar de usuario." +
 					"\n1.- Gestion de empresas." +
 					"\n2.- Facturacion." +
 					"\n3.- Cerrar Programa.");
 			opcion=lector.nextInt();
 			lector.nextLine();
 			switch (opcion) {
+				case 0:
+					menu.logPrincipal(lista);
+					break;
 				case 1:
 					menu.gestionEmpresas(listaEmpresas);
 					break;
