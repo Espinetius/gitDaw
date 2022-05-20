@@ -14,21 +14,58 @@
                     <header class="header">
                         <h1>Tabacos Cachimbas</h1>
                     </header>
-                    <nav>
+                    <nav class="navegacion">
                         <a href="">Home</a>
                         <a href="">Buscador</a>
                         <a href="">Quienes somos</a>
                     </nav>     
-                    <asside class="asside">
-                        <h2>Enlaces de interes</h2>
-                        <a href="">Por marca</a>
-                        <a href="">Por estilo de hoja</a>
-                    </asside>    
-                    <div class="contenido">
-                    
+                    <div class="centroweb">
+                        <div class="contenido">
+                            <xsl:for-each select="tabacos/marca">
+                                <div>
+                                    <h4>
+                                        <xsl:value-of select="@nombre" />
+                                    </h4>
+                                    <xsl:for-each select="sabor">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <p>Nombre: <span><xsl:value-of select="@nombre"/></span></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p> Estilo de hoja: <span><xsl:value-of select="@estilo"/></span></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <xsl:value-of select="foto"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Descripción: <span><xsl:value-of select="descripcion"/></span></p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </xsl:for-each>
+                                </div>
+                            </xsl:for-each>
+                        </div>
+                        <asside class="asside">
+                            <h2>Enlaces de interes</h2>
+                            <div class="div_aside">
+                                <div class="div_selects">
+                                <h4>Marca</h4>
+                                <h4>Estilo de hoja</h4>
+                                </div>
+                            </div>
+                        </asside>    
+                        
                     </div>                       
                     <footer class="footer">
-                        <h2>1º DAW. Palomeras Vallecas 2021-2022</h2>
+                        <h3>1º DAW. Palomeras Vallecas 2021-2022</h3>
                     </footer>
                 </div>
             </body>
