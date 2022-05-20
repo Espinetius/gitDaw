@@ -9,14 +9,92 @@ and open the template in the editor.
 */
 body {
     background-image: url('fondo.jpg');
+    display: flex;
+    justify-content: center;
+    
 }
 .contenedor {
+    border-radius: 3.5%;
     display: inline-block;
-    width:70%;
-    height: 60%;
+    width:80%;
     background-color: grey;
 }
 .header {
-    background-color: #3f4c6b;
+    background-color: #3f4c6b;   
+    height: 10%;
     
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.navegacion {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 5%; 
+}
+a {
+    display: flex;
+    height: 100%;
+    width: 33%;    
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-transform: uppercase;
+}
+a:hover {
+    color: green;
+    background-color: lightgreen;
+}
+.centroweb {
+    display: flex;
+    justify-content: space-between;
+    height: 72%;
+}
+asside {
+    display: block;
+    width: 33%;
+}
+h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgrey; 
+    height: 10%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.div_aside {
+   display: flex;
+   justify-content: space-around;
+   margin-top: 0;
+}
+h4 {
+    margin-top: 0.5%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: 1px black dotted;
+}
+.contenido {
+    display: flex;
+    overflow-y: auto;
+}
+table {
+    height: 50%;
+}
+.footer {
+    background-color: black;
+    color: white;
+    height: 12%;
+    border-radius: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
