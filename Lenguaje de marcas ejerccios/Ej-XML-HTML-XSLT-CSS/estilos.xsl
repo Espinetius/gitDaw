@@ -22,10 +22,11 @@
                     <div class="centroweb">
                         <div class="contenido">
                             <xsl:for-each select="tabacos/marca">
-                                <div>
-                                    <h4>
+                                <div class="marca">
+                                    <h3>
                                         <xsl:value-of select="@nombre" />
-                                    </h4>
+                                    </h3>
+                                    <div class="sabores">
                                     <xsl:for-each select="sabor">
                                         <table>
                                             <tr>
@@ -40,7 +41,11 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <xsl:value-of select="foto"/>
+                                                    <img>
+                                                        <xsl:attribute name="src">
+                                                            <xsl:value-of select="foto"/>
+                                                        </xsl:attribute>
+                                                    </img>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -50,6 +55,7 @@
                                             </tr>
                                         </table>
                                     </xsl:for-each>
+                                </div>
                                 </div>
                             </xsl:for-each>
                         </div>

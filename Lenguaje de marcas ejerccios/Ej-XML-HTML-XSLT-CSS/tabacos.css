@@ -83,11 +83,48 @@ h4 {
     border: 1px black dotted;
 }
 .contenido {
+    display:flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    justify-content: center;
+    width: 77%;
+}
+.sabores {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+img {
     display: flex;
-    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    width: 30%;
+    padding: 0 33%;
 }
 table {
-    height: 50%;
+    width: 45.4%;
+    display: block;
+    border: 1px white dashed;
+    padding: 0 0 0 0;
+}
+.marca {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+h3 {
+    margin-top: 0.5%;
+    margin-bottom: 0%;
+    background-color: darkslategray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90.5%;
+    border: 1px black dotted;
 }
 .footer {
     background-color: black;
