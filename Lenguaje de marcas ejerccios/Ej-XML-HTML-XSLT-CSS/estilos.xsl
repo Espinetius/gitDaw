@@ -31,7 +31,7 @@
                                         <table>
                                             <tr>
                                                 <td>
-                                                    <p>Nombre: <span><xsl:value-of select="@nombre"/></span></p>
+                                                    <p><xsl:value-of select="@nombre"/></p>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -50,7 +50,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <p>Descripción: <span><xsl:value-of select="descripcion"/></span></p>
+                                                    <p>Descripción- <span><xsl:value-of select="descripcion"/></span></p>
                                                 </td>
                                             </tr>
                                         </table>
@@ -64,7 +64,28 @@
                             <div class="div_aside">
                                 <div class="div_selects">
                                 <h4>Marca</h4>
+                                <select>
+                                    <option>
+                                        <p>Seleccione su marca</p>
+                                    </option>
+                                    <xsl:for-each select="tabacos/marca">
+                                        <option>
+                                            <xsl:value-of select="@nombre"/>
+                                        </option>
+                                    </xsl:for-each>
+                                </select>
                                 <h4>Estilo de hoja</h4>
+                                <select>
+                                    <option>
+                                        <p>Seleccione el estilo de hoja</p>
+                                    </option>
+                                    <option>
+                                        <p>Virginia</p>
+                                    </option>
+                                    <option>
+                                        <p>Burley</p>
+                                    </option>
+                                </select>
                                 </div>
                             </div>
                         </asside>    

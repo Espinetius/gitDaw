@@ -60,25 +60,30 @@ a:hover {
 asside {
     display: block;
     width: 33%;
+    background: -webkit-linear-gradient(left, rgb(181,189,200) 0%,rgb(24,43,68) 92%);
 }
 h2 {
+    border-bottom: 5px black double;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: darkgrey; 
+    background: -webkit-linear-gradient(left, rgb(181,189,200) 0%,rgb(24,43,68) 92%);
     height: 10%;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 2%;
 }
 .div_aside {
    display: flex;
-   justify-content: space-around;
-   margin-top: 0;
+   justify-content: center;
+   margin: 0;
+   padding: 0;
+   
 }
 h4 {
     margin-top: 0.5%;
     display: flex;
     justify-content: center;
+    background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(55,155,27,0.32) 11%,rgba(55,155,27,0.5) 17%,rgba(55,155,27,1) 48%,rgba(55,155,27,0.5) 80%,rgba(55,155,27,0.2) 92%,rgba(0,0,0,0) 100%);
     width: 100%;
     border: 1px black dotted;
 }
@@ -89,6 +94,7 @@ h4 {
     overflow-x: hidden;
     justify-content: center;
     width: 77%;
+    background: linear-gradient(to right, rgba(24,43,68,1) 8%,rgba(181,189,200,1) 100%); 
 }
 .sabores {
     display:flex;
@@ -104,12 +110,17 @@ img {
     width: 30%;
     padding: 0 33%;
 }
+img:hover {
+    border-radius: 50%;
+}
 table {
     width: 45.4%;
     display: block;
     border: 1px white dashed;
     padding: 0 0 0 0;
-}
+    background-color: darkgray;
+    text-align: center;
+} 
 .marca {
     display: flex;
     flex-wrap: wrap;
@@ -119,18 +130,29 @@ table {
 h3 {
     margin-top: 0.5%;
     margin-bottom: 0%;
-    background-color: darkslategray;
+    background-color: green;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 90.5%;
     border: 1px black dotted;
 }
-.footer {
+p {
+    font-weight: bold;
+}
+span {
+    font-weight: normal;
+}
+select {
+    margin: 2% 0 50% 0;
+    padding: 2% 0;
+    width: 100%;    
+    border-bottom: 2px black solid;
+}
+.footer, footer h3 {
     background-color: black;
     color: white;
     height: 12%;
-    border-radius: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
