@@ -4,7 +4,7 @@ public class Direccion {
 	protected String piso;
 	protected String ciudad;
 	public Direccion() {
-		this("calle", 00, "S/N", "Ciudad");
+		this("Calle Idioma Esperanto", 20, "1A", "Madrid");
 	}
 	public Direccion(String calle, int numero, String piso, String ciudad){
 		this.calle=calle;

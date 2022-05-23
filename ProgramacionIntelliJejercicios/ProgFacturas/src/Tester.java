@@ -28,6 +28,9 @@ public class Tester {
 				case 1:
 					menu.gestionEmpresas(listaEmpresas);
 					break;
+				case 2:
+					menu.facturacion(listaEmpresas);
+					break;
 				case 3:
 					System.out.println("Gracias por usar el programa." +
 							"\n" +

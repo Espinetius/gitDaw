@@ -119,4 +119,40 @@ public class OpcionesPrograma {
 			}
 		} while(!finbucle);
 	}
+	public void facturacion(ListaEmpresas empresas){
+		Scanner lector = new Scanner(System.in);
+		boolean salida = false;
+		Factura factura = new Factura();
+		String CIFempresa;
+		String CIFcliente;
+		empresas = new ListaEmpresas();
+		do {
+			System.out.println("Seleccione que desea hacer:" +
+					"\n1.- Crear nueva factura" +
+					"\n2.- Modificar factura existente");
+			int opcion = lector.nextInt();
+			switch (opcion) {
+				case 1:
+					System.out.println("Ha seleccionado realizar una nueva factura." +
+							"\n Introduce el CIF de la empresa servicios." +
+							"\n Introduce el CIF de la empresa cliente");
+					CIFempresa = lector.nextLine();
+					CIFcliente = lector.nextLine();
+					factura.newFactura(CIFempresa, CIFcliente);
+					break;
+				case 2:
+					break;
+				case 3:
+					System.out.println("Desea volver al menu anterior?");
+					String respuesta = lector.nextLine();
+					if (respuesta.equalsIgnoreCase("si")) {
+						salida = true;
+						System.out.println("Volviendo al menu anterior...");
+					}
+					break;
+				default:
+					System.out.println("No ha seleccionado una opcion valida");
+			}
+		} while (!salida);
+	}
 }

@@ -8,3 +8,8 @@ CIF: 51665685-A
 Telefono: 615665515
 Direccion: Calle Olivos 31 --, Paracuellos del jarama
 ----------------------------------------------------------------------------------------------------
+Empresa: Miguelitos S.L.
+CIF: B-123456789
+Telefono: 601061864
+Direccion: Avenida Pablo Neruda 102 Bajo A, Madrid
+----------------------------------------------------------------------------------------------------

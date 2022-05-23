@@ -8,7 +8,7 @@ public class Empresa {
 	 * Constructor para crear linea de empresa vacia y NIF vacio.
 	 */
 	public Empresa(){
-		this("Nombre de la empresa", "CIF de la empresa", 000000000, new Direccion());
+		this("Egota S.L.", "B-79938130", 630916381, new Direccion());
 	}
 
 	/**
