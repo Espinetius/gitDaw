@@ -7,7 +7,7 @@ public class Tester {
 		Scanner lector = new Scanner(System.in);
 		OpcionesPrograma menu = new OpcionesPrograma();
 		ListaUsuarios lista = new ListaUsuarios();
-		ListaEmpresas listaEmpresas= new ListaEmpresas();
+		ListaEmpresas listaEmpresas = new ListaEmpresas();
 		System.out.println("" +"----------------------------------------------------------------------------------------------------" +
 				"\n						Bienvenido al Programa de facturacion Tresgon29." +
                 "\n----------------------------------------------------------------------------------------------------" +

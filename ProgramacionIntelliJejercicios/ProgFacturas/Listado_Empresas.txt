@@ -1,5 +1,10 @@
 Empresa: Egota S.L.
 CIF: B-79938130
-Telefono: 913065594
+Telefono: 630916381
 Direccion: Calle Idioma Esperanto 20 1A, Madrid
+----------------------------------------------------------------------------------------------------
+Empresa: Oscar Duarte Salmeron
+CIF: 51665685-A
+Telefono: 615665515
+Direccion: Calle Olivos 31 --, Paracuellos del jarama
 ----------------------------------------------------------------------------------------------------
