@@ -9,6 +9,7 @@ public class ListaUsuarios {
 	public ListaUsuarios() {
 		usuarios= new ArrayList<>();
 		usuarios.add(new User("David", "1234"));
+		usuarios.add(new User("Alvaro","1234"));
 		usuarios.add(new User());
 	}
 	public static void comprobarFichero() {
