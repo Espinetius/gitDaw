@@ -1,0 +1,96 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27 may. 2022, 12:26:31
+    Author     : Admin
+*/
+body {
+    display: flex;
+    background-image: url("vivienda.jpg");
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.dni {
+    color: violet;
+}
+span {
+    color: blueviolet;
+}
+p {
+    color: red;
+}
+.header {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 230%;
+    background-color: darkslategray;
+    color: lightgreen;
+    width: 80%;
+    height: 30%;
+    margin: 5% 20%;
+}
+.vivienda {
+    display: inline-block;
+    background-color: salmon;
+    border: 5px black dotted;
+    width: 50%;
+    margin: 2% 25%;
+
+}
+.piso {
+    font-size: 170%;
+    border-top: 5px black solid;
+    background-color: lightgreen;
+    text-align: right;
+    margin: 5% 5% 0 5%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0%;
+    padding-top: 2%;
+    padding-right: 15%;
+}
+.persona {
+    background-color: lightgreen;
+    text-align: center;
+    margin: 0 5% 5% 5%;
+    padding: 0%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-right: 10%;
+}
+img {
+    width: 15%;
+    height: 15%;
+    margin-bottom: 5%;
+}
+.datos {
+    float: left;
+    width: 80%;
+}
+.menores {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.menores p{
+    width: 100%;
+    border: 2px solid black;
+    background-color: grey;
+}
+.footer {
+    background-color: black ;
+    color: white;
+    width: 80%;
+    text-align: center;
+    border-radius: 50%;
+}

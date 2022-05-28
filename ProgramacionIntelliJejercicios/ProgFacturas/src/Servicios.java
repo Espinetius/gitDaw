@@ -3,6 +3,11 @@ import java.util.ArrayList;
 public class Servicios {
 	protected ArrayList<Servicio> servicios;
 	protected double preciototal;
+
+	public ArrayList<Servicio> getServicios() {
+		return servicios;
+	}
+
 	public Servicios() {
 		servicios = new ArrayList<>();
 		servicios.add(new Servicio("Introduzca el viaje aqui", 0.00, new Fecha()));

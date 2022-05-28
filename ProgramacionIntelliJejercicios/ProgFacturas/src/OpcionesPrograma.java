@@ -131,14 +131,15 @@ public class OpcionesPrograma {
 					"\n1.- Crear nueva factura" +
 					"\n2.- Modificar factura existente");
 			int opcion = lector.nextInt();
+			lector.nextLine();
 			switch (opcion) {
 				case 1:
 					System.out.println("Ha seleccionado realizar una nueva factura." +
-							"\n Introduce el CIF de la empresa servicios." +
-							"\n Introduce el CIF de la empresa cliente");
+							"\nIntroduce el CIF de la empresa servicios.");
 					CIFempresa = lector.nextLine();
+					System.out.println("Introduce la empresa del cliente");
 					CIFcliente = lector.nextLine();
-					factura.newFactura(CIFempresa, CIFcliente);
+					factura.escribirEXCEL(CIFempresa, CIFcliente);
 					break;
 				case 2:
 					break;

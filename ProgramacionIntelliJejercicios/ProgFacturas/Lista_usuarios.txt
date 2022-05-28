@@ -4,3 +4,5 @@ El usuario -Sergio- tiene la contraseña -123456-
 El usuario -Gema- tiene la contraseña -1daw-
 El usuario -Miguel- tiene la contraseña -Nevera24-
 El usuario -Alvaro- tiene la contraseña -1234-
+El usuario -ajemplo- tiene la contraseña -1234-
+El usuario -SergioP- tiene la contraseña -4321-

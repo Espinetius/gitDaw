@@ -1,9 +1,16 @@
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.ImageObserver;
 import java.awt.image.ImageProducer;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Factura {
@@ -74,6 +81,7 @@ public class Factura {
 		Scanner lector = new Scanner(System.in);
 		boolean salidacliente = false;
 		Scanner lectorFichero = null;
+		ListaEmpresas listaEmp = new ListaEmpresas();
 		try {
 			lectorFichero = new Scanner(new File("Listado_Empresas.txt"));
 			while (!salidacliente) {
@@ -132,30 +140,74 @@ public class Factura {
 	public void viajesRealizados(Servicio servicio) {
 		servicios.añadirServicios(servicio);
 	}
-	/* Me falta un metodo aqui que sea para crear el excel como tal */
-	public void newFactura(String CIFempresa, String CIFcliente) {
+	public void escribirEXCEL(String CIFempresa, String CIFcliente) {
 		Scanner lector = new Scanner(System.in);
+		System.out.println("Introduzca el mes y año, de la factura (ej: mayo/2022)");
+		String excel = lector.nextLine();
+		String nombreArchivo = excel + ".xlsx";
+		String factura = String.valueOf(idFactura);
+		XSSFWorkbook libro = new XSSFWorkbook();
+		XSSFSheet hoja = libro.createSheet(factura);
 		boolean salida = false;
-		Factura newfac = new Factura();
-		newfac.seleccionarEmpresa(CIFempresa);
-		newfac.seleccionarCliente(CIFcliente);
-		while (!salida) {
-			System.out.println("Introduce el servicio");
+		Servicio servicio = new Servicio();
+		servicios= new Servicios();
+		for (int i = 0; !salida; i++) {
+			System.out.println("Introduzca el servicio realizado: viaje, precio");
 			String viaje = lector.nextLine();
-			double precio= lector.nextDouble();
+			double precio = lector.nextDouble();
+			System.out.println("Introduzca dia, mes y año");
 			int dia = lector.nextInt();
 			int mes = lector.nextInt();
 			int año = lector.nextInt();
+			lector.nextLine();
 			Fecha fecha = new Fecha(dia, mes, año);
-			Servicio servicio = new Servicio();
-			newfac.viajesRealizados(servicio);
-			System.out.println("Desea introducir otro servicio?");
-			String opcion = lector.nextLine();
-			if (opcion.equalsIgnoreCase("no")) {
+			servicio = new Servicio(viaje, precio, fecha);
+			servicios.getServicios().add(servicio);
+			System.out.println("Quieres añadir mas servicios?");
+			String respuesta = lector.nextLine();
+			if (respuesta.equalsIgnoreCase("no")) {
 				salida = true;
 			}
 		}
-		//Aqui iria la creacion del excel con los datos que tiene este metodo.
-		System.out.println("Factura generada...");
+		XSSFRow fila1= hoja.createRow(1);
+		XSSFCell celda11 = fila1.createCell(1);
+		XSSFCell celda14 = fila1.createCell(4);
+		celda11.setCellValue("Logo Empresa");
+		celda14.setCellValue("Factura num:"+ idFactura);
+		XSSFRow fila2 = hoja.createRow(2);
+		XSSFCell celda24 =fila2.createCell(4);
+		celda24.setCellValue("Fecha :"+ excel);
+		XSSFRow fila5 = hoja.createRow(5);
+		XSSFCell celda51 = fila5.createCell(1);
+		XSSFCell celda54 = fila5.createCell(4);
+		celda51.setCellValue(String.valueOf(seleccionarEmpresa(CIFempresa)));
+		celda54.setCellValue(String.valueOf(seleccionarCliente(CIFcliente)));
+		XSSFRow fila6 = hoja.createRow(6);
+		XSSFCell celda61 = fila6.createCell(1);
+		XSSFCell celda62 = fila6.createCell(2);
+		XSSFCell celda64 = fila6.createCell(4);
+		celda61.setCellValue("Dia");
+		celda62.setCellValue("Viaje realizado");
+		celda64.setCellValue("Precio");
+		for (int j = 0; j < servicios.getServicios().size(); j++) {
+			Servicio servicioactual = servicios.getServicios().get(j);
+			XSSFRow filaactual = hoja.createRow(7+j);
+			XSSFCell celdadia = filaactual.createCell(1);
+			XSSFCell celdaviaje = filaactual.createCell(2);
+			XSSFCell celdaprecio = filaactual.createCell(4);
+			celdadia.setCellValue(servicioactual.getFecha().getDia());
+			celdaviaje.setCellValue(servicioactual.getViaje());
+			celdaprecio.setCellValue(servicioactual.getPrecio());
+		}
+		String path = ".\\Facturas\\"+nombreArchivo;
+		try {
+			FileOutputStream os = new FileOutputStream(path);
+			libro.write(os);
+			os.close();
+		} catch (FileNotFoundException e) {
+			e.getMessage();
+		} catch (IOException e) {
+			e.getMessage();
+		}
 	}
 }

@@ -1,4 +1,5 @@
 public class Servicio {
+
 	protected String viaje;
 	protected double precio;
 	protected Fecha fecha;
@@ -25,6 +26,14 @@ public class Servicio {
 
 	public void setPrecio(double precio) {
 		this.precio = precio;
+	}
+
+	public Fecha getFecha() {
+		return fecha;
+	}
+
+	public void setFecha(Fecha fecha) {
+		this.fecha = fecha;
 	}
 
 	@Override

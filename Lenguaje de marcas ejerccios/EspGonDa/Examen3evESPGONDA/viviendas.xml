@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="viviendas.xsl"?>
+<viviendas>
+    <portal numero="77">        
+        <vivienda piso="1" letra="A">
+            <persona sexo="H">
+                <nombre>Antonio</nombre>
+                <apellido>García</apellido>
+                <apellido>Pérez</apellido> 
+                <dni>12345678F</dni>
+                <foto>desconocido.jfif</foto>
+            </persona>
+        </vivienda>
+        <vivienda piso="1" letra="B">
+            <persona sexo="M">
+                <nombre>Ana</nombre>
+                <apellido>González</apellido>
+                <apellido>García</apellido> 
+                <dni>66389696M</dni>
+                <foto>desconocida.jfif</foto>
+            </persona>
+            <persona sexo="H">
+                <nombre>Juan</nombre>
+                <apellido>López</apellido>
+                <apellido>Arribas</apellido> 
+                <dni>87654321A</dni>
+                <foto>desconocido.jfif</foto>
+            </persona>
+        </vivienda>  
+        <vivienda piso="2" letra="C">  
+            <persona sexo="M">
+                <nombre>Marisa</nombre>
+                <apellido>Escudero</apellido>
+                <apellido>García</apellido> 
+                <dni>343202028J</dni>
+                <foto>desconocida.jfif</foto>
+            </persona>
+            <menor>
+                <nombre>Marga</nombre>
+                <apellido>Lozano</apellido>
+                <apellido>Escudero</apellido> 
+                <edad>5</edad>
+            </menor>    
+            <menor>    
+                <nombre>Antonio</nombre>
+                <apellido>Lozano</apellido>
+                <apellido>Escudero</apellido> 
+                <edad>8</edad>
+            </menor>
+        </vivienda>    
+    </portal>    
+</viviendas>

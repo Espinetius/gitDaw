@@ -39,3 +39,4 @@ sudadera ; 4
 raton ; 1
 teclado ; 3
 portatil ; 4
+curriculo ; 5
