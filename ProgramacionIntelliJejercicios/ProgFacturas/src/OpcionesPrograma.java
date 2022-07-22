@@ -142,6 +142,7 @@ public class OpcionesPrograma {
 					factura.escribirEXCEL(CIFempresa, CIFcliente);
 					break;
 				case 2:
+					System.out.println("Esta opcion aun no ha sido desarrollada. Se completara en fututas versiones");
 					break;
 				case 3:
 					System.out.println("Desea volver al menu anterior?");

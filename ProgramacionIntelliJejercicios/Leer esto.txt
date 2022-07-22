@@ -1,0 +1,8 @@
+En la clase de factura.java, tengo un error en el metodo de "public Empresa seleccionarCliente(String CIF)"
+Dentro de ese metodo, estoy recorriendo con un for el fichero, y dentro pregunto el
+el arraylist para recorrerlo. Me salta un indexoutofbound de error, y no encuentro la 
+manera de solucionarlo. Por lo demas, creo que el programa crea las carpetas y los archivos
+bien.
+
+El usuario para logear base es david, con la contraseña 1234. Aunque en el listado de usuarios
+puedes encontrar un usuario Gema con contraseña 1daw.

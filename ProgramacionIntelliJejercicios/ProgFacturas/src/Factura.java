@@ -7,10 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.image.ImageObserver;
 import java.awt.image.ImageProducer;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 public class Factura {
@@ -84,9 +81,14 @@ public class Factura {
 		ListaEmpresas listaEmp = new ListaEmpresas();
 		try {
 			lectorFichero = new Scanner(new File("Listado_Empresas.txt"));
+			PrintWriter pw = new PrintWriter(new FileWriter(new File("Listado_Empresas.txt")));
+			while(lectorFichero.hasNextLine()) {
+				pw.println(lectorFichero.nextLine());
+				pw.close();
+			}
 			while (!salidacliente) {
-				for (int i = 0; lectorFichero.hasNextLine() && !salidacliente; i++) {
-					if (listaEmpresas.empresasArraylist.get(i).getCIF().equalsIgnoreCase(CIF)) {
+				for (int i = 0; !salidacliente; i++) {
+					if (CIF.equalsIgnoreCase(String.valueOf(listaEmpresas.empresasArraylist.get(i)))) {
 						clientes = listaEmpresas.empresasArraylist.get(i);
 						salidacliente = true;
 					}
@@ -120,7 +122,9 @@ public class Factura {
 			}
 		}catch (FileNotFoundException e) {
 				throw new RuntimeException(e);
-			}
+			} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
 		return clientes;
 	}
 	public Empresa seleccionarEmpresa(String CIF) {
