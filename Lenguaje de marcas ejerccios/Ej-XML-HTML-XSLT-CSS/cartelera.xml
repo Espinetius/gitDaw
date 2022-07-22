@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="cartelera.xsl"?>
+
+<cartelera>
+    <pelicula numero="1"> 
+        <titulo>Cinco Lobitos</titulo> 
+        <anio>2022</anio>         
+        <duracion>1h 44m</duracion>  
+        <genero>Drama</genero>
+        <reparto>Laia Costa</reparto>  
+        <reparto>Ramón Barea</reparto>    
+        <caratula>CincoLobitos.jpg</caratula>
+    </pelicula>  
+    <pelicula numero="2"> 
+        <titulo>El Escuadrón Suicida</titulo> 
+        <anio>2021</anio>         
+        <duracion>2h 12m</duracion>  
+        <genero>Acción</genero>
+        <genero>Aventura</genero>
+        <reparto>Margot Robbie</reparto>  
+        <reparto>Pete Davidson</reparto>  
+        <reparto>John Cena</reparto>  
+        <reparto>Daniela Melchior</reparto>  
+        <caratula>EscuadronSuicida.jpg</caratula>
+    </pelicula>   
+    <pelicula numero="3"> 
+        <titulo>La Ciudad Perdida</titulo> 
+        <anio>2022</anio>         
+        <duracion>1h 53m</duracion>  
+        <genero>Aventura</genero>
+        <reparto>Sandra Bullock</reparto>  
+        <reparto>Channig Tatum</reparto>    
+        <reparto>Brad Pitt</reparto>    
+        <caratula>LaCiudadPerdida.jpg</caratula>
+    </pelicula>  
+    <pelicula numero="4"> 
+        <titulo>Top Gun: Maverick</titulo> 
+        <anio>2022</anio>         
+        <duracion>2h 15m</duracion> 
+        <genero>Acción</genero> 
+        <genero>Aventura</genero>
+        <reparto>Tom Cruise</reparto>  
+        <reparto>Val Klimer</reparto>    
+        <reparto>Jenniffer Connelly</reparto>    
+        <caratula>TopGun.jpg</caratula>
+    </pelicula>       
+    <pelicula numero="5"> 
+        <titulo>Mamá O Papá</titulo> 
+        <anio>2021</anio>         
+        <duracion>1h 43m</duracion>  
+        <genero>Comedia</genero>
+        <reparto>Ester Expósito</reparto>  
+        <reparto>Miren Ibarguren</reparto>  
+        <reparto>Eva Ugarte</reparto>  
+        <reparto>Paco León</reparto>  
+        <reparto>Anuar Beno</reparto>  
+        <reparto>Álvaro Fontalba</reparto>
+        <caratula>MamaOPapa.jpg</caratula>
+    </pelicula>            
+    <pelicula numero="6"> 
+        <titulo>Ojos De Fuego</titulo> 
+        <anio>2022</anio>         
+        <duracion>1h 34m</duracion> 
+        <genero>Terror</genero> 
+        <reparto>Zac Efron</reparto>  
+        <reparto>Ryan Kiera</reparto>    
+        <reparto>Sydney Lemmon</reparto>    
+        <reparto>Michael Greyeyes</reparto>    
+        <caratula>OjosDeFuego.jpg</caratula>
+    </pelicula>      
+    <pelicula numero="7"> 
+        <titulo>García y García</titulo> 
+        <anio>2021</anio>         
+        <duracion>1h 38m</duracion> 
+        <genero>Comedia</genero> 
+        <reparto>Eva Ugarte</reparto>  
+        <reparto>Alicia Fernández</reparto> 
+        <reparto>Ylenia Baglietto</reparto>    
+        <reparto>José Mota</reparto>    
+        <reparto>Ricardo Castella</reparto>  
+        <reparto>Pepe Viyuela</reparto>   
+        <caratula>GarciaYGarcia.jpg</caratula>
+    </pelicula>                              
+</cartelera>
+    
+
+
