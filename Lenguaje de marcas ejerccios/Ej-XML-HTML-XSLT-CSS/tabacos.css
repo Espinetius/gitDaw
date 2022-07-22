@@ -17,7 +17,7 @@ body {
     border-radius: 3.5%;
     display: inline-block;
     width:80%;
-    background-color: grey;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);;
 }
 .header {
     background-color: #3f4c6b;   

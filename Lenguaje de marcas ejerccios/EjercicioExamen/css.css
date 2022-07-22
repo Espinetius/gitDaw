@@ -1,0 +1,85 @@
+body{
+    background-image: url(fondoepico.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido{
+    height: 1200px;
+    width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.portal{
+    width: 100%;
+    height: 20%;
+    border: 10px solid rgb(36, 233, 200);
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.personas{
+    width: 100%;
+    background-color: palevioletred;
+    border: 10px solid royalblue;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+table td{
+    text-align: center;
+}
+.piso{
+    text-align: right;
+    color: blue;
+}
+.nombre{
+    color: red;
+}
+.dni{
+    color: blue;
+}
+.dni::before {
+    content: 'DNI: ';
+    color: green;
+}
+
+.menor{
+    width: 75%;
+    background-color: grey;
+    border: 5px solid blue;
+    text-align: center;
+    color: brown ;
+    margin: 5px;
+}
+table{
+    width: 100%;
+}
+
+img{
+    width: 64px;
+    height: 64px;
+}
+
+footer{
+    width: 100%;
+    height: 10%;
+    color: goldenrod;
+    background-color: brown;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

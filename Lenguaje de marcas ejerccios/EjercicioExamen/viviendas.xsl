@@ -17,8 +17,8 @@
     <xsl:template match="/">
         <html>
             <head>
+                <link rel="stylesheet" href="viviendas.css"/>
                 <title>viviendas.xsl</title>
-                <link reel="shylesheet" href="viviendas.css" />
             </head>
             <body>
                 <header>
@@ -26,45 +26,51 @@
                 </header>
                 <div>
                     <xsl:for-each select="viviendas/portal">
-                        <p>Portal: 
+                        <h2>Portal: 
                             <span>
                                 <xsl:value-of select="@numero"/>
                             </span>
-                        </p>
+                        </h2>
                         <xsl:for-each select="vivienda">
-                            <div>
-                                <p>Piso: 
-                                    <span>
-                                        <xsl:value-of select="@piso"/>
-                                    </span>
-                                    <span>
-                                        <xsl:value-of select="@letra"/>
-                                    </span>
-                                </p>
+                            <div class="targeta_piso">
                                 <div>
                                     <xsl:for-each select="persona">
-                                        <div>
-                                            <p>
+                                        <div class="targeta_izq">
+                                            <div class="nombre_apellido">
                                                 <xsl:value-of select="nombre"/>
+                                                <xsl:value-of select="apellido[1]"/>
+                                                <xsl:value-of select="apellido[2]"/>
+                                            </div>
+                                            <p class="cni">DNI:
+                                                <span>
+                                                    <xsl:value-of select="dni"/>
+                                                </span>
                                             </p>
-                                            <p>
-                                                <xsl:value-of select="apellido"/>
-                                            </p>
-                                            <p>
-                                                <xsl:value-of select="dni"/>
-                                            </p>
-                                            <img>
-                                                <xsl:attribute name="src">
-                                                    <xsl:value-of select="foto"/>
-                                                </xsl:attribute>
-                                            </img>
                                         </div>
                                     </xsl:for-each>
+                                </div>
+                                <div class="targeta_dcha">
+                                    <p>Piso: 
+                                        <span>
+                                            <xsl:value-of select="@piso"/>
+                                        </span>
+                                        <span>
+                                            <xsl:value-of select="@letra"/>
+                                        </span>
+                                    </p>
+                                    <img>
+                                        <xsl:attribute name="src">
+                                            <xsl:value-of select="persona/foto"/>
+                                        </xsl:attribute>
+                                    </img>
                                 </div>
                             </div>
                         </xsl:for-each>
                     </xsl:for-each>
                 </div>
+                <footer>
+                    <h2>DAVID ESPINOSA 1 DAW</h2>
+                </footer>
             </body>
         </html>
     </xsl:template>

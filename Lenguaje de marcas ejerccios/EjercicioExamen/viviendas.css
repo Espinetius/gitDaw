@@ -1,0 +1,53 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25 may. 2022, 12:39:59
+    Author     : Admin
+*/
+body {
+    margin: 5% 30%;
+    background-image: url("vivienda.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    
+}
+img {
+    width: 70%;
+    height: 70%;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    margin: 0;
+    padding: 0 0 5% 0;
+    height: 10%;
+}
+h2 {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 250%;
+}
+.targeta_piso {
+    background-color: #ffcc66;
+    border: 2px red solid;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10%;
+    text-align: center;
+}
+span {
+    color: blue;
+}
+p{
+    color: brown;
+}
+.dni {
+    color: green;
+}
